@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microintel</title>
+    <link rel="stylesheet" href="logst.css">
+    <script>
+        function microcheck() {
+            let x = "Condition:-  User Name Must Be Equal To Passwd\n Vice-Versa";
+            var username = document.getElementById("user").value;
+            var password = document.getElementById("pass").value;
+            if (username === password){location.href = "micropro.html";} 
+            else {alert(x);}
+            return false;
+            }
+    </script>
+</head>
+<body>
+<div id="mv">
+    <video id="mve" autoplay loop muted onerror="showFallbackImage()">
+        <source src="st.mp4" type="video/mp4">
+    </video>
+</div>
+<div class="mi">
+    <div class="micro">
+        <h1>Login to Microintel</h1>
+        <form onsubmit="return microcheck()">
+            <input type="text" id="user" placeholder="User Name" required>
+            <input type="password" id="pass" placeholder="Passwd = User Name" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <br><br><br>
+    <div id="DBMI">
+        <center><img src="DBMI.png" height="50%" width="60%"></center>
+    </div>
+</div>
+</body>
+</html>
