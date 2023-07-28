@@ -17,7 +17,7 @@ else{document.getElementById("par").innerHTML=prx;}
 function abt(){let aud=new Audio("click.mp3");aud.play();
 let abot=`<div style="margin-top:30px;width: 95%;padding:2%;background-color: white;opacity: 0.7;border-radius: 20px;font-family:serif;">
    <h2 style="text-align: center;color:black"><u>About MicroIntel</u></h2>
-   <p>Microintel.Inc is an Multinational computer software company headquartered in , Earth. </p>
+   <p>Microintel.Inc is an Multinational computer software company headquartered in , Pandora.</p>
    <p>The term "microintel" could also be a portmanteau of "micro" and "intel", which refers to intelligence.In this sense, "microintel" could be used to describe a small amount of intelligence or knowledge.</p>
    It develops software for web development and more.
    Some of its most popular products include Login Autentication, Result portal, InDesign, Cie Calculator... </p>
