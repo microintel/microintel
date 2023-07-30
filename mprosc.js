@@ -39,7 +39,7 @@ let cu=`<div style="margin-top:30px; margin-left:65%; width:15%; padding:5%; bac
    <div style="text-align: center; margin-top: 10px;">
       <a href="mailto:microfly2410@gmail.com" style="color: black;"><img src="gmail.png" style="height: 35px; width: 35px;"></a>
       <br><a href="tel:+919380579439" style="color: black;"><img src="call.png" style="height: 35px; width: 35px;"></a>
-      <br> <a href="https://instagram.com/_raghu_uppar__08" style="color: black;"><img src="insta.png" style="height: 35px; width: 35px;"></a>
+      <br> <a href="https://instagram.com/wag_2005/" style="color: black;"><img src="insta.png" style="height: 42px; width: 42px;"></a>
       <br><a href="https://www.threads.net/@wag_2005" style="color: black;"><img src="threads.png" style="height: 35px; width: 35px;"></a>
       <br><a href="https://wa.link/kfitog" style="color: black;"><img src="WhatsApp.png" style="height: 35px; width: 35px;"></a>
    </div>
