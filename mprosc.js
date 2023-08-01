@@ -6,7 +6,7 @@ let prx =`<div style="margin-top:100px;">
    <br><br><a href="https://microintel.github.io/Result/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">Diploma Result [ch-nagar]</button></a></center></div>
    <br><center>
    <h4 style="color:white;font-family:fantasy;">Preview of the next project</h4>
-   <br><video width="100%" height="210px" style="border-radius:70px;border:1px solid brown;" controls autoplay>
+   <br><video width="100%" height="210px" style="border-radius:70px;border:1px solid brown;" controls>
    <source src="mdisk.mp4" type="video/mp4"></video>
    <h5 style="color:white;font-family:fantasy;">Project Micro Disk will be implemented on Nov 1, 2023</h5></center>`;
 if (false) {document.getElementById("par").innerHTML = " ";} 
