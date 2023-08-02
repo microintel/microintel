@@ -28,9 +28,10 @@ function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
     <p>Mr, Nikil, BM-Founder-Coder-Shareholder of Microintel</p>
     <p> Mr, Vignesh, Founder-Coder-Shareholder of Microintel</p>
     <p> Mr, Raghavendra, QA Manager & Distributor of Microintel</p>
-    <p> Mr, Vinay, QA Tester & Distributor of Microintel </p>
+    <p> Mr, Vinay, QA Tester & Distributor of Microintel </p
     <p> Mr, Amith, Asset of Microintel</p>
     <p> Mr, Dhanush, Asset of Microintel</p>
+    <p>Mr, Charan ,imaginative Kid of Microintel</p>
     </div>`;
     if (dr == 5) {document.getElementById('par').innerHTML = drm;}
     else {if (mi) {document.getElementById('par').innerHTML = '';}else {document.getElementById('par').innerHTML = abot;}}
