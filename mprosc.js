@@ -29,7 +29,7 @@ function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
     <p> Mr, Vignesh, Founder-Coder-Shareholder of Microintel</p>
     <p> Mr, Raghavendra, QA Manager & Distributor of Microintel</p>
     <p> Mr, Vinay, QA Tester & Distributor of Microintel </p
-    <p> Mr, Amith, Asset of Microintel</p>
+    <p> Mr, Amith, Ideator, Designer of Microintel</p>
     <p> Mr, Dhanush, Asset of Microintel</p>
     <p>Mr, Charan ,imaginative Kid of Microintel</p>
     </div>`;
