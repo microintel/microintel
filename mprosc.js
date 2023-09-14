@@ -5,6 +5,9 @@ let prx =`<div style="margin-top:100px;">
    <center><a href="https://microintel.github.io/cie/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">DIPLOMA CIE BOOK EVALUATOR</button></a>
    <br><br><a href="https://microintel.github.io/Result/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">Diploma Result [ch-nagar]</button></a></center></div>
    <br><a href="https://microintel.github.io/Micrography/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">Micrography</button></a></center></div>
+   <br><br>
+   <a href="https://microintel.github.io/Microdisk/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">MicroDisk</button></a></center></div>
+   
    <center>
    <h4 style="color:white;font-family:fantasy;">Preview of the next project</h4>
    <br><video width="100%" height="210px" style="border-radius:70px;border:1px solid brown;" controls>
