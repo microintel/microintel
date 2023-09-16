@@ -27,7 +27,7 @@ function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
     </div>`;
     let drm = `<div style="margin-top:30px;width: 95%;padding:2%;background-color: white;opacity: 0.7;border-radius: 20px;font-family:serif;">
     <h2 style="text-align: center;color:black"><u>Asset Of Microintel</u></h2>
-    <center><img src="ceo.jpg" style="width:140px;height:200px;border-radius:10px;"/><br><font style="font-size:12px;">CEO OF MICROINTEL.INC</font><br></center>
+    <center><img src="ce.jpg" style="width:140px;height:200px;border-radius:10px;"/><br><font style="font-size:12px;">CEO OF MICROINTEL.INC</font><br></center>
     <p>Ms, Darling, CEO of the Microintel</p>
     <p>Mr, Nikil, BM-Founder-Coder-Shareholder of Microintel</p>
     <p> Mr, Vignesh, Founder-Coder-Shareholder of Microintel</p>
