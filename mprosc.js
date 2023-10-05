@@ -48,7 +48,7 @@ function pro() {let aud = new Audio("click.mp3");aud.play();
 function con() {let aud = new Audio("click.mp3");aud.play();
     let cu = `<div style="margin-top:30px; margin-left:65%; width:15%; padding:5%; background-color: white; opacity: 0.6; border-radius: 30px; box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);">
     <div style="text-align: center; margin-top: 10px;">
-    <a href="mailto:microfly2410@gmail.com" style="color: black;"><img src="gmail.png" style="height: 35px; width: 35px;"></a>
+    <a href="mailto:microfly2410@gmail.com?body=Hello Microintel support team" style="color: black;"><img src="gmail.png" style="height: 35px; width: 35px;"></a>
     <br> <a href="https://instagram.com/micro_intel/" style="color: black;"><img src="insta.png" style="height: 42px; width: 42px;"></a>
     <br><a href="sms:+917411481645?body=Hello Microintel support team," style="color: black;"><img src="msg.png" style="height: 35px; width: 35px;"></a>
     <br><a href="https://wa.link/kfitog" style="color: black;"><img src="WhatsApp.png" style="height: 35px; width: 35px;"></a>
