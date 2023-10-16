@@ -12,7 +12,7 @@ let prx =`<div style="margin-top:100px;">
    <h4 style="color:white;font-family:fantasy;">Preview of the next project</h4>
    <br><video width="100%" height="210px" style="border-radius:70px;border:1px solid brown;" controls>
    <source src="mdisk.mp4" type="video/mp4"></video>
-   <h5 style="color:white;font-family:fantasy;">Project Micro Disk will be implemented on Nov 1, 2023</h5></center>`;
+   <h5 style="color:white;font-family:fantasy;">Project Micro Disk will be implemented soon.</h5></center>`;
 if (false) {document.getElementById("par").innerHTML = " ";} 
 else {document.getElementById("par").innerHTML = prx;}
 function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
