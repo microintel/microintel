@@ -1,27 +1,33 @@
 body {
-           display: flex;
+           margin:0;
            justify-content: center;
            align-items: center;
-           height: 95vh;
-           margin: 25%;
            background-color: black;
            padding: 3%;
+           background-repeat: no-repeat;
+           
        }
 
        .mi {
-           display: flex;
-           flex-direction: column;
+           
            align-items: center;
+           
+         
        }
 
        .micro {
-           margin-top:100px;
+          
+           margin:30% 0% 30% 0%;
            width: 300px;
            padding: 20px;
-           background-color: white;
-           opacity: 0.6;
+           background-color: transparent;
            border-radius: 50px;
            box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+           animation-name: ani;
+           animation-duration: 2.5s;
+           animation-iteration-count: infinite;
+           border: 2px solid rgba(0, 217, 255, 0);
+           animation-timing-function: ease-in-out;
        }
 
        .micro h1 {
@@ -70,6 +76,11 @@ body {
        #mve.hide-video {
            display: none;
        }
-       #DBMI{
-       padding-top:100px;
-       }
+
+    @keyframes ani{
+        0%{border-color:rgba(0, 242, 255, 0.13) ;}
+        25%{border-color:rgba(0, 242, 255, 0.324) ;}
+        50%{border-color:rgba(0, 242, 255, 0.477) ;}
+        70%{border-color:rgba(0, 242, 255, 0.717) ;}
+        100%{border-color:rgb(0, 242, 255) ;}
+                      }
