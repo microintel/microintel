@@ -93,4 +93,4 @@ var mi = false;
   </div>`;
   if (mi) {document.getElementById('par').innerHTML = '';}
   else {document.getElementById('par').innerHTML = cu;}
-     }
+    }
