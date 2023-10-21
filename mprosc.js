@@ -13,11 +13,9 @@ let prx =`<div style="margin-top:100px;">
    <br><video width="100%" height="210px" style="border-radius:70px;border:1px solid brown;" controls>
    <source src="mdisk.mp4" type="video/mp4"></video>
    <h5 style="color:white;font-family:fantasy;">Project Micro Disk will be implemented soon.</h5></center>`;
-if (false) {document.getElementById("par").innerHTML = " ";} 
-else {document.getElementById("par").innerHTML = prx;}
 function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
-    let abot = `<div style="margin-top:30px;width: 95%;padding:2%;background-color: white;opacity: 0.7;border-radius: 20px;font-family:serif;">
-    <h2 style="text-align: center;color:black"><u>About MicroIntel</u></h2>
+    let abot = `<div style="margin-top:30px;width: 95%;padding:2%;background-color: transparent ;border-radius: 20px;font-family:serif; color:white">
+    <h2 style="text-align: center;color:white"><u>About MicroIntel</u></h2>
     <p>Microintel.Inc is an Multinational computer software company headquartered in , Pandora.</p>
     <p>The term "microintel" could also be a portmanteau of "micro" and "intel", which refers to intelligence.In this sense, "microintel" could be used to describe a small amount of intelligence or knowledge.</p>
     It develops software for web development and more.
@@ -35,7 +33,6 @@ function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
     <p> Mr, Vinay, QA Tester & Distributor of Microintel </p
     <p> Mr, Amith, Ideator, Designer of Microintel</p>
     <p> Mr, Dhanush, Asset of Microintel</p>
-    <p>Mr, Charan ,imaginative Kid of Microintel</p>
     </div>`;
     if (dr == 5) {document.getElementById('par').innerHTML = drm;}
     else {if (mi) {document.getElementById('par').innerHTML = '';}else {document.getElementById('par').innerHTML = abot;}}
@@ -56,4 +53,4 @@ function con() {let aud = new Audio("click.mp3");aud.play();
     </div>`;
     if (mi) {document.getElementById('par').innerHTML = '';}
     else {document.getElementById('par').innerHTML = cu;}
-   }
+       }
