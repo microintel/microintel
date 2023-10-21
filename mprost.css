@@ -33,4 +33,18 @@
        button:hover{
         color: aqua;
        }
-    
+       .img3{
+        opacity: 1;
+        animation-name: imgani;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+       }
+       @keyframes imgani{
+        0%{opacity: 0.0;}
+        20%{opacity: 0.2;}
+        40%{opacity: 0.4;}
+        60%{opacity: 0.6;}
+        80%{opacity: 0.8;}
+        80%{opacity: 1;}
+       }
