@@ -19,9 +19,9 @@ function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
     <p>Microintel.Inc is an Multinational computer software company headquartered in , Pandora.</p>
     <p>The term "microintel" could also be a portmanteau of "micro" and "intel", which refers to intelligence.In this sense, "microintel" could be used to describe a small amount of intelligence or knowledge.</p>
     It develops software for web development and more.
-    Some of its most popular products include Login Autentication, Result portal, InDesign, Cie Calculator... </p>
+    Some of its most popular products include Login Autentication, Result portal, Cie Calculator, Micrography, Microdisk... </p>
     <p>Microintel was founded in 2023 by Microintel team. </p>
-    <p>Microintel's products are used by 5+You of people around the world, from creative professionals to students to everyday users.The company's software has been used to create some of the most iconic documents in history, including the Result portal,Cie Calculator and more.</p>
+    <p>Microintel's products are used by 5+You of people around the world, from creative professionals to students to everyday users.The company's software has been used to create some of the most iconic documents in history, including the Microdisk, Micrography and more.</p>
     </div>`;
     let drm = `<div style="margin-top:30px;width: 95%;padding:2%;background-color: white;opacity: 0.7;border-radius: 20px;font-family:serif;">
     <h2 style="text-align: center;color:black"><u>Asset Of Microintel</u></h2>
