@@ -7,7 +7,7 @@
        
        h1 {
            color: white;
-           font-family: fantasy;
+           font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
            text-shadow: 2px 2px 0 black, 4px 4px 0 black, 6px 6px 0 black;
            font-size: 40px;
            letter-spacing: 10px;
@@ -26,7 +26,11 @@
        }
 
        @keyframes loopBorderColors {
-           0% { border-color: white; }
+           0% { border-color: rgb(4, 246, 250); }
            50% { border-color: black; }
-           100% { border-color: white; }
+           100% { border-color: rgb(0, 255, 255); }
        }
+       button:hover{
+        color: aqua;
+       }
+    
