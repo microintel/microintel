@@ -1,3 +1,30 @@
+  let x = document.getElementsByClassName('apc');
+  let sw = window.innerWidth;
+  let gap;
+  let video = document.getElementById('vs');
+
+  if (sw >= 820)
+  {
+    gap = "35%";
+    video.style.width = "70%";
+    video.style.height = "60%";
+  }    else if (sw >= 600)
+  {
+    gap = "10%";
+    video.style.width = "50%";
+    video.style.height = "45%";
+  } 
+  else
+  {
+    gap = "24%";
+    video.style.width = "80%";
+    video.style.height = "45%";
+  }
+  let i = 0;
+  for (; i < x.length;) {
+    x[i].style.marginRight= gap;
+    i++;
+  }
 var mi = false;
   let dr = 0;
   let aud = new Audio("click.mp3");
