@@ -5,7 +5,7 @@
 
   if (sw >= 820)
   {
-    gap = "35%";
+    gap = "3%";
     video.style.width = "70%";
     video.style.height = "60%";
   }    else if (sw >= 600)
