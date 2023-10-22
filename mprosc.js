@@ -16,7 +16,7 @@
   } 
   else
   {
-    gap = "15%";
+    gap = "17%";
     video.style.width = "80%";
     video.style.height = "45%";
   }
