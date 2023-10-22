@@ -44,17 +44,22 @@ padding:3px 10px;
        .img3{
         opacity: 1;
         animation-name: imgani;
-        animation-duration: 2.5s;
+        animation-duration: 4s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
        }
        @keyframes imgani{
-        0%{opacity: 0.0;}
-        20%{opacity: 0.2;}
-        40%{opacity: 0.4;}
-        60%{opacity: 0.6;}
-        80%{opacity: 0.8;}
-        80%{opacity: 1;}
+        0% {opacity: 0.19;}
+    10% {opacity: 0.2;}
+    20% {opacity: 0.4; }
+    30% {opacity: 0.6;}
+    40% {opacity: 0.8;}
+    50% {opacity: 1;}
+    60% {opacity: 0.8;}
+    70% {opacity: 0.6;}
+    80% { opacity: 0.4;}
+    90% { opacity: 0.2; }
+    100% { opacity: 0.19;}
        }
        .cntus{
        transition:1s;
