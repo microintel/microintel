@@ -5,7 +5,7 @@
    let xr=document.getElementById('apcd');
   if (sw >= 820)
   {
-    xr.style.marginLeft="15%";
+    xr.style.marginLeft="35%";
     gap = "3%";
     video.style.width = "70%";
     video.style.height = "60%";
@@ -17,7 +17,7 @@
   } 
   else
   {
-    gap = "17%";
+    gap = "15%";
     video.style.width = "80%";
     video.style.height = "45%";
   }
