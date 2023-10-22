@@ -16,7 +16,7 @@
   } 
   else
   {
-    gap = "13%";
+    gap = "15%";
     video.style.width = "80%";
     video.style.height = "45%";
   }
@@ -92,7 +92,7 @@ var mi = false;
   <tr>
   <th>
   <div >
-  <img id="i1" src="https://www.collater.al/wp-content/uploads/2022/05/johnny-depp-style-collater.al-9-837x1024.jpg" style="border-radius: 50%;" width="150px" height="150px">
+  <img id="i1" src="https://microintel.github.io/Resources/images/babygrrot.jpg" style="border-radius: 50%;" width="150px" height="150px">
   <h3 style="color: white;"> VIGNESH</h3>
   <h4 style="color: white;"> Coder</h4>
   </div>
