@@ -2,10 +2,11 @@
   let sw = window.innerWidth;
   let gap;
   let video = document.getElementById('vs');
-
+   let xr=document.getElementById('apcd');
   if (sw >= 820)
   {
-    gap = "3%";
+    xr.style.marginLeft="5%";
+    gap = "2%";
     video.style.width = "70%";
     video.style.height = "60%";
   }    else if (sw >= 600)
