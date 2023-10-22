@@ -1,3 +1,10 @@
+.apcdiv{
+display:flex;
+margin:3%;
+}
+.apc{
+padding:3px 10px;
+}
 #d {
            
            position: fixed;
