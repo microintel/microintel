@@ -1,4 +1,5 @@
-  let x = document.getElementsByClassName('apc');
+
+let x = document.getElementsByClassName('apc');
   let sw = window.innerWidth;
   let gap;
   let video = document.getElementById('vs');
