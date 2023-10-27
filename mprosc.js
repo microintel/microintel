@@ -36,7 +36,7 @@ var mi = false;
   <br><a href="https://microintel.github.io/Micrography/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">Micrography</button></a></center></div>
   <br><br>
   <a href="https://microintel.github.io/Microdisk/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">MicroDisk</button></a></center></div>
-  <br><br><a href="#" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="alert('tic tac toe will lounch Soon')">Tic Tac Toe</button></a></center></div>
+  <br><br><a href="https://microintel.github.io/xox/Sample/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">Tic Tac Toe</button></a></center></div>
   
   `;
   function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
