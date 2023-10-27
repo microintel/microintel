@@ -113,10 +113,10 @@ var mi = false;
   <div style="width:20%;margin-top:100px">
   <div style=" width:15%; padding:5%; background-color: transparent;  border-radius: 30px; box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);">
   <div style=" margin-left:20%;">
-  <a href="mailto:microfly2410@gmail.com?body=Hello Microintel support team" style="color: black;"><img class="cntus" src="gmail.png" style="height: 35px; width: 35px;"></a>
-  <br><br><a href="https://instagram.com/micro_intel/" style="color: black;"><img class="cntus" src="insta.png" style="height: 42px; width: 42px;"></a>
-  <br><br><a href="sms:+919380579439?body=Hello Microintel support team," style="color: black;"><img class="cntus" src="msg.png" style="height: 35px; width: 35px;"></a>
-  <br><br><a href="https://wa.link/kfitog" style="color: black;"><img class="cntus" src="WhatsApp.png" style="height: 35px; width: 35px;"></a>
+  <a href="mailto:microfly2410@gmail.com?body=Hello Microintel support team" style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/gmail.png" style="height: 35px; width: 35px;"></a>
+  <br><br><a href="https://instagram.com/micro_intel/" style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/insta.png" style="height: 42px; width: 42px;"></a>
+  <br><br><a href="sms:+919380579439?body=Hello Microintel support team," style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/msg.png" style="height: 35px; width: 35px;"></a>
+  <br><br><a href="https://wa.link/kfitog" style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/WhatsApp.png" style="height: 35px; width: 35px;"></a>
   </div>
   </div>
   </div>
