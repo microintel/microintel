@@ -79,11 +79,9 @@
     }
     
     @keyframes ani{
-    0%{border-color:rgba(0, 242, 255, 0.13) ;}
-    25%{border-color:rgba(0, 242, 255, 0.324) ;}
-    50%{border-color:rgba(0, 242, 255, 0.477) ;}
-    70%{border-color:rgba(0, 242, 255, 0.717) ;}
-    100%{border-color:rgb(0, 242, 255) ;}
+    0% { border-color: rgb(4, 246, 250); }
+           50% { border-color: black; }
+           100% { border-color: rgb(0, 255, 255); }
     }
     p{
     margin:10px 10px 0px 0px;
