@@ -42,19 +42,19 @@ var mi = false;
   function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
   let abot = `<div style="margin-top:30px;width: 95%;padding:2%;background-color: transparent ;border-radius: 20px;font-family:serif; color:white">
   <h2 style="text-align: center;color:white"><u>About MicroIntel</u></h2>
+  <br>
+  <center>
+  <video style="border-radius:360px;" width="50%" height="20%" controlsList="nodownload" poster="poster.jpg" preload="none" controls disablePictureInPicture>
+  <source src="https://microintel.github.io/Resources/videos/about_mi_by_CR.mp4" type="video/mp4">
+</video>
+</center>
   <p>Microintel.Inc is an Multinational computer software company headquartered in , Pandora.</p>
   <p>The term "microintel" could also be a portmanteau of "micro" and "intel", which refers to intelligence.In this sense, "microintel" could be used to describe a small amount of intelligence or knowledge.</p>
   It develops software for web development and more.
   Some of its most popular products include Micrography, Microdisk, XOX Game, Result portal, Cie Calculator... </p>
   <p>Microintel was founded in 2023 by Microintel team. </p>
   <p>Microintel's products are used by number of people around the world, from creative professionals to students to everyday users. The company's software has been used to create some of the most iconic documents in history, including the MicroDisk & MicroGraphy and more.</p>
-  </div>
-  <br>
-  <center>
-  <video style="border-radius:360px;" width="40%" height="20%" controlsList="nodownload" poster="poster.jpg" preload="none" controls disablePictureInPicture>
-  <source src="https://microintel.github.io/Resources/videos/about_mi_by_CR.mp4" type="video/mp4">
-</video>
-</center>`;
+  </div>`;
   let drm = `<div style="margin-top:30px;width: 95%;padding:2%;background-color: transparent;border-radius: 20px;font-family:serif;color:white">
   <h2 style="text-align: center;color:white"><u>Asset Of Microintel</u></h2>
   <center><img src="ce.jpg" style="width:140px;height:200px;border-radius:10px;"/><br><font style="font-size:12px;">CEO OF MICROINTEL.INC</font><br></center>
