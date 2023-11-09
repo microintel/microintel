@@ -28,6 +28,7 @@ function signup() {
     let indtsub = miuserinfo.indexOf("$");
 
     localStorage.setItem("miut1", miuserinfo);
+   alert("User Account Created Scuessfully\n Just Sign in to MicroIntel");
 }
 
 function login() {
