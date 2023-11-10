@@ -1,22 +1,38 @@
-let sup = `<center><h2>Welcome to MicroIntel</h2><h4>Where Innovation Meets Intelligence!</h4></center><div><h2>New User?<br>Sign Up</h2>
-<center><form onsubmit="signup()">
-   <input type="text" id="uname" placeholder="enter full name" required><br>
-   <input type="text" id="uid" placeholder="enter to create user id" required><br>
-   <input type="password" id="upass" placeholder="enter password" required><br>
-   <input type="text" id="umail" placeholder="enter email holder" required><br>
-   <br><br>
-   <input type="submit">
-</form></center></div>`;
 
-let logi = `<center><h2>Welcome to MicroIntel</h2><h4>Where Innovation Meets Intelligence!</h4></center><div><center><h3>Sign In to <b>MicroIntel</b></h3></center>
-<center><form onsubmit="login()">
-   <input type="text" id="luid" placeholder="enter user id" required>
-   <input type="password" id="lupass" placeholder="enter password" required>
-   <br><br>
-   <input type="submit">
-</form></center></div>`;
+let sup = `<center><h2>Welcome to MicroIntel</h2><h4>Where Innovation Meets Intelligence!</h4></center>
+
+<div style="border:None;position: absolute; top:260px; left: 45%; transform: translate(-50%, -50%);">
+    <div id="sign" style="text-align: center;">
+        <h2>New User?<br>Sign Up</h2>
+        <form onsubmit="signup()">
+            <input type="text" id="uname" placeholder="enter full name" required><br>
+            <input type="text" id="uid" placeholder="enter to create user id" required><br>
+            <input type="password" id="upass" placeholder="enter password" required><br>
+            <input type="text" id="umail" placeholder="enter email holder" required><br>
+            <br><br>
+            <input type="submit">
+        </form>
+    </div>
+</div>
+`;
+
+let logi = `<center><h2>Welcome to MicroIntel</h2><h4>Where Innovation Meets Intelligence!</h4></center>
+<div style="position: absolute; top:200px; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+    <center><h3>Sign In to <b>MicroIntel</b></h3></center>
+    <form onsubmit="login()">
+        <input type="text" id="luid" placeholder="enter user id" required>
+        <input type="password" id="lupass" placeholder="enter password" required>
+        <br><br>
+        <input type="submit">
+    </form>
+    
+</div>
+`;
 
 function signup() {
+if(window.innerWidth>=820){
+document.getElementById("sign").style.width='100%';
+}
     let Fname = document.getElementById('uname').value;
     let Uid = document.getElementById('uid').value;
     let Upass = document.getElementById('upass').value;
