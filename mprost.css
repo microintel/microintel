@@ -1,8 +1,12 @@
+p{
+font-size:14px;
+}
 .apcdiv{
 display:flex;
 margin:3%;
 }
 .apc{
+height:55px;
 padding:3px 10px;
 }
 #d {
@@ -23,6 +27,7 @@ padding:3px 10px;
        }
 
        button {
+           
            background-color: transparent;
            color: white;
            border: 2px solid transparent;
@@ -48,7 +53,7 @@ animation:ba 4s linear infinite;
 100% { border-color: rgb(0, 255, 255); }
 }
        button:hover{
-        color: aqua;
+        background-color:#007477;
        }
        .img3{
         opacity: 1;
@@ -76,3 +81,45 @@ animation:ba 4s linear infinite;
        .cntus:hover{
        transform:translateY(-10px);
        }
+       
+       
+       .projects{
+       background-color: transparent;
+       color: white;
+       width:50%;
+       border: 2px solid white;
+       padding: 10px 20px;
+       border-radius: 5px;
+       font-size: 16px;
+       font-family:Times New Roman;
+       transition:0.5s;
+       
+       }
+       
+       .projects:hover{
+       background-color:#007477;
+       color: white;
+       margin-left:12%;
+       border: 2px solid white;
+       padding: 10px 20px;
+       border-radius: 5px;
+       font-size: 16px;
+       font-family:Times New Roman;
+       }
+       .lot{
+       margin-right:90%;
+       height:4vh;
+       width:20vw;
+       padding:0;
+       color:white;
+       transition:0.7;
+       }
+       .lot:hover{
+       color:#007477;
+       margin-right:90%;
+       height:4vh;
+       width:23vw;
+       padding:0;
+       color:white;
+                  }
+                  
