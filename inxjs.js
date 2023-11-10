@@ -1,20 +1,20 @@
 let sup = `<center><h2>Welcome to MicroIntel</h2><h4>Where Innovation Meets Intelligence!</h4></center><div><h2>New User?<br>Sign Up</h2>
-<form onsubmit="signup()">
+<center><form onsubmit="signup()">
    <input type="text" id="uname" placeholder="enter full name" required><br>
    <input type="text" id="uid" placeholder="enter to create user id" required><br>
    <input type="password" id="upass" placeholder="enter password" required><br>
    <input type="text" id="umail" placeholder="enter email holder" required><br>
    <br><br>
    <input type="submit">
-</form></div>`;
+</form></center></div>`;
 
 let logi = `<center><h2>Welcome to MicroIntel</h2><h4>Where Innovation Meets Intelligence!</h4></center><div><center><h3>Sign In to <b>MicroIntel</b></h3></center>
-<form onsubmit="login()">
+<center><form onsubmit="login()">
    <input type="text" id="luid" placeholder="enter user id" required>
    <input type="password" id="lupass" placeholder="enter password" required>
    <br><br>
    <input type="submit">
-</form></div>`;
+</form></center></div>`;
 
 function signup() {
     let Fname = document.getElementById('uname').value;
