@@ -1,42 +1,63 @@
-
-let x = document.getElementsByClassName('apc');
+function lout(){
+localStorage.removeItem("Lmiut1");
+alert("User Signed Out");
+window.location.href="https://microintel.github.io/microintel/";
+ }
+  
+  let x = document.getElementsByClassName('apc');
   let sw = window.innerWidth;
   let gap;
   let video = document.getElementById('vs');
-   let xr=document.getElementById('apcd');
+  let xr=document.getElementById('apcd');
   if (sw >= 820)
   {
-    xr.style.marginLeft="35%";
-    gap = "3%";
-    video.style.width = "70%";
-    video.style.height = "60%";
+  xr.style.marginLeft="35%";
+  gap = "3%";
+  video.style.width = "70%";
+  video.style.height = "60%";
   }    else if (sw >= 600)
   {
-    gap = "10%";
-    video.style.width = "50%";
-    video.style.height = "45%";
+  gap = "10%";
+  video.style.width = "50%";
+  video.style.height = "45%";
   } 
   else
   {
-    gap = "15%";
-    video.style.width = "80%";
-    video.style.height = "45%";
+  gap = "15%";
+  video.style.width = "80%";
+  video.style.height = "45%";
   }
   let i = 0;
   for (; i < x.length;) {
-    x[i].style.marginRight= gap;
-    i++;
+  x[i].style.marginRight= gap;
+  i++;
   }
-var mi = false;
+  var mi = false;
   let dr = 0;
   let aud = new Audio("click.mp3");
   let prx =`<div style="margin-top:100px;">
-  <center><a href="https://microintel.github.io/cie/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">DIPLOMA CIE BOOK EVALUATOR</button></a>
-  <br><br><a href="https://microintel.github.io/Result/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">Diploma Result [ch-nagar]</button></a></center></div>
-  <br><a href="https://microintel.github.io/Micrography/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">Micrography</button></a></center></div>
-  <br><br>
-  <a href="https://microintel.github.io/Microdisk/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">MicroDisk</button></a></center></div>
-  <br><br><a href="https://microintel.github.io/xox/Sample/" > <button style="background-color: transparent;color: white;border: 2px solid white;padding: 10px 20px;border-radius: 5px;font-size: 16px;font-family: fantasy;" onclick="mpa()">Tic Tac Toe</button></a></center></div>
+                  <center>
+                               <a href="https://microintel.github.io/cie/" >
+                               <button class="projects" onclick="mpa()">CIE EVALUATOR</button>
+                               </a>
+                         <br><br>
+                                <a href="https://microintel.github.io/Result/" >
+                                <button class="projects" onclick="mpa()">Diploma Result</button>
+                                </a>
+                         <br><br>
+                                 <a href="https://microintel.github.io/Micrography/" >
+                                 <button class="projects" onclick="mpa()">Micrography</button>
+                                 </a>
+                        <br><br>
+                                 <a href="https://microintel.github.io/Microdisk/" >
+                                 <button class="projects" onclick="mpa()">MicroDisk</button>
+                                 </a>
+                        <br><br>
+                                 <a href="https://microintel.github.io/xox/Sample/" >
+                                 <button class="projects" onclick="mpa()">Tic Tac Toe</button>
+                                 </a>
+                 </center>
+            </div>
   
   `;
   function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
@@ -44,16 +65,18 @@ var mi = false;
   <h2 style="text-align: center;color:white"><u>About MicroIntel</u></h2>
   <br>
   <center>
-  <video style="border-radius:360px;" width="50%" height="20%" controlsList="nodownload" poster="poster.jpg" preload="none" controls disablePictureInPicture>
+  <video style="border-radius:20px;" width="190vw" height="200vh" controlsList="nodownload" poster="poster.jpg" preload="none" controls disablePictureInPicture>
   <source src="https://microintel.github.io/Resources/videos/about_mi_by_CR.mp4" type="video/mp4">
-</video>
-</center>
+  </video>
+  </center>
+  <center>
   <p>Microintel.Inc is an Multinational computer software company headquartered in , Pandora.</p>
   <p>The term "microintel" could also be a portmanteau of "micro" and "intel", which refers to intelligence.In this sense, "microintel" could be used to describe a small amount of intelligence or knowledge.</p>
   It develops software for web development and more.
   Some of its most popular products include Micrography, Microdisk, XOX Game, Result portal, Cie Calculator... </p>
   <p>Microintel was founded in 2023 by Microintel team. </p>
   <p>Microintel's products are used by number of people around the world, from creative professionals to students to everyday users. The company's software has been used to create some of the most iconic documents in history, including the MicroDisk & MicroGraphy and more.</p>
+  </center>
   </div>`;
   let drm = `<div style="margin-top:30px;width: 95%;padding:2%;background-color: transparent;border-radius: 20px;font-family:serif;color:white">
   <h2 style="text-align: center;color:white"><u>Asset Of Microintel</u></h2>
@@ -81,7 +104,7 @@ var mi = false;
   <body>
   <div style="display:flex;width:100%">
   <div style="width:80%">
-  <table style="border: hidden;">
+  <table style="border: hidden;" id="devss">
   <tr>
   <th>  
   <div>
@@ -121,7 +144,7 @@ var mi = false;
   <div style=" margin-left:20%;">
   <a href="mailto:microfly2410@gmail.com?body=Hello Microintel support team" style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/gmail.png" style="height: 35px; width: 35px;"></a>
   <br><br><a href="https://instagram.com/micro_intel/" style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/insta.png" style="height: 42px; width: 42px;"></a>
-  <br><br><a href="sms:+919380579439?body=Hello Microintel support team," style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/msg.png" style="height: 35px; width: 35px;"></a>
+  <br><br><a href="sms:+917411481645?body=Hello Microintel support team," style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/msg.png" style="height: 35px; width: 35px;"></a>
   <br><br><a href="https://wa.link/kfitog" style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/WhatsApp.png" style="height: 35px; width: 35px;"></a>
   </div>
   </div>
