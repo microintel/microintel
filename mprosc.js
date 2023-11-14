@@ -53,7 +53,7 @@ window.location.href="https://microintel.github.io/microintel/";
                                  <button class="projects" onclick="mpa()">MicroDisk</button>
                                  </a>
                         <br><br>
-                                 <a href="https://microintel.github.io/xox/Sample/" >
+                                 <a href="https://microintel.github.io/xox/" >
                                  <button class="projects" onclick="mpa()">Tic Tac Toe</button>
                                  </a>
                  </center>
