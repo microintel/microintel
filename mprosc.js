@@ -35,29 +35,60 @@ window.location.href="https://microintel.github.io/microintel/";
   var mi = false;
   let dr = 0;
   let aud = new Audio("click.mp3");
-  let prx =`<div style="margin-top:100px;">
-                  <center>
-                               <a href="https://microintel.github.io/cie/" >
-                               <button class="projects" onclick="mpa()">CIE EVALUATOR</button>
-                               </a>
-                         <br><br>
-                                <a href="https://microintel.github.io/Result/" >
-                                <button class="projects" onclick="mpa()">Diploma Result</button>
-                                </a>
-                         <br><br>
-                                 <a href="https://microintel.github.io/Micrography/" >
-                                 <button class="projects" onclick="mpa()">Micrography</button>
-                                 </a>
-                        <br><br>
-                                 <a href="https://microintel.github.io/Microdisk/" >
-                                 <button class="projects" onclick="mpa()">MicroDisk</button>
-                                 </a>
-                        <br><br>
-                                 <a href="https://microintel.github.io/xox/" >
-                                 <button class="projects" onclick="mpa()">Tic Tac Toe</button>
-                                 </a>
-                 </center>
-            </div>
+  let prx =`
+  <div class="cmc" style="display: inline-block;padding: 20px;margin-top:40px;">
+  <a href="https://microintel.github.io/cie/" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microevaluator.jpg">
+  <center> <p class="infoOfPro">Diploma CIE Book Evaluator</p></center>
+  </div>
+  </a>
+  
+  <a href="https://microintel.github.io/Result/" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microresult.jpg">
+  <center> <p class="infoOfPro" >Dte Result Portal[2022-24]</p></center>
+  </div>
+  </a>
+  
+  <a href="https://microintel.github.io/Micrography/" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/micrography.jpg">
+  <center> <p class="infoOfPro">Convert Your MSG To Another Form</p></center>
+  </div>
+  </a>
+  
+  <a href="https://microintel.github.io/Microdisk/" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microdisk.gif">
+  <center> <p class="infoOfPro">For Downloading Movies,Series..</p></center>
+  </div>
+  </a>
+  
+  <a href="https://microintel.github.io/xox/" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microPlay.png">
+  <center>  <p class="infoOfPro">Simple Game</p></center>
+  </div>
+  </a>
+  
+  
+  <div onclick="alert('This project is still in development and it will launch soon')" class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microTunes.png">
+  <center>  <p class="infoOfPro">Self healing Musics</p></center>
+  </div>
+  
+  <div onclick="alert('This project is still in development and it will launch soon')" class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microLearn.png">
+  <center>  <p class="infoOfPro">Learn Basics Of Programing</p></center>
+  </div>
+  
+  <div onclick="alert('This project is still in development and it will launch soon')" class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microinj.gif">
+  <center>  <p class="infoOfPro">A Simple Web Injection.</p></center>
+  </div>
+  
+  </div>
   
   `;
   function abt() {dr = dr + 1;let aud = new Audio("click.mp3");aud.play();
