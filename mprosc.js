@@ -58,7 +58,7 @@ window.location.href="https://microintel.github.io/microintel/";
   </div>
   </a>
   
-  <a href="https://microintel.github.io/Microdisk/" >
+  <a href="https://nikhil2005858.github.io/microdisk/new12.html" >
   <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microdisk.gif">
   <center> <p class="infoOfPro">For Downloading Movies,Series..</p></center>
