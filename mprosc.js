@@ -50,7 +50,14 @@ window.location.href="https://microintel.github.io/microintel/";
   <center> <p class="infoOfPro" >Dte Result Portal[2022-24]</p></center>
   </div>
   </a>
-  
+
+  <a href="https://microintel.github.io/microbrowser/" >
+    <div class="ccd">
+    <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/IMG_20231118_004250.png">
+    <center>  <p class="infoOfPro">Secured Search Engine</p></center>
+    </div>
+    </a>
+    
   <a href="https://microintel.github.io/Micrography/" >
   <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/micrography.jpg">
@@ -102,11 +109,11 @@ window.location.href="https://microintel.github.io/microintel/";
   </center>
   <center>
   <p>Microintel.Inc is an Multinational computer software company headquartered in , Pandora.</p>
-  <p>The term "microintel" could also be a portmanteau of "micro" and "intel", which refers to intelligence.In this sense, "microintel" could be used to describe a small amount of intelligence or knowledge.</p>
+  <p>The term "microintel" is combination of "micro" and "intel", which refers to intelligence.In this sense, "microintel" could be used to describe a small amount of intelligence or knowledge.</p>
   It develops software for web development and more.
-  Some of its most popular products include Micrography, Microdisk, XOX Game, Result portal, Cie Calculator... </p>
+  Some of its most popular products include Micro Browser, Micrography, Microdisk, XOX Game, Result portal, Cie Calculator... </p>
   <p>Microintel was founded in 2023 by Microintel team. </p>
-  <p>Microintel's products are used by number of people around the world, from creative professionals to students to everyday users. The company's software has been used to create some of the most iconic documents in history, including the MicroDisk & MicroGraphy and more.</p>
+  <p>Microintel's products are used by number of people around the world, from creative professionals to students to everyday users. The company's software has been used to create some of the most iconic documents in history, including the Micro Browser, MicroDisk & MicroGraphy and more.</p>
   </center>
   </div>`;
   let drm = `<div style="margin-top:30px;width: 95%;padding:2%;background-color: transparent;border-radius: 20px;font-family:serif;color:white">
