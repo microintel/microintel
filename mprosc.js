@@ -53,7 +53,7 @@ window.location.href="https://microintel.github.io/microintel/";
 
   <a href="https://microintel.github.io/microbrowser/" >
     <div class="ccd">
-    <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/IMG_20231118_004250.png">
+    <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/mbro.gif">
     <center>  <p class="infoOfPro">Secured Search Engine</p></center>
     </div>
     </a>
