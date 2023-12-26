@@ -128,7 +128,6 @@ window.location.href="https://microintel.github.io/microintel/";
   <p> Mr, Vinay, QA Tester & Distributor of Microintel </p
   <p> Mr, Amith, Ideator, Designer of Microintel</p>
   <p> Mr, Dhanush, Asset of Microintel</p>
-  <p>Mr, Charan ,imaginative Kid of Microintel</p>
   </div>`;
   if (dr == 5) {document.getElementById('par').innerHTML = drm;}
   else {if (mi) {document.getElementById('par').innerHTML = '';}else {document.getElementById('par').innerHTML = abot;}}
@@ -164,7 +163,7 @@ window.location.href="https://microintel.github.io/microintel/";
   <tr>
   <th>
   <div >
-  <img id="i1" src="https://microintel.github.io/Resources/images/babygrrot.jpg" style="border-radius: 50%;" width="150px" height="150px">
+  <img id="i1" src="https://microintel.github.io/Resources/images/tom.jpg" style="border-radius: 50%;" width="150px" height="150px">
   <h3 style="color: white;"> VIGNESH</h3>
   <h4 style="color: white;"> Coder</h4>
   </div>
