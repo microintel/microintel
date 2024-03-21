@@ -5,6 +5,10 @@ font-size:14px;
 display:flex;
 margin:3%;
 }
+body{
+
+  background-color: black;
+}
 .apc{
 height:55px;
 padding:3px 10px;
@@ -37,44 +41,14 @@ padding:3px 10px;
            animation:bc 4s linear infinite;
        }
 
-       @keyframes bc {
-           0% { border-color: rgb(4, 246, 250); }
-           50% { border-color: black; }
-           100% { border-color: rgb(0, 255, 255); }
-       }
-video
-{
-border:2px solid aqua;
-animation:ba 4s linear infinite;
-}
-@keyframes ba{
-0% { border-color: rgb(4, 246, 250); }
-50% { border-color: black; }
-100% { border-color: rgb(0, 255, 255); }
-}
+
+
+
        button:hover{
         background-color:#007477;
-       }
-       .img3{
-        opacity: 1;
-        animation-name: imgani;
-        animation-duration: 4s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-       }
-       @keyframes imgani{
-        0% {opacity: 0.19;}
-    10% {opacity: 0.2;}
-    20% {opacity: 0.4; }
-    30% {opacity: 0.6;}
-    40% {opacity: 0.8;}
-    50% {opacity: 1;}
-    60% {opacity: 0.8;}
-    70% {opacity: 0.6;}
-    80% { opacity: 0.4;}
-    90% { opacity: 0.2; }
-    100% { opacity: 0.19;}
-       }
+}
+
+
        .cntus{
        transition:1s;
        }
@@ -109,7 +83,7 @@ animation:ba 4s linear infinite;
        .lot{
        margin-right:90%;
        height:4vh;
-       width:20vw;
+       width: 90px;
        padding:0;
        color:white;
        transition:0.7;
@@ -149,4 +123,16 @@ animation:ba 4s linear infinite;
     .ccd:hover {
       transform: scale(1.1);
     }
+
+      .visi{
+  background-color: transparent;
+          color:white;
+          margin:0px;
+           border: 2px solid transparent;
+           padding: 10px 20px;
+           border-radius: 5px;
+           height:30px;
+           font-size: 16px;
+           animation:bc 4s linear infinite;
+}            
                   
