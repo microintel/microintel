@@ -80,10 +80,12 @@ window.location.href="https://microintel.github.io/microintel/";
   </a>
 
   
-  <div onclick="alert('This project is still in development and it will launch soon')" class="ccd">
-  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/micro_curl.jpg">
-  <center>  <p class="infoOfPro">URL Compressor</p></center>
+  <a href="https://microintel.github.io/mscan/">
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://giphy.com/gifs/new-fishing-method-y8kA4Y9OntEo8">
+  <center>  <p class="infoOfPro">Fishing</p></center>
   </div>
+  </a>
 
   
   <div onclick="alert('This project is still in development and it will launch soon')" class="ccd">
