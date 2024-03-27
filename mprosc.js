@@ -179,6 +179,7 @@ window.location.href="https://microintel.github.io/microintel/";
   <body>
   <div style="display:flex;width:100%">
   <div style="width:80%">
+  <center>
   <table style="border: hidden;" id="devss">
   <tr>
   <th>  
@@ -213,6 +214,7 @@ window.location.href="https://microintel.github.io/microintel/";
   </th>
   </tr>
   </table>
+  </center>
   </div>
   <div style="width:20%;margin-top:100px">
   <div style=" width:15%; padding:5%; background-color: transparent;  border-radius: 30px; box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);">
