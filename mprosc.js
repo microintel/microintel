@@ -234,7 +234,7 @@ window.location.href="https://microintel.github.io/microintel/";
   <br><br><a href="sms:+917411481645?body=Hello Microintel support team," style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/msg.png" style="height: 35px; width: 35px;"></a>
   <br><br><a href="https://wa.link/kfitog" style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/WhatsApp.png" style="height: 35px; width: 35px;"></a>
 
-  <br><br><a href="https://microintel.github.io/grow/" style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/evolution.webp" style="height: 100px; width: 200px;"></a>
+  <br><br><a href="https://microintel.github.io/grow/" style="color: black;"><img class="cntus" src="https://microintel.github.io/Resources/images/evolim.png" style="height: 35px; width: 35px;"></a>
 
     
   </div>
