@@ -173,7 +173,8 @@ window.location.href="https://microintel.github.io/microintel/";
   <p> Mr, Raghavendra, QA Manager & Distributor of Microintel</p>
   <p> Mr, Vinay, QA Tester & Distributor of Microintel </p
   <p> Mr, Amith, Ideator, Designer of Microintel</p>
-  <p> Mr, Dhanush, Asset of Microintel</p>
+  <p> Mr, Dhanush, tester of Microintel</p>
+  <p> Mr, Pranav, primary investor of Microintel</p>
   </div>`;
   if (dr == 5) {document.getElementById('par').innerHTML = drm;}
   else {if (mi) {document.getElementById('par').innerHTML = '';}else {document.getElementById('par').innerHTML = abot;}}
