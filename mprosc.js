@@ -71,6 +71,15 @@ window.location.href="https://microintel.github.io/microintel/";
   <center> <p class="infoOfPro">For Downloading Movies,Series..</p></center>
   </div>
   </a>
+
+  <a href="https://microintel.github.io/multiverse/" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/multiwan.jpg">
+  <center> <p class="infoOfPro">Multi Version of MicroGraphy</p></center>
+  </div>
+  </a>
+
+  
   
   <a href="https://microintel.github.io/xox/" >
   <div class="ccd">
