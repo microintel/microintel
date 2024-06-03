@@ -75,7 +75,7 @@ window.location.href="https://microintel.github.io/microintel/";
   <a href="https://microintel.github.io/multiverse/" >
   <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/multiwan.jpg">
-  <center> <p class="infoOfPro">Multi Version of MicroGraphy</p></center>
+  <center> <p class="infoOfPro">MultiVersion & Api for MicroGraphy</p></center>
   </div>
   </a>
 
