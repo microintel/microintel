@@ -75,7 +75,7 @@ window.location.href="https://microintel.github.io/microintel/";
   <a href="https://microintel.github.io/multiverse/" >
   <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/multiwan.jpg">
-  <center> <p class="infoOfPro">MultiVersion & Api for MicroGraphy</p></center>
+  <center> <p class="infoOfPro">Api for MicroGraphy</p></center>
   </div>
   </a>
   
@@ -89,7 +89,7 @@ window.location.href="https://microintel.github.io/microintel/";
 <a href="https://microintel.github.io/Resources/file/coding.html" >
   <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/vision.jpg">
-  <center> <p class="infoOfPro">Vision for Wealthy Calculation</p></center>
+  <center> <p class="infoOfPro">Vision for the wealthy who prefer relaxation.</p></center>
   </div>
   </a>
   
