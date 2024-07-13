@@ -78,7 +78,20 @@ window.location.href="https://microintel.github.io/microintel/";
   <center> <p class="infoOfPro">MultiVersion & Api for MicroGraphy</p></center>
   </div>
   </a>
+  
+  <a href="https://microintel.github.io/Resources/file/coding.html" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/falcon.png">
+  <center> <p class="infoOfPro">Conference on Consequences</p></center>
+  </div>
+  </a>
 
+<a href="https://microintel.github.io/Resources/file/coding.html" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/vision.jpg">
+  <center> <p class="infoOfPro">Vision for Wealthy Calculation</p></center>
+  </div>
+  </a>
   
   
   <a href="https://microintel.github.io/xox/" >
