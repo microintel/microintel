@@ -86,7 +86,7 @@ window.location.href="https://microintel.github.io/microintel/";
   </div>
   </a>
 
-<a href="https://microintel.github.io/Resources/file/coding.html" >
+<a href="https://microintel.github.io/vision" >
   <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/vision.jpg">
   <center> <p class="infoOfPro">Vision for the wealthy who prefer relaxation.</p></center>
