@@ -94,7 +94,7 @@ window.location.href="https://microintel.github.io/microintel/";
   </a>
   
   
-  <a href="https://microintel.github.io/xox/" >
+  <a href="https://microintel.github.io/Resources/file/coding.html" >
   <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microPlay.png">
   <center>  <p class="infoOfPro">Simple Game</p></center>
@@ -143,26 +143,32 @@ window.location.href="https://microintel.github.io/microintel/";
   
 <a href="https://microintel.github.io/asky/" >
   <div class="ccd">
-  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/asky.jpg">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/asky%20guardian.jpg">
   <center>  <p class="infoOfPro">ASKY a Json & Api based work</p></center>
   </div>
   </a>
   
-  <div onclick="alert('This project is still in development and it will launch soon')" class="ccd">
+    <a href="https://microintel.github.io/Resources/file/coding.html" >
+  <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/micro_passman.jpg">
   <center>  <p class="infoOfPro">Password Manager</p></center>
   </div>
+  </a>
 
   
-  <div onclick="alert('This project is still in development and it will launch soon')" class="ccd">
+    <a href="https://microintel.github.io/Resources/file/coding.html" >
+  <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microTunes.png">
   <center>  <p class="infoOfPro">Self healing Musics</p></center>
   </div>
+  </a>
   
-  <div onclick="alert('This project is still in development and it will launch soon')" class="ccd">
+    <a href="https://microintel.github.io/Resources/file/coding.html" >
+  <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/microLearn.png">
   <center>  <p class="infoOfPro">Learn Basics Of Programing</p></center>
   </div>
+  </a>
 
   
   </div>
