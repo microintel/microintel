@@ -1,4 +1,4 @@
-MicroIntel
+*MicroIntel*
 
 Microintel.Inc is an Multinational computer software company headquartered in , Pandora.
 
