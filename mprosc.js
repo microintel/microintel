@@ -79,17 +79,34 @@ window.location.href="https://microintel.github.io/microintel/";
   </div>
   </a>
   
-  <a href="https://microintel.github.io/Resources/file/coding.html" >
+
+
+<a href="https://microintel.github.io/vision" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/vision_bro.jpeg">
+  <center> <p class="infoOfPro">Vision for the wealthy who prefer relaxation.</p></center>
+  </div>
+  </a>
+  
+<a href="https://microintel.github.io/Resources/file/coding.html" >
   <div class="ccd">
   <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/falcon.png">
   <center> <p class="infoOfPro">Conference on Consequences</p></center>
   </div>
   </a>
-
-<a href="https://microintel.github.io/vision" >
+  
+<a href="https://microintel.github.io/Resources/file/coding.html" >
   <div class="ccd">
-  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/vision.jpg">
-  <center> <p class="infoOfPro">Vision for the wealthy who prefer relaxation.</p></center>
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/digi_api.png">
+  <center> <p class="infoOfPro">Your Gateway to Seamless Integration with Microintel.</p></center>
+  </div>
+  </a>
+  
+
+<a href="https://microintel.github.io/Resources/file/coding.html" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://microintel.github.io/Resources/images/roadmap1.png">
+  <center> <p class="infoOfPro">RoadMap for developers.</p></center>
   </div>
   </a>
   
