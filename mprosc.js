@@ -109,6 +109,13 @@ window.location.href="https://microintel.github.io/microintel/";
   <center> <p class="infoOfPro">RoadMap for developers.</p></center>
   </div>
   </a>
+
+  <a href="https://microintel.github.io/Resources/file/coding.html" >
+  <div class="ccd">
+  <img id="img" class="pimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkT9wI4EXAsVStI-OuOttdTOcmZKDOqf8r2w&usqp=CAU">
+  <center> <p class="infoOfPro">LATEX A Text Formater & Design.</p></center>
+  </div>
+  </a>
   
   
   <a href="https://microintel.github.io/Resources/file/coding.html" >
