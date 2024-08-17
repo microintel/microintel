@@ -1,0 +1,120 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microintel</title>
+    <link rel="stylesheet" href="commonCss.css">
+    <style type="text/css">
+
+
+button:nth-child(2){
+
+border-bottom:3px solid red;
+font-size:1em;
+}
+.proj {
+padding-top:150px;
+display: flex;
+flex-wrap: wrap;
+justify-content:center;
+align-items:center;
+        }
+.ppp {
+    background-color: white;
+    display: flex;
+    margin: 8px;
+    flex-direction: column;
+    max-width: 300px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     border-radius: 8px;
+        }
+
+  .ppp img {
+            width: 300px;
+            height: 200px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+  }
+
+.ppp p {
+    margin: 0;
+    padding: 5px;
+    text-align:center;
+        }
+
+@media (max-width: 767px) {
+.proj {
+flex-direction: column;
+align-items: center;
+            }
+        }
+
+@media (min-width: 768px) {
+.proj {
+flex-direction: row;
+            }
+         .ul1{
+         
+         justify-content:center;
+         }
+        }
+        
+        
+        @keyframes appear {
+        from {
+        opacity: 0;
+        transform:scale(0.7);
+        
+        }
+        to {
+        opacity: 1;
+        transform:scale(1.0);
+        
+        }
+        }
+        
+        
+        
+   
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg">
+        <br>
+        <div class="ul1">
+            <button id="u1"><a onclick="window.location.href='micropro.html'" target="workspace">Home</a></button>
+            <button  id="u2"><a onclick="window.location.href='projects.html'">Projects</a></button>
+            <button id="u5"><a onclick="window.location.href='news.html'">News</a></button>
+            <button id="u3"><a onclick="window.location.href='contactus.html'">Contact Us</a></button>
+            <button id="u4" ><a onclick="window.location.href='aboutus.html'">About</a></button>
+        </div>
+    </div>
+    <center>
+    <div id="projj" class="proj"></div></center>
+
+    <script>
+        async function myproject() {
+            document.getElementById("projj").style.display = "flex";
+            let fet = await fetch("https://microintel.github.io/microintel/project.json");
+            let xon = await fet.json();
+            let arda = ``;
+            for (let x in xon) {
+                let logo = xon[x]["projectlogo"];
+                let redu = xon[x]["redurl"];
+                let apro = xon[x]["aboutproject"];
+                let sda = `
+                    <div onclick="window.location.href='${redu}'" class="ppp">
+                        <img src="${logo}">
+                        <p>${apro}</p>
+                    </div>
+                `;
+                arda += sda;
+            }
+            document.getElementById('projj').innerHTML = arda;
+        }
+
+        
+        myproject();
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="commonCss.css">
+<style type="text/css">
+
+button:nth-child(4){
+
+border-bottom:3px solid red;
+font-size:1em;
+}
+
+#c1{
+width:96%;
+height:210px;
+
+}
+
+
+
+.ab1:hover{
+    background-color: red;
+
+}
+.ab1{
+    background-color: black; 
+    height: 50px;
+     color: aliceblue;
+     font-size:medium;
+     display:flex;
+     flex-direction:column;
+     justify-content:center;
+}
+.ab2{
+    display: inline-flex;
+    justify-items: center;
+    align-items: center;
+     box-shadow: 3px 5px 8px black;
+}
+
+
+
+
+
+
+        @media (min-width: 768px) {
+        
+        .ul1{
+        
+        justify-content:center;
+        }
+        
+        #c1{
+        width:66%;
+        height:210px;
+        
+        }
+        
+        .ctu1{
+        
+        display:flex;
+        justify-content:center;
+        gap:40px;
+        }
+        }
+        
+        
+        @media (max-width:600px){
+        .ctu1{
+        
+        display:flex;
+        justify-content:space-evenly;
+        }
+        }
+        
+         
+</style>
+    <title>Microintel</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+    <body>
+        <div id="head" class="header">
+        <center>
+        <img id="im" src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg">
+        <br>
+        <div class="ul1">
+            <button id="u1"><a onclick="window.location.href='micropro.html'" target="workspace">Home</a></button>
+            <button  id="u2"><a onclick="window.location.href='projects.html'">Projects</a></button>
+            <button id="u5"><a onclick="window.location.href='news.html'">News</a></button>
+            <button id="u3"><a onclick="window.location.href='contactus.html'">Contact Us</a></button>
+            <button id="u4" ><a onclick="window.location.href='aboutus.html'">About</a></button>
+            
+        </div>
+        </center>
+        </div>
+        <br>
+        <!--
+        <iframe src="home.html" width="300px" height="600px">
+        
+        -->
+        
+      
+        
+        
+        
+        <br>
+        <center>
+        <br>
+        <div id="ctt" class="ct">
+        
+        <br>
+        <div  class="ab2" style="margin: 10px; " >
+        <a>
+        <img src="https://cdn.marvel.com/content/1x/017lok_ons_crd_03.jpg" height="200px" width="150px" alt="">
+        <div class="ab1" ><b>VIGNESH</b></div></a>
+        </div>
+        <div class="ab2" style="margin: 10px; ">
+        <a>
+        <img src="https://cdn.marvel.com/content/1x/004tho_ons_crd_04.jpg" height="200px" width="150px" alt="">
+        <div class="ab1"><b>NIKHIL</b></div></a>
+        </div>
+        <div class="ab2" style="margin: 10px; ">
+        <a>
+        <img src="https://media.assettype.com/filmcompanion%2F2024-01%2Fb5e444fe-e851-406b-a454-c228063548fe%2FChristian_Bale_American_Psycho.png" height="200px" width="150px" alt="">
+        <div class="ab1" ><b>DHANUSH</b></div></a>
+        </div>
+        <div class="ab2" style="margin: 10px; ">
+        <a><img src="https://i.pinimg.com/736x/b5/1e/e6/b51ee666503f24461bf63233d2dcc82b.jpg" height="200px" width="150px" alt="">
+        <div class="ab1" ><b>AMITH</b></div></a>
+        
+        </div>
+        <br><br>
+        <div  class="ctu1">
+        <a href="mailto:microfly2410@gmail.com?body=Hello Microintel support team" style="color: black;"><img class="cntus" src="https://raw.githubusercontent.com/microintel/endgram/main/photo/gmail%20logo.png" style="height: 35px; width: 35px;"></a>
+        <a href="https://instagram.com/micro_intel/" style="color: black;"><img class="cntus" src="https://raw.githubusercontent.com/microintel/endgram/main/photo/instagram%20logo.png" style="height: 42px; width: 42px;"></a>
+        <a href="https://github.com/microintel/" style="color: black;"><img class="cntus" src="https://raw.githubusercontent.com/microintel/endgram/main/photo/github%20black%20logo.png" style="height: 35px; width: 35px;"></a>
+        <a href="https://x.com/micro_intel/" style="color: black;"><img class="cntus" src="https://raw.githubusercontent.com/microintel/endgram/main/photo/twitter%20x%20logo%20black.png" style="height: 35px; width: 35px;"></a>
+        </div>
+        
+        </div>
+
+   <script>
+   function xx(){
+   let c=document.getElementById('head').offsetHeight;
+  
+   c=c-10;
+   c=c+'px';
+  document.getElementById('ctt').style.paddingTop=c;
+   }
+   
+   xx();
+   </script>
+    </body>
+</html>

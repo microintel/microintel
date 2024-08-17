@@ -1,0 +1,204 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microintel</title>
+    <link rel="stylesheet" href="commonCss.css">
+<style type="text/css">
+.ul1 button:nth-child(1){
+
+border-bottom:3px solid red;
+font-size:1em;
+}
+
+.viddiv{
+
+padding-top:21vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:20px;
+}
+.abtvid{
+color:black;
+}
+.vidcon{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:10px;
+
+}
+
+.vidcon video{
+width:86%;
+}
+
+.vidbtn{
+display:flex;
+justify-content:space-around;
+align-items:center;
+gap:30px;
+}
+
+.vidhtn button{
+border-bottom:1px solid black;
+transition:1s;
+}
+
+button:hover{
+border-bottom:3px solid red;
+transition:0.7s;
+transform:scale(1.14);
+}
+
+.qts{
+
+padding:10px;
+}
+
+@media (min-width: 768px) {
+        
+        .ul1{
+        
+        justify-content:center;
+        }
+        
+        .vidcon video{
+        width:70%;
+        height:50%;
+        }
+        
+        
+        }
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+        <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg">
+        <br>
+        <div class="ul1">
+            <button id="u1"><a onclick="window.location.href='micropro.html'" target="workspace">Home</a></button>
+            <button  id="u2"><a onclick="window.location.href='projects.html'">Projects</a></button>
+            <button id="u5"><a onclick="window.location.href='news.html'">News</a></button>
+            <button id="u3"><a onclick="window.location.href='contactus.html'">Contact Us</a></button>
+            <button id="u4" ><a onclick="window.location.href='aboutus.html'">About</a></button>
+        </div>
+    </div>
+
+<div class="viddiv">
+
+<center>
+<div class="vidcon">
+
+<p class="abtvid"><b>Microdisk powered by Microintel</b></p>
+
+<div class="vidbtn">
+<button id="b1" onclick="vidply('p1')" title="use headphone for better experince">Play MicroDisk</button>
+<button>View Microdisk</button>
+</div>
+<video id="vid1" onclick="vidply(this,'y')" class="v1" poster="https://w0.peakpx.com/wallpaper/127/1000/HD-wallpaper-avengers-poster-hero-endgame-marvel-film-poster-art.jpg" preload="none">
+  <source src="https://microintel.github.io/endgram/videos/mdisk.mp4">
+</video>
+
+</div>
+<br>
+<hr>
+
+<div class="vidcon">
+
+<p> <b>Gallery of Microintel</b></p>
+
+ <div class="vidbtn">
+ <button id="b2" onclick="vidply('p2')" title="use headphone for better experince">Play gallery</button>
+ <button onclick="window.location.href='projects.html'">View projects</button>
+ </div>
+ 
+ <video onclick="vidply(this,'y')" id="vid2" class="v1" poster="https://raw.githubusercontent.com/microintel/endgram/main/photo/endgram.png"  preload="none">
+ <source src="https://microintel.github.io/endgram/videos/mi_peoplearestrange.mp4">
+ </video>
+ </div>
+ <br>
+ <hr>
+</center>
+
+<div class="qts">
+<h2>Quoutes</h2>
+<blockquote style="text-transform: uppercase;font-family:monospace;">
+<h4>
+<b>if you don't believe you are the best, then you will never achive all that you are capable of.
+
+<br><br>
+You Could Not Live With Your Own Failure.
+
+<br><br>
+With great power comes great responsibility.
+
+<br><br>
+Everything you see exists together in a delicate balance. As king, you need to understand that balance and respect all the creatures, from the crawling ant to the leaping antelope.
+</b>
+</h4>
+</div>
+</blockquote>
+
+</div>
+
+
+<script>
+
+function vidply(x,y){
+
+
+
+let vi1=document.getElementById('vid1');
+let vi2=document.getElementById('vid2');
+
+if(x=="p1"){
+if(vi1.paused){
+vi1.play();
+document.getElementById('b1').innerHTML="Pause Micridisk";
+document.getElementById('b2').innerHTML="Play gallery";
+onclick="vidply(this,'y')"
+vi2.pause();
+
+}
+else
+{
+document.getElementById('b1').innerHTML="Play Microdisk";
+vi1.pause();
+}
+
+}
+
+if(x=="p2"){
+if(vi2.paused){
+vi2.play();
+vi1.pause();
+document.getElementById('b2').innerHTML="Pause gallery";
+document.getElementById('b1').innerHTML="Play Microdisk";
+}
+else
+{
+vi2.pause();
+document.getElementById('b2').innerHTML="Play gallery";
+}
+
+}
+
+
+if(y=='y'){
+
+x.currentTime=0;
+}
+
+
+
+
+}
+
+</script>
+</body>
+</html>
