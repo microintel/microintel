@@ -98,7 +98,7 @@ padding:10px;
 
 <div class="vidbtn">
 <button id="b1" onclick="vidply('p1')" title="use headphone for better experince">Play MicroDisk</button>
-<button>View Microdisk</button>
+<button onclick="location.href='https://microintel.github.io/Microdisk/'">View Microdisk</button>
 </div>
 <video id="vid1" onclick="vidply(this,'y')" class="v1" poster="https://w0.peakpx.com/wallpaper/127/1000/HD-wallpaper-avengers-poster-hero-endgame-marvel-film-poster-art.jpg" preload="none">
   <source src="https://microintel.github.io/endgram/videos/mdisk.mp4">
@@ -159,7 +159,7 @@ let vi2=document.getElementById('vid2');
 if(x=="p1"){
 if(vi1.paused){
 vi1.play();
-document.getElementById('b1').innerHTML="Pause Micridisk";
+document.getElementById('b1').innerHTML="Pause Microdisk";
 document.getElementById('b2').innerHTML="Play gallery";
 onclick="vidply(this,'y')"
 vi2.pause();
