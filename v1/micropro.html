@@ -55,9 +55,34 @@ transform:scale(1.14);
 }
 
 .qts{
-
+position:relative;
 padding:10px;
 }
+
+#sc{
+display:none;
+position:absolute;
+top:50%;
+z-index:10;
+width:100%;
+margin:0px;
+transform: translate(-50px, -50px);
+}
+
+#sc #bb{
+
+opacity:0.5;
+}
+
+@keyframes blink {
+  0%, 100% {opacity: 0.8;}
+  50% {opacity: 1;}
+}
+#sc {
+  animation: blink 1.6s linear infinite;
+}
+
+
 
 @media (min-width: 768px) {
         
@@ -77,7 +102,7 @@ padding:10px;
 
 </style>
 </head>
-<body>
+<body id="bb" onmouseover="scamP()">
 
 <div class="header">
         <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg">
@@ -154,6 +179,13 @@ Ideas don't come out fully formed, they only become clear as you work on them. Y
 
 <summary >More</summary>
 <h4 id="h"><b>
+
+<img id="sc" onmouseover="scamP()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVf7lr6T6D-riX6FzhugsWj30jtVDlc36-XQ&usqp=CAU">
+<a onclick="scam()" style="text-decoration:none;color:black;">
+Keep Working On Ideas.</a>
+<audio id="scaMA" src="https://microintel.github.io/endgram/audio/scam-1992-bgm.mp3"></audio>
+
+<br><br>
 <a style="text-decoration:none;color:black;" href="https://www.google.com/search?client=ms-android-vivo-rvo2&sca_esv=689fca6f77b92f6d&sca_upv=1&sxsrf=ADLYWIIoIM26pVeigXEXB6JHWxsxEUczqQ:1723959509471&q=Everything+you+see+exists+together+in+a+delicate+balance.&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J603JUkR9Y5suk8yuy50qOYMMWTNCTu57lKPsZpPcfqPInr9nYx0o93U7Rc7eYLjY3hjgLcr9IOyKfOh9VkaTJQRv7J6SNC0oacXerpesAGtkHcC4rlyYj2W7QetzJxHvglfUJ1iZCXxQFDnQ7yEEI4hz8I0lDrMP-rL1UkUeOOfbPwymg&sa=X&ved=2ahUKEwjv3KzR6f2HAxXbwzgGHfvPD38QtKgLegQIERAB&biw=360&bih=674&dpr=2#imgrc=bWuvMkBGVMPX3M&imgdii=_qB8XbvsbgdWFM" >
 Everything you see exists together in a delicate balance. As king, you need to understand that balance and respect all the creatures, from the crawling ant to the leaping antelope.</a>
 
@@ -174,6 +206,21 @@ I am Groot!.</a>
 
 
 <script>
+
+
+function scamP(){
+document.getElementById('sc').style.display="none";
+document.body.style.backgroundColor="white";
+document.getElementById('scaMA').pause();
+}
+
+function scam(){
+document.getElementById('sc').style.display="block";
+document.body.style.backgroundColor="black";
+document.getElementById('scaMA').currentTime=0;
+document.getElementById('scaMA').play();
+}
+
 
 function vidply(x,y){
 
