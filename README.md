@@ -1,6 +1,6 @@
 
 ## MICROINTEL
-[![microintel](https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg)](https://youtu.be/UhVjp48U2Oc?si=0EFyCEGxHRL9yAQA)
+[![microintel](https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg)](https://microintel.github.io/microintel/v1/micropro.html)
 
 
 ## About MicroIntel
@@ -24,4 +24,4 @@ Microintel's products are used by people around the world, from **creative profe
 - **Mr. Dhanush**, Tester of Microintel
 - **Mr. Pranav**, Primary Investor & Designer of Microintel
 
-For more information, Google it [microintel](https://microintel.github.io/microintel).
+Google it [microintel](https://microintel.github.io/microintel).
