@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="commonCss.css">
+<link rel="stylesheet" href="https://microintel.github.io/microintel/v1/commonCss.css">
 <style type="text/css">
 
 button:nth-child(4){
@@ -38,7 +38,7 @@ height:210px;
 
 .ab1{
             position: relative;
-          
+          font-weight:bold;
         }
 
      .ab1::after{
@@ -56,11 +56,64 @@ height:210px;
      background-color:white;
      
      }
+     
      .ab1:hover{
      
      background-color:red;
      }
-     
+
+        .ab1:hover::after {
+    
+            top: 100%;
+            border:2px solid transparency;
+        }
+        
+        .ab1:hover{
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        }
+
+#nikil:hover::before{
+            content: "CODER";
+            position: absolute;
+            color:black;
+           font-weight:bold;
+        }
+        
+        #vignesh:hover::before{
+        content: "CODER";
+        position: absolute;
+        color:black;
+        
+        font-weight:bold;
+        }
+        
+        #dheenu:hover::before{
+        content: "TESTER";
+        position: absolute;
+        color:black;
+        font-weight:bold;
+        }
+        
+        #amith:hover::before{
+        content: "DESIGN";
+        position: absolute;
+        color:black;
+        font-weight:bold;
+        }
+        
+        
+        #pranu:hover::before{
+        content: "SID";
+        position: absolute;
+        color:black;
+        font-weight:bold;
+        }
+        
+        
+        
 
 
         @media (min-width: 768px) {
@@ -133,29 +186,29 @@ height:210px;
         <div  class="ab2" style="margin: 10px; " >
         <a>
         <img onclick="porn('r')" src="https://raw.githubusercontent.com/microintel/endgram/main/photo/loki_trick.jpeg" height="200px" width="150px" alt="">
-        <div class="ab1" ><b>VIGNESH</b></div></a>
+        <div class="ab1" id="vignesh">VIGNESH</div></a>
         </div>
         <div  class="ab2" style="margin: 10px; ">
         <a>
         <img src="https://cdn.marvel.com/content/1x/004tho_ons_crd_04.jpg" height="200px" width="150px" alt="">
-        <div class="ab1"><b>NIKHIL</b></div></a>
+        <div class="ab1" id="nikil">NIKHIL</div></a>
         </div>
         <div class="ab2" style="margin: 10px; ">
         <a>
         <img src="https://media.assettype.com/filmcompanion%2F2024-01%2Fb5e444fe-e851-406b-a454-c228063548fe%2FChristian_Bale_American_Psycho.png" height="200px" width="150px" alt="">
-        <div class="ab1" ><b>DHANUSH</b></div></a>
+        <div class="ab1" id="dheenu">DHANUSH</div></a>
         </div>
         
         
         
         <div class="ab2" style="margin: 10px; ">
         <a><img src="https://i.pinimg.com/736x/b5/1e/e6/b51ee666503f24461bf63233d2dcc82b.jpg" height="200px" width="150px" alt="">
-        <div class="ab1" ><b>AMITH</b></div></a>
+        <div class="ab1" id="amith">AMITH</div></a>
         
         </div>
         <div id="pranu" class="ab2" style="margin: 1px; width:150px;height:250px;">
-        <a href="https://www.instagram.com/_pranav_shaiva?igsh=bnZkcDZqbHV6N2t0"><img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/Warren_buffet-min.jpg" height="200px" width="150px" alt="">
-        <div class="ab1" ><b>PRANAV</b></div></a>
+        <a ><img onclick="location.href='https://www.instagram.com/_pranav_shaiva?igsh=bnZkcDZqbHV6N2t0'" src="https://raw.githubusercontent.com/microintel/endgram/main/photo/Warren_buffet-min.jpg" height="200px" width="150px" alt="">
+        <div class="ab1" id="pranu">PRANAV</div><a>
         
         </div>
         
@@ -203,4 +256,4 @@ height:210px;
    xx();
    </script>
     </body>
-</html>
+            </html>
