@@ -1,6 +1,6 @@
 
 ## MICROINTEL
-[![microintel](https://raw.githubusercontent.com/microintel/endgram/main/photo/mi%20microintel%20marvel%20logo.jpg)](https://youtu.be/UhVjp48U2Oc?si=0EFyCEGxHRL9yAQA)
+[![microintel](https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg)](https://youtu.be/UhVjp48U2Oc?si=0EFyCEGxHRL9yAQA)
 
 
 ## About MicroIntel
