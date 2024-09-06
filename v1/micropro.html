@@ -102,6 +102,26 @@ opacity:0.5;
         }
 
 
+.quts{
+display:none;
+padding:15px;
+background-color:#FAF6F9;
+border:1px solid grey;
+border-radius:7px;
+}
+
+.bquts{
+padding:8px;
+background-color:black;
+border:1px solid black;
+color:white;
+box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+border-radius:5px;
+
+}
+
+
+
 </style>
 </head>
 <body id="bb" onmouseover="scamP()">
@@ -201,6 +221,9 @@ I am Groot!.</a>
 </b>
 </h4>
 
+
+<h4 class="quts"></h4>
+<span class="bquts">Another Quote</span>
 </details>
 </div>
 </blockquote>
@@ -211,7 +234,7 @@ I am Groot!.</a>
     
 <script>
 
-
+let cc;
 function scamP(){
 document.getElementById('sc').style.display="none";
 document.body.style.backgroundColor="white";
@@ -275,6 +298,28 @@ x.currentTime=0;
 
 
 }
+
+
+function disq(){
+
+document.querySelector(".quts").innerHTML="<a style='color:black;'>"+cc[0]+"</a>";
+}
+
+document.querySelector(".bquts").addEventListener("click",async ()=>{
+document.querySelector(".quts").style.display="block";
+document.querySelector(".quts").innerHTML="<img id='lim' width='25px' src='https://raw.githubusercontent.com/microintel/endgram/main/photo/loading-waiting.gif'>";
+let f= await fetch("https://quotes-api-self.vercel.app/quote");
+let fc= await f.json();
+let fcq= await fc["quote"];
+let fca= await fc["author"];
+//qf=fcq;
+cc=[fcq,fca];
+let ra=parseInt(String(Math.floor(Math.random()*3)+"000"));
+//alert(typeof(ra));
+//setTimeout(disq(fcq),5000);
+setTimeout(disq,ra);
+
+});
 
 </script>
 </body>
