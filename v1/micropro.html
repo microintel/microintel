@@ -120,77 +120,6 @@ border-radius:5px;
 
 }
 
-.prcnt {
-
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  width: 250px;
-  z-index: 5;
-  left: 50%;
-  top: 50%;
-  justify-content: center;
-  align-items: center;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.2);
-  background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-  backdrop-filter: blur(10px); 
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-radius: 10px;
-  border: 0.6px solid black;
-  display:none;
-}
-
-.prcnt{
-    animation: fly 0.3s;
-}
-@keyframes fly {
-    0%{
-        transform: translate(-50%,-50%);opacity: .50;
-    }
-    100%{
-        transform: translate(-50%,-50%);opacity:1;
-    }
-}
-
-.prcnt input, .prcnt button, .prcnt p ,.prcnt select{
-  margin: 7px;
-  padding: 8px;
-  width: 80%;
-  color: black;
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.prcnt button {
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: background-color 0.3s ease;
-}
-
-.prcnt button:hover {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-
-
-
-.percan{
-display:flex;
-flex-direction:row;
-width:100%;
-border-bottom:1px solid black;
-justify-content:space-between;
-align-items:center;
-}
-
-.percan span{
-
-padding:5px;
-}
 
 
     
@@ -199,26 +128,10 @@ padding:5px;
 </head>
 <body id="bb" onmouseover="scamP()">
 
-<div id="prcntt" class="prcnt">
-<div class="percan">
-<span>Percentage</span><span onclick="qqq()"><i class="material-icons" style="font-size:28px;color:black">cancel</i></span>
-</div>
-<center>
-  <select onchange="inpast(this.value)" id="selmed">
-     <option value="s3">Methods</option>
-     <option value="s1">what is 50% of 100</option>
-     <option value="s2">50 what is percent of 100</option>
-  </select>
-  <input id="pv1">
-  <input id="pv2">
-  <button onclick="percal()">Click me</button>
- 
-  <p id="pout">OutPut Will Display Here</p>
-</center>
-</div>
 
 
-<div ondblclick="ppp()" class="header">
+
+<div class="header">
         <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg">
         <br>
         <div class="ul1">
@@ -300,8 +213,7 @@ Ideas don't come out fully formed, they only become clear as you work on them. Y
 risk hai toh ishq hai.</a>
 <audio id="scaMA" src="https://microintel.github.io/endgram/audio/scam-1992-bgm.mp3"></audio>
 
-<br><br>
-<a style="text-decoration:none;color:black;" href="https://www.google.com/search?client=ms-android-vivo-rvo2&sca_esv=689fca6f77b92f6d&sca_upv=1&sxsrf=ADLYWIIoIM26pVeigXEXB6JHWxsxEUczqQ:1723959509471&q=Everything+you+see+exists+together+in+a+delicate+balance.&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J603JUkR9Y5suk8yuy50qOYMMWTNCTu57lKPsZpPcfqPInr9nYx0o93U7Rc7eYLjY3hjgLcr9IOyKfOh9VkaTJQRv7J6SNC0oacXerpesAGtkHcC4rlyYj2W7QetzJxHvglfUJ1iZCXxQFDnQ7yEEI4hz8I0lDrMP-rL1UkUeOOfbPwymg&sa=X&ved=2ahUKEwjv3KzR6f2HAxXbwzgGHfvPD38QtKgLegQIERAB&biw=360&bih=674&dpr=2#imgrc=bWuvMkBGVMPX3M&imgdii=_qB8XbvsbgdWFM" >
+<br><a style="text-decoration:none;color:black;" href="https://www.google.com/search?client=ms-android-vivo-rvo2&sca_esv=689fca6f77b92f6d&sca_upv=1&sxsrf=ADLYWIIoIM26pVeigXEXB6JHWxsxEUczqQ:1723959509471&q=Everything+you+see+exists+together+in+a+delicate+balance.&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J603JUkR9Y5suk8yuy50qOYMMWTNCTu57lKPsZpPcfqPInr9nYx0o93U7Rc7eYLjY3hjgLcr9IOyKfOh9VkaTJQRv7J6SNC0oacXerpesAGtkHcC4rlyYj2W7QetzJxHvglfUJ1iZCXxQFDnQ7yEEI4hz8I0lDrMP-rL1UkUeOOfbPwymg&sa=X&ved=2ahUKEwjv3KzR6f2HAxXbwzgGHfvPD38QtKgLegQIERAB&biw=360&bih=674&dpr=2#imgrc=bWuvMkBGVMPX3M&imgdii=_qB8XbvsbgdWFM" >
 Everything you see exists together in a delicate balance. As king, you need to understand that balance and respect all the creatures, from the crawling ant to the leaping antelope.</a>
 
 <br><br>
@@ -325,75 +237,6 @@ I am Groot!.</a>
 <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/wave-loading.svg" width="100%">
     
 <script>
-
-    function inpast(x){
-if(x=="s1"){
-let ggg=Math.floor(Math.random() * 100);
-let gg=Math.floor(Math.random() * 8000);
-
-document.getElementById("pv1").placeholder=ggg+" %";
-document.getElementById("pv2").placeholder=gg+" rs";
-}
-
-if(x=="s2"){
-let ggg=Math.floor(Math.random() * 100);
-let gg=Math.floor(Math.random() * 8000);
-
-document.getElementById("pv1").placeholder=ggg;
-document.getElementById("pv2").placeholder=gg+" rs";
-}
-
-}
-
-function ppp(){
-document.getElementById("prcntt").style.display="block";
-}
-
-function qqq(){
-document.getElementById("prcntt").style.display="none";
-}
-
-
-function percal(){
-
-let selm=document.getElementById("selmed").value;
-let p1=parseInt(document.getElementById("pv1").value);
-let p2=parseInt(document.getElementById("pv2").value);
-
-
-if(selm=="s1"){
-if(p1>100){
-document.getElementById("pout").style.backgroundColor="red";
-document.getElementById("pout").innerHTML="please enter percent less than 100 or equalbto 100";
-}
-else{
-let perc=p1/100*p2;
-perc=perc.toFixed(2);
-document.getElementById("pout").style.backgroundColor="transparent";
-document.getElementById("pout").innerHTML=perc;
-}
-}
-
-if(selm=="s2"){
-if(p1<=p2){
-let perc1=p1/p2*100;
-
-perc1=perc1.toFixed(2);
-document.getElementById("pout").style.backgroundColor="transparent";
-document.getElementById("pout").innerHTML=perc1+" %";
-}
-else{
-document.getElementById("pout").style.backgroundColor="red";
-document.getElementById("pout").innerHTML="Please Enter First Value less than or equal to second Value";
-}
-
-}
-
-if(selm=="s3"){
-alert("please select the methods.");
-}
-
-}
 
 
     
