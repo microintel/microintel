@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>mi-about-us</title>
+<script type="text/javascript" src="abtusltr.js"></script>
+<link rel="stylesheet" href="commonCss.css">
+<style type="text/css">
+
+button:nth-child(5){
+
+border-bottom:3px solid red;
+font-size:1em;
+}
+
+
+.aboutMI p,.assestMI p{
+padding:8px;
+text-align:left;
+margin:5px;
+}
+.abas{
+
+margin-left:15px;
+margin-right:15px;
+margin-top:4px;
+padding:5px;
+padding-top:34%;
+}
+
+.aboutMI, .assestMI {
+  background:white;
+border-radius: 15px;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) inset;
+  margin-bottom: 40px;
+   padding: 10px;
+   overflow: hidden;
+        }
+        .aboutMI h2, .assestMI h2 {
+  font-size: 2.5em;
+ color: #333;
+margin-bottom: 20px;
+letter-spacing: 1px;
+        }
+        .aboutMI p {
+font-size: 1.1em;
+line-height: 1.8;
+color:grey;
+margin: 10px 0;
+        }
+        .assestMI p {
+   font-size: 1.1em;
+color: grey;
+ margin: 5px 0;
+        }
+            .aboutMI h2, .assestMI h2 {
+        font-size: 2em;
+            }
+            .assestMI img {
+         width: 100px;
+                height: 150px;
+            }
+    .aboutMI p, .assestMI p {
+            font-size: 0.95em;
+            }
+            
+            
+        
+        @media (min-width: 768px) {
+        .ul1{
+        
+        justify-content:center;
+        }
+        .abas{
+        padding-top:14%;
+        display:flex;
+        flex-direction:row;
+        gap:20px;
+        
+        }
+        
+        .aboutMI, .assestMI{
+        
+        width:50vw;
+        }
+        }
+</style>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+    <body>
+        <div class="header">
+        <center>
+        <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg">
+        <br>
+        <div class="ul1">
+            <button id="u1"><a onclick="window.location.href='micropro.html'" target="workspace">Home</a></button>
+            <button  id="u2"><a onclick="window.location.href='projects.html'">Projects</a></button>
+            <button id="u5"><a onclick="window.location.href='news.html'">News</a></button>
+            <button id="u3"><a onclick="window.location.href='contactus.html'">Contact Us</a></button>
+            <button id="u4" ><a id="u44" onclick="window.location.href='aboutus.html'">About</a></button>
+            
+        </div>
+        </center>
+        </div>
+        <br>
+        <br>
+        <center>
+        <div id="work1">
+        
+        </div>
+        
+        
+       
+       
+
+   <script>
+   
+
+   function about(){
+   document.getElementById("work1").style.display="block";
+   document.getElementById('work1').innerHTML=`
+   <div class="abas">
+   <div class="aboutMI">
+   <center><h2>About MicroIntel</h2></center>
+   <center>
+   <p>Microintel is an Multinational computer software company headquartered in , Pandora. & founded in 2023 by Microintel team. </p>
+   <p>The term "microintel" is combination of "micro" and "intel", which refers to intelligence. In this sense, "microintel" could be used to describe a small amount of intelligence or knowledge.</p>
+   <p>It develops software for web development and more.
+   Some of its most popular products include Vision, Result Portal, Multiverse,Microdisk....</p>
+   
+   <p>Microintel's products are used by number of people around the world, from creative professionals to students to everyday users. The company's software has been used to create some of the most iconic documents in history, including the Dtech CMNR Result-Portal , Vision and more.</p>
+   </center>
+   </div>
+   <div class="assestMI">
+   <center><h2>Assets Of Microintel</h2></center>
+   <center><p> Ms, Darling, CEO of the Microintel</p>
+   <p> Mr, Nikil, BM-Founder-Coder-Shareholder of Microintel</p>
+   <p> Mr, Vignesh, Founder-Coder-Shareholder of Microintel</p>
+   <p> Mr, Raghavendra, QA Manager & Distributor of Microintel</p>
+   <p> Mr, Vinay, QA Tester & Distributor of Microintel</p>
+   <p> Mr, Amith, Ideator, Designer of Microintel</p>
+   <p>Mr, Dhanush, tester of Microintel</p>
+   <p>Mr, Pranav, primary investor & Designer of Microintel</p>
+   </center>
+   </div>
+   </div>`;
+   }
+   
+   about();
+   </script>
+    </body>
+</html>

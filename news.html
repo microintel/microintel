@@ -1,0 +1,311 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script type="text/javascript" src="newsltr.js"></script>
+<link rel="stylesheet" href="commonCss.css">
+<style type="text/css">
+
+body {
+margin: 0;
+        }
+.header {
+position:fixed;
+width:100%;
+  padding: 10px;
+  padding-bottom:0px;
+  background-color: black;
+  text-align: center;
+  z-index:1;
+        }
+        .header img{
+        width:200px;
+        
+        }
+
+.ul1 {
+            display: flex;
+            color: white;
+            list-style-type: none;
+            justify-content: space-between;
+            margin: 0px;
+            padding-left: 10px;
+            padding-right:15px;
+            pading-top:10px;
+            padding-bottom:0px;
+        }
+
+
+a {
+  text-decoration: none;
+ color: white;
+        }
+
+button {
+            color: white;
+            margin:0px;
+            font-size:0.8em;
+            background-color: black;
+            padding:10px 10px 10px 10px;
+            border:0px;
+            
+        }
+        
+
+
+
+button:nth-child(3){
+
+border-bottom:3px solid red;
+font-size:1em;
+}
+
+    .par {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  min-width:300px;
+    }
+    .child {
+   background-color: #FFFFFF;
+   padding: 20px;
+   width:90%;
+   border-radius: 5px;
+  box-shadow: 0 4px 8px 0px grey;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   margin-right:10vw;
+    }
+    .child img {
+        width: 100%;
+        max-width: 350px;
+        max-height:180px;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+.child font:nth-child(1) {
+        font-size: 24px;
+        font-weight: bold;
+    }
+.child font:nth-child(2) {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    .date {
+        color: #888888;
+        margin-bottom: 10px;
+    }
+    .pp{
+    height:20px;
+    }
+    
+    a{
+    text-decoration:none;
+    }
+@media (min-width:700px){
+.par{
+max-width:630px;
+min-width:630px;
+}
+
+
+.child img {
+        width: 100%;
+        max-width: 590px;
+        max-height:240px;
+        }
+        .child{
+        
+        max-width:100%;
+        }
+        input{
+        width:78%;
+        padding:8px;
+        border:1px solid black;
+        }
+
+}
+
+.opp{
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+gap:10px;
+}
+.opp div{
+display:flex;
+justify-content:space-around;
+
+}
+.opp div button{
+padding:8px;
+background-color:white;
+color:black;
+border:1px solid black;
+}
+
+input{
+width:65%;
+padding:8px;
+border:1px solid black;
+}
+.inb{
+gap:10px;
+}
+.inb button{
+width:20%;
+background-color:white;
+border:1px solid black;
+}
+
+#load {
+
+  width: 48px;
+    height: 48px;
+    border: 5px solid white;
+    border-bottom-color:black;
+    border-radius:360px;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rot 0.9s infinite;
+    display:none;
+    }
+
+    @keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+    
+    
+    
+    @media (min-width: 768px) {
+    .child{
+    margin-right:15vw;
+    }
+    .ul1{
+    
+    justify-content:center;
+    }
+    
+    #c1{
+    width:66%;
+    height:210px;
+    
+    }
+    
+    #work1{
+    
+    padding-top:14%;
+    
+    }
+    }
+    
+    
+</style>
+</head>
+<body>
+
+<div id="head" class="header">
+        <center>
+        <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg">
+        <br>
+        <div class="ul1">
+            <button id="u1"><a onclick="window.location.href='micropro.html'" target="workspace">Home</a></button>
+            <button  id="u2"><a onclick="window.location.href='projects.html'">Projects</a></button>
+            <button id="u5"><a id="u55" onclick="window.location.href='news.html'">News</a></button>
+            <button id="u3"><a onclick="window.location.href='contactus.html'">Contact Us</a></button>
+            <button id="u4" ><a onclick="window.location.href='aboutus.html'">About</a></button>
+            
+        </div>
+        </center>
+        </div>
+
+<br><br>
+<div id="op" class="opp">
+<div>
+<button onclick="xx('marvel')">Marvel</button>
+<button onclick="xx('stock market')">Stocks</button>
+<button onclick="xx('python')">Python</button>
+<button onclick="xx('avatar the way of water')">Avatar</button>
+</div>
+<div class="inb">
+
+<input id="inp" placeholder="what about news do u want to read.">
+
+
+
+<button onclick="xxx('inp')">Search</button>
+</div><br>
+<div>
+<br><br><br>
+<center>
+<span id="load"></span>
+<div id="pare" class="par">
+
+
+</div>
+</center>
+
+
+<script type="text/javascript">
+function xxxx(){
+let c=document.getElementById('head').offsetHeight;
+   c=c+50;
+   c=c+'px';
+  document.getElementById('op').style.paddingTop=c;
+
+}
+xxxx();
+async function xx(qq) {
+document.getElementById('load').style.display="block";
+document.getElementById('pare').innerHTML="";
+let wq = qq;
+let str = `https://newsdata.io/api/1/latest?apikey=pub_50746bae58827b7fc68ea59748a56c0b1cecb&q=${wq}`;
+let f = await fetch(str);
+let c = await f.json();
+let rl = c["results"];
+
+for (let x of rl) {
+let nt = x["title"];
+let nl = x["link"];
+let nd = x["description"];
+let npd = x["pubDate"];
+let nimg = x["image_url"];
+let nll = x["language"];
+document.getElementById('load').style.display="none";
+if (nll === "english") {
+
+            let newe = document.createElement("div");
+            newe.loading = "lazy";
+            newe.className = "child";
+            newe.innerHTML = `
+            <font>${nt}</font>
+            <img src="${nimg}" alt="${nt}" loading="lazy">
+            <font>${nd}</font><br>
+            <font class="date">${npd}</font>
+            <font style="color:red;"><a style="color:blue;" href="${nl}" target="_blank">Read More...</a></font>
+            `;
+document.getElementById('pare').appendChild(newe);
+ }
+ 
+ 
+ }
+}
+
+
+function xxx(x) {
+    xx(document.getElementById(x).value);
+}
+
+</script>
+</body>
+</html>
