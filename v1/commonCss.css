@@ -1,0 +1,46 @@
+body {
+margin: 0;
+        background-color:#FFFFFF;
+        }
+.header {
+position:fixed;
+width:100%;
+  padding: 10px;
+  padding-bottom:0px;
+  background-color: black;
+  text-align: center;
+  z-index:1;
+        }
+        .header img{
+        width:200px;
+        
+        }
+
+.ul1 {
+            display: flex;
+            color: white;
+            list-style-type: none;
+            justify-content: space-between;
+            margin: 0px;
+            padding-left: 10px;
+            padding-right:15px;
+            pading-top:10px;
+            padding-bottom:0px;
+        }
+
+
+a {
+  text-decoration: none;
+ color: white;
+        }
+
+button {
+            color: white;
+            margin:0px;
+            font-size:0.8em;
+            background-color: black;
+            padding:10px 10px 10px 10px;
+            border:0px;
+            
+        }
+        

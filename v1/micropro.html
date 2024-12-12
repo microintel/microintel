@@ -1,0 +1,378 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microintel</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20as%20dc%203.png">
+    <script type="text/javascript" src="mhomeltr.js"></script>
+<style type="text/css">
+body {
+margin: 0;
+        background-color:#FFFFFF;
+        }
+.header {
+position:fixed;
+width:100%;
+  padding: 10px;
+  padding-bottom:0px;
+  background-color: black;
+  text-align: center;
+  z-index:1;
+        }
+        .header img{
+        width:200px;
+        
+        }
+
+.ul1 {
+            display: flex;
+            color: white;
+            list-style-type: none;
+            justify-content: space-between;
+            margin: 0px;
+            padding-left: 10px;
+            padding-right:15px;
+            pading-top:10px;
+            padding-bottom:0px;
+        }
+
+
+a {
+  text-decoration: none;
+ color: white;
+        }
+
+button {
+            color: white;
+            margin:0px;
+            font-size:0.8em;
+            background-color: black;
+            padding:10px 10px 10px 10px;
+            border:0px;
+            
+        }
+        
+.ul1 button:nth-child(1){
+
+border-bottom:3px solid red;
+font-size:1em;
+}
+
+.viddiv{
+
+padding-top:21vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+gap:20px;
+}
+.abtvid{
+color:black;
+}
+.vidcon{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:10px;
+
+}
+
+.vidcon video{
+width:86%;
+border-radius:6px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.vidbtn{
+display:flex;
+justify-content:space-around;
+align-items:center;
+gap:30px;
+}
+
+.vidhtn button{
+border-bottom:1px solid black;
+transition:1s;
+}
+
+button:hover{
+border-bottom:3px solid red;
+transition:0.7s;
+transform:scale(1.14);
+}
+
+.qts{
+position:relative;
+padding:10px;
+}
+
+#sc{
+display:none;
+position:absolute;
+top:50%;
+z-index:10;
+width:100%;
+margin:0px;
+transform: translate(-50px, -50px);
+}
+
+#sc #bb{
+
+opacity:0.5;
+}
+
+@keyframes blink {
+  0%, 100% {opacity: 0.8;}
+  50% {opacity: 1;}
+}
+#sc {
+  animation: blink 1.6s linear infinite;
+}
+
+
+
+@media (min-width: 768px) {
+        
+        .ul1{
+        
+        justify-content:center;
+        }
+        
+        .vidcon video{
+        width:70%;
+        height:50%;
+        }
+        
+        
+        }
+
+
+.quts{
+display:none;
+padding:15px;
+background-color:#FAF6F9;
+border:1px solid grey;
+border-radius:7px;
+}
+
+.bquts{
+padding:8px;
+background-color:black;
+border:1px solid black;
+color:white;
+box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+border-radius:5px;
+
+}
+
+
+
+    
+
+</style>
+</head>
+<body id="bb" onmouseover="scamP()">
+
+
+
+
+<div class="header">
+        <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20marvel.jpg">
+        <br>
+        <div class="ul1">
+            <button id="u1"><a id="u11" onclick="window.location.href='micropro.html'" target="workspace">Home</a></button>
+            <button  id="u2"><a onclick="window.location.href='projects.html'">Projects</a></button>
+            <button id="u5"><a onclick="window.location.href='news.html'">News</a></button>
+            <button id="u3"><a onclick="window.location.href='contactus.html'">Contact Us</a></button>
+            <button id="u4" ><a onclick="window.location.href='aboutus.html'">About</a></button>
+        </div>
+    </div>
+
+<div class="viddiv">
+
+<center>
+<div class="vidcon">
+
+<p style="margin:2px;" class="abtvid"><b>Microdisk Demo Video</b></p>
+
+<div class="vidbtn">
+<button id="b1" onclick="vidply('p1')" title="use headphone for better experince">Play MicroDisk</button>
+<button onclick="location.href='https://microintel.github.io/Microdisk/'">View Microdisk</button>
+</div>
+<video id="vid1" onclick="vidply(this,'y')" class="v1" poster="https://w0.peakpx.com/wallpaper/127/1000/HD-wallpaper-avengers-poster-hero-endgame-marvel-film-poster-art.jpg" preload="none">
+  <source src="https://microintel.github.io/endgram/videos/mdisk.mp4">
+</video>
+
+</div>
+<br>
+<img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/wave-loading.svg" width="100%">
+    
+
+<div class="vidcon">
+
+<p> <b>Gallery of Microintel</b></p>
+
+ <div class="vidbtn">
+ <button id="b2" onclick="vidply('p2')" title="use headphone for better experince">Play gallery</button>
+ <button onclick="window.location.href='https://microintel.github.io/endgram/photo/pro.html'">View Endgram</button>
+ </div>
+ 
+ <video onclick="vidply(this,'y')" id="vid2" class="v1" poster="https://raw.githubusercontent.com/microintel/endgram/main/photo/endgram.png"  preload="none">
+ <source src="https://microintel.github.io/endgram/videos/mi_peoplearestrange.mp4">
+ </video>
+ </div>
+ <br>
+ <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/wave-loading.svg" width="100%">
+    
+</center>
+
+<div class="qts">
+<h2>Quoutes</h2>
+<blockquote style="text-transform: uppercase;font-family:monospace;">
+<h4>
+<a style="text-decoration:none;color:black;" href="https://www.google.com/amp/s/amp.knowyourmeme.com/memes/you-couldnt-live-with-your-own-failure-where-did-that-bring-you-back-to-me" >
+You Could Not Live With Your Own Failure.</a>
+<br><br>
+<b>if you don't believe you are the best, then you will never achive all that you are capable of.
+
+<br><br>
+<a style="text-decoration:none;color:black;" href="https://www.google.com/search?client=ms-android-vivo-rvo2&sca_esv=689fca6f77b92f6d&sca_upv=1&sxsrf=ADLYWIKeVGas_SMFRn6ONmfiX3gM5Csq-Q:1723959138146&q=With+great+power+comes+great+responsibility.&udm=2&fbs=AEQNm0DK64vHUu0GQUAE1V4cqElYcHarlBuVd_RdPNnNYBvKw-sici15_CNrfw-QDLC4quUeWiUT95RHvOverUbLHtoiBWeC0XWWyXMz0pfGwROaBhjyZuP_R4Ap0WiAueIIWH17dbSE0RpCDbiioKtMY-iGakGhMY3w6cUzpiBi6fLOKY4pDwPpzGK-2pD71iz_ume8MV9aHgg7_DKDMwGwUSQzYJ5amA&sa=X&ved=2ahUKEwjHj6Wg6P2HAxX8yjgGHavoOfEQtKgLegQIFRAB&biw=360&bih=674&dpr=2#imgrc=6P1N884Mx_2t_M&imgdii=lIHJgczPSJzYUM" >
+With great power comes great responsibility.</a>
+
+<br><br>
+<a style="text-decoration:none;color:black;" href="https://www.google.com/search?client=ms-android-vivo-rvo2&sca_esv=689fca6f77b92f6d&sca_upv=1&sxsrf=ADLYWIIJcYr0hxWmh2zEXGxliO8LNbIdbw:1723958968701&q=warren+buffett+if+you+don%27t+find+a+way+to+make+money+while+you+sleep&udm=2&fbs=AEQNm0B925W8C4C--LSsRMo1bJHHuMG6vYxjNru5gN-kPlrck_imseM5D3chYU5NQRO-ybJSFlXnW3n7Ofgve-8f_5jVSXG1yyEQMN-Q7QG4-WiVYbnlIvK4xFfGMjOMA2PjJe74WcFWN3TV6hl98CEGjLPC-W2q-ueKfL9sHocKOdCGv_t76zeV4KPgxkx-duhDSrQFX85SADWZPWgiEbB9GIYfiY0eJA&sa=X&ved=2ahUKEwjvgb_P5_2HAxXn7DgGHdMkNR0QtKgLegQIDBAB&biw=360&bih=674&dpr=2#vhid=06uwQthtIoSYAM&vssid=mosaic" >
+If you don't find a way to make money while you sleep, you will work until you die.</a>
+
+<br><br>
+<a style="text-decoration:none;color:black;" href="https://www.google.com/search?q=mark+zuckerberg+ideas+don%27t+come+out+fully+formed&oq=ideas+don%27t+come+out+fully+formed+&gs_lcrp=EgZjaHJvbWUqCAgBEAAYFhgeMgoIABBFGBYYHhg5MggIARAAGBYYHjIICAIQABgWGB4yDQgDEAAYhgMYgAQYigUyDQgEEAAYhgMYgAQYigUyDQgFEAAYhgMYgAQYigUyDQgGEAAYhgMYgAQYigXSAQg4OTQ5ajBqNKgCDrACAQ&client=ms-android-vivo-rvo2&sourceid=chrome-mobile&ie=UTF-8" >
+Ideas don't come out fully formed, they only become clear as you work on them. You just have to get started!</a>
+</b></h4>
+<a href="#h" ></a>
+<details>
+
+<summary >More</summary>
+<h4 id="h"><b>
+
+<img id="sc" onmouseover="scamP()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVf7lr6T6D-riX6FzhugsWj30jtVDlc36-XQ&usqp=CAU">
+<a onclick="scam()" style="text-decoration:none;color:black;">
+risk hai toh ishq hai.</a><br>
+<audio id="scaMA" src="https://microintel.github.io/endgram/audio/scam-1992-bgm.mp3"></audio>
+
+<br><a style="text-decoration:none;color:black;" href="https://www.google.com/search?client=ms-android-vivo-rvo2&sca_esv=689fca6f77b92f6d&sca_upv=1&sxsrf=ADLYWIIoIM26pVeigXEXB6JHWxsxEUczqQ:1723959509471&q=Everything+you+see+exists+together+in+a+delicate+balance.&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J603JUkR9Y5suk8yuy50qOYMMWTNCTu57lKPsZpPcfqPInr9nYx0o93U7Rc7eYLjY3hjgLcr9IOyKfOh9VkaTJQRv7J6SNC0oacXerpesAGtkHcC4rlyYj2W7QetzJxHvglfUJ1iZCXxQFDnQ7yEEI4hz8I0lDrMP-rL1UkUeOOfbPwymg&sa=X&ved=2ahUKEwjv3KzR6f2HAxXbwzgGHfvPD38QtKgLegQIERAB&biw=360&bih=674&dpr=2#imgrc=bWuvMkBGVMPX3M&imgdii=_qB8XbvsbgdWFM" >
+Everything you see exists together in a delicate balance. As king, you need to understand that balance and respect all the creatures, from the crawling ant to the leaping antelope.</a>
+
+<br><br>
+<a style="text-decoration:none;color:black;" href="https://www.google.com/search?q=keep+working+on+your+ideas+mark&client=ms-android-vivo-rvo2&sca_esv=689fca6f77b92f6d&sca_upv=1&udm=2&sxsrf=ADLYWII177F2VZQqOueEWvGLDdo-u_mfqg%3A1723959629592&ei=TYnBZtLdI-CNqfkP_dWYqQE&oq=keep+working+on+your+ideas+mark&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIh9rZWVwIHdvcmtpbmcgb24geW91ciBpZGVhcyBtYXJrMgQQHhgKSIAnUMQNWI8gcAB4AJABAJgBvgOgAf0JqgEHMC41LjQtMbgBA8gBAPgBAZgCBKAC1AfCAgQQIxgnwgIIEAAYgAQYogSYAwCIBgGSBwcwLjMuNC0xoAeADQ&sclient=mobile-gws-wiz-serp#vhid=wMEXgmSuYwHR7M&vssid=mosaic" >
+Keep Working On Ideas.</a>
+<br><br>
+<a style="text-decoration:none;color:black;" href="https://www.google.com/search?client=ms-android-vivo-rvo2&sca_esv=689fca6f77b92f6d&sca_upv=1&sxsrf=ADLYWIIIKcBgzZWL3nTNvdp53NV0s5-0IA:1723959682718&q=i+am+groot&udm=2&fbs=AEQNm0Aa4sjWe7Rqy32pFwRj0UkWd8nbOJfsBGGB5IQQO6L3J603JUkR9Y5suk8yuy50qOYMMWTNCTu57lKPsZpPcfqPQwPMMD4P0WXn1oc4jxGqgogzJLLRVFmLTfyHs64Xc3Bwp8u45S1GiHD5AE2mDxF6hqFFMGqlbO3FshjG0DQ3Nwkp97S_3k6hiHHFpkxV5clSK4pVNSewiBexgDn7Ngj0WopRwQ&sa=X&ved=2ahUKEwjDkPuj6v2HAxWZwTgGHdqaCvIQtKgLegQIDxAB#vhid=JIusWqk4hu6mBM&vssid=mosaic" >
+I am Groot!.</a>
+</b>
+</h4>
+
+
+<h4 class="quts"></h4>
+<span class="bquts">Another Quote</span>
+</details>
+</div>
+</blockquote>
+
+</div>
+
+<img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/wave-loading.svg" width="100%">
+    
+<script>
+
+
+    
+let cc;
+function scamP(){
+document.getElementById('sc').style.display="none";
+document.body.style.backgroundColor="white";
+document.getElementById('scaMA').pause();
+}
+
+function scam(){
+document.getElementById('sc').style.display="block";
+document.body.style.backgroundColor="black";
+document.getElementById('scaMA').currentTime=0;
+document.getElementById('scaMA').play();
+}
+
+
+function vidply(x,y){
+
+
+
+let vi1=document.getElementById('vid1');
+let vi2=document.getElementById('vid2');
+
+if(x=="p1"){
+if(vi1.paused){
+vi1.play();
+document.getElementById('b1').innerHTML="Pause Microdisk";
+document.getElementById('b2').innerHTML="Play gallery";
+onclick="vidply(this,'y')"
+vi2.pause();
+
+}
+else
+{
+document.getElementById('b1').innerHTML="Play Microdisk";
+vi1.pause();
+}
+
+}
+
+if(x=="p2"){
+if(vi2.paused){
+vi2.play();
+vi1.pause();
+document.getElementById('b2').innerHTML="Pause gallery";
+document.getElementById('b1').innerHTML="Play Microdisk";
+}
+else
+{
+vi2.pause();
+document.getElementById('b2').innerHTML="Play gallery";
+}
+
+}
+
+
+if(y=='y'){
+
+x.currentTime=0;
+}
+
+
+
+
+}
+
+
+function disq(){
+
+document.querySelector(".quts").innerHTML="<a style='color:black;'>"+cc[0]+"</a>";
+}
+
+document.querySelector(".bquts").addEventListener("click",async ()=>{
+document.querySelector(".quts").style.display="block";
+document.querySelector(".quts").innerHTML="<img id='lim' width='25px' src='https://raw.githubusercontent.com/microintel/endgram/main/photo/loading-waiting.gif'>";
+let f= await fetch("https://quotes-api-self.vercel.app/quote");
+let fc= await f.json();
+let fcq= await fc["quote"];
+let fca= await fc["author"];
+//qf=fcq;
+cc=[fcq,fca];
+let ra=parseInt(String(Math.floor(Math.random()*3)+"000"));
+//alert(typeof(ra));
+//setTimeout(disq(fcq),5000);
+setTimeout(disq,ra);
+
+});
+
+</script>
+</body>
+</html>
