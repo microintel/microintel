@@ -85,6 +85,16 @@
   "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/ferdinand-milogo.jpg"
   },
   {
+  "aboutproject": " Magics Of kaprekar constant",
+  "redurl": "https://microintel.github.io/kaprekar6174",
+  "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/kaprekar.png"
+  },
+  {
+  "aboutproject": "The magic of the Collatz conjecture",
+  "redurl": "https://microintel.github.io/cc1/",
+  "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/collatz.png"
+  },
+  {
   "aboutproject": "Simple Game",
   "redurl": "https://microintel.github.io/endgram/file/coding.html",
   "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micro%20play%20logo.png"
