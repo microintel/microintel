@@ -66,7 +66,7 @@
   },
   {
     "aboutproject": "Mimic : Effortless Screenshot Spoofing",
-    "redurl": "https://microintel.github.io/endgram/file/coding.html",
+    "redurl": "https://microintel.github.io/fakeres",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/mimic.jpg"
   },
   {
@@ -168,6 +168,11 @@
     "aboutproject": "Learn Basics Of Programing.",
     "redurl": "https://microintel.github.io/endgram/file/coding.html",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micro%20learn.png"
+  },
+  {
+    "aboutproject": "Fake Results",
+    "redurl": "https://microintel.github.io/benhexa",
+    "projectlogo": "https://microintel.github.io/benhexa/icon512_maskable.png"
   },
   {
     "aboutproject": " Evolutionary Files",
