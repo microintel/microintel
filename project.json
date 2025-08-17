@@ -190,6 +190,11 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/evogro.png"
   },
   {
+    "aboutproject": "Simplify with Max",
+    "redurl": "https://microintel.github.io/max",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/max.png"
+  },
+  {
     "aboutproject": "Our PWA Apps.",
     "redurl": "https://microintel.github.io/microintel/pwa/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/pwa.png"
