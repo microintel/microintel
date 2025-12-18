@@ -13,15 +13,5 @@ It develops software for **web development** and more. Some of its most popular 
 
 Microintel's products are used by people around the world, from **creative professionals** to **students** to **everyday users**. The company's software has been used to create some of the most iconic documents in history, including the **Dtech CMNR Result-Portal**, **Vision**, and more.
 
-## Assets Of MicroIntel
-
-- **Ms. Darling**, CEO of Microintel
-- **Mr. Nikil**, BM-Founder-Coder-Shareholder of Microintel
-- **Mr. Vignesh**, Founder-Coder-Shareholder of Microintel
-- **Mr. Raghavendra**, QA Manager & Distributor of Microintel
-- **Mr. Vinay**, QA Tester & Distributor of Microintel
-- **Mr. Amith**, Ideator, Designer of Microintel
-- **Mr. Dhanush**, Tester of Microintel
-- **Mr. Pranav**, Primary Investor & Designer of Microintel
 
 Google it [microintel](https://microintel.github.io/microintel).
