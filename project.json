@@ -210,6 +210,11 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/frs.png"
   },
   {
+    "aboutproject": "Micron = Currency Converter",
+    "redurl": "https://microintel.github.io/micron/",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micron.png"
+  },
+  {
     "aboutproject": "Our PWA Apps.",
     "redurl": "https://microintel.github.io/microintel/pwa/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/pwa.png"
