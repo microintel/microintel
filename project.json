@@ -219,6 +219,11 @@
     "redurl": "https://microintel.github.io/milkshake/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/milkshake-project.png"
   },
+      {
+    "aboutproject": "Whats Up : A demo messaging application",
+    "redurl": "https://microintel.github.io/whatsup/",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/whatsup.png"
+  },
   {
     "aboutproject": "Our PWA Apps.",
     "redurl": "https://microintel.github.io/microintel/pwa/",
