@@ -691,6 +691,140 @@ margin-l3ft:100px;
 color:red;
 font-weight:bold;
 }
+
+.call-btn{
+  width:48px;
+  height:48px;
+  border:none;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:.2s;
+  color:white;
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+}
+
+.end-call{
+  background:linear-gradient(
+    135deg,
+    #ff4d4d,
+    #d40000
+  );
+
+  display:none;
+}
+/* END CALL */
+
+
+
+/* CALL BUTTONS */
+
+.call-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.call-btn{
+  width:50px;
+  height:50px;
+
+  border:none;
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:pointer;
+
+  transition:.25s;
+
+  color:white;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* VOICE CALL */
+
+#voice-call-btn{
+
+  background:
+  linear-gradient(
+    135deg,
+    #10B981,
+    #059669
+  );
+
+  
+}
+
+#voice-call-btn:hover{
+
+  transform:
+  translateY(-2px)
+  scale(1.03);
+
+  
+}
+
+/* END CALL */
+
+#end-call-btn{
+
+  background:
+  linear-gradient(
+    135deg,
+    #ff4d4d,
+    #dc2626
+  );
+
+  
+
+  display:none;
+}
+
+#end-call-btn:hover{
+
+  transform:
+  translateY(-2px)
+  scale(1.03);
+
+  
+}
+
+/* ACTIVE CALL PULSE */
+
+.calling{
+
+  animation:
+  pulseCall 1.4s infinite;
+}
+
+@keyframes pulseCall{
+
+  0%{
+    box-shadow:
+    0 0 0 0 rgba(16,185,129,.6);
+  }
+
+  70%{
+    box-shadow:
+    0 0 0 18px rgba(16,185,129,0);
+  }
+
+  100%{
+    box-shadow:
+    0 0 0 0 rgba(16,185,129,0);
+  }
+}
+
+
+
 </style>
 </head>
 
@@ -868,10 +1002,26 @@ background-color:transparent;
         </button>
 
 <button
-class="icon-btn"
-id="end-call-btn"
-style="display:none;background:#ff3b30;">
-❌
+class="call-btn end-call"
+id="end-call-btn">
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="20"
+height="20"
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="2"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<path d="M10 14a3.5 3.5 0 0 1 4 0l4 3"/>
+
+<path d="M6 17l4-3"/>
+
+<path d="M2 10c5-5 15-5 20 0"/>
+
+</svg>
 </button>
       </div>
 
@@ -1131,7 +1281,89 @@ id="receive-sound"
 src="https://microintel.github.io/whatsup/rec.mp3"
 preload="auto">
 </audio>
+<div id="incoming-call-modal" style="
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.75);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:999999;
+">
 
+<div style="
+width:90%;
+max-width:340px;
+background:#111;
+border:1px solid #222;
+border-radius:28px;
+padding:30px;
+text-align:center;
+color:white;
+">
+
+<img
+id="caller-photo"
+src=""
+style="
+width:90px;
+height:90px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:16px;
+"
+/>
+
+<h2 id="caller-name">
+Incoming Call
+</h2>
+
+<p style="
+color:#999;
+margin-top:8px;
+margin-bottom:24px;
+">
+Nkn Vaice Call...
+</p>
+
+<div style="
+display:flex;
+justify-content:center;
+gap:18px;
+">
+
+<button id="reject-call-btn"
+style="
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+background:#dc2626;
+color:white;
+font-size:22px;
+cursor:pointer;
+">
+✕
+</button>
+
+<button id="accept-call-btn"
+style="
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+background:#10B981;
+color:white;
+font-size:22px;
+cursor:pointer;
+">
+📞
+</button>
+
+</div>
+
+</div>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script type="module">
@@ -2670,6 +2902,10 @@ async function startVoiceCall() {
   .style.display = 'none';
   
   document
+  .getElementById('voice-call-btn')
+  .classList.add('calling');
+  
+  document
   .getElementById('end-call-btn')
   .style.display = 'inline-flex';
 
@@ -2820,8 +3056,7 @@ function listenIncomingCalls() {
       snap.docChanges()
       .forEach(async change => {
 
-        const call =
-        change.doc.data();
+        const call = change.doc.data();
 
         if (
           call.receiverId !== currentUser.uid
@@ -2831,22 +3066,60 @@ function listenIncomingCalls() {
           call.status !== 'calling'
         ) return;
 
-        const accept =
-        confirm(
-          'Incoming voice call'
-        );
+        // SHOW MODAL
 
-        if (!accept) return;
+        document
+        .getElementById(
+          'incoming-call-modal'
+        )
+        .style.display = 'flex';
 
-        answerCall(
-          change.doc.id,
-          call
-        );
+        document
+        .getElementById(
+          'caller-name'
+        )
+        .textContent =
+        'Incoming Voice Call';
+
+        // ACCEPT
+
+        document
+        .getElementById(
+          'accept-call-btn'
+        )
+        .onclick = () => {
+
+          document
+          .getElementById(
+            'incoming-call-modal'
+          )
+          .style.display = 'none';
+
+          answerCall(
+            change.doc.id,
+            call
+          );
+        };
+
+        // REJECT
+
+        document
+        .getElementById(
+          'reject-call-btn'
+        )
+        .onclick = () => {
+
+          document
+          .getElementById(
+            'incoming-call-modal'
+          )
+          .style.display = 'none';
+        };
+
       });
     }
   );
 }
-
 
 async function answerCall(
 callId,
@@ -3036,6 +3309,9 @@ async function endCall() {
       );
 
     remoteAudio.srcObject = null;
+document
+.getElementById('voice-call-btn')
+.classList.remove('calling');
 
     // HIDE END BUTTON
     document
