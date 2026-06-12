@@ -1,68 +1,43 @@
 [
   {
-    "aboutproject": "A Calculator CIE Book",
+    "aboutproject": "Evaluator : A Calculator for CIE Book",
     "redurl": "https://microintel.github.io/cie/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/evaluators.jpg"
   },
   {
-    "aboutproject": "2021-2024 Dtek CMNR Results",
+    "aboutproject": "MicroResult : 2021-2024 Dtek CMNR Results",
     "redurl": "https://microintel.github.io/Result/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micro%20result.jpg"
   },
   {
-    "aboutproject": "Secured Search Engine",
-    "redurl": "https://microintel.github.io/endgram/file/co6.html",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micro%20browser%20logo1.png"
-  },
-  {
-    "aboutproject": "Convert Your MSG To Another Form",
+    "aboutproject": "Micrography : Convert Your MSG To Another Form",
     "redurl": "https://microintel.github.io/Micrography/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micro%20graphy.jpg"
   },
   {
-    "aboutproject": "For Downloading Movies,Series..",
+    "aboutproject": "Micro disk : For Downloading Movies,Series..",
     "redurl": "https://microintel.github.io/endgram/file/co6.html",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micro%20disk%20as%20thor.jpg"
   },
   {
-    "aboutproject": "Api for MicroGraphy",
+    "aboutproject": "MultiVerse : Api for MicroGraphy",
     "redurl": "https://microintel.github.io/multiverse/mvdocu.html",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/multi%20verse%20wanda.jpg"
   },
   {
-    "aboutproject": "Vision for the wealthy who prefer relaxation.",
+    "aboutproject": "Vision : for the wealthy who prefer relaxation.",
     "redurl": "https://microintel.github.io/vision",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/future%20vision%201.jpeg"
   },
   {
-    "aboutproject": "Conference on Consequences",
+    "aboutproject": "Falcon : Conference on Consequences",
     "redurl": "https://microintel.github.io/endgram/file/co6.html",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/falcon.png"
   },
   {
-    "aboutproject": "Practice the Matrix with Patrix.",
-    "redurl": "https://microintel.github.io/endgram/file/co6.html",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/patrix-min.png"
-  },
-  {
-    "aboutproject": "Double U ,Convert U R Image To 3 dimensional Stereoscopic Image .",
-    "redurl": "https://microintel.github.io/endgram/file/co6.html",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/doubleU.jpg"
-  },
-  {
-    "aboutproject": "LATEX A Text Formater & Design.",
-    "redurl": "https://microintel.github.io/microintel_latex/",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/latex_new_.jpeg"
-  },
-  {
-    "aboutproject": "Endgram Our Resources With An Instagram-style Approach.",
+    "aboutproject": "Endgram : Our Resources With An Instagram-style Approach.",
     "redurl": "https://microintel.github.io/endgram/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/Endgram-8-8-2024%20(1).png"
-  },
-  {
-    "aboutproject": "Images to Code, Code to Images.",
-    "redurl": "https://microintel.github.io/endgram/file/co6.html",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/ICon-min.png"
   },
   {
     "aboutproject": "Mimic : Effortless Screenshot Spoofing",
@@ -70,12 +45,7 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/mimic.jpg"
   },
   {
-    "aboutproject": "CRUD Your Files with Ease.",
-    "redurl": "https://microintel.github.io/endgram/file/co6.html",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/crud_3.png"
-  },
-  {
-    "aboutproject": "Black Road tracks income, balance, and spending.",
+    "aboutproject": "BlackRoad : tracks income, balance, and spending.",
     "redurl": "https://microintel.github.io/finpulse",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/blackroad-logo-front.png"
   },
@@ -100,14 +70,9 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/colltree.png"
   },
   {
-  "aboutproject": "Nothing.",
-  "redurl": "https://microintel.github.io/dd/",
-  "projectlogo": "https://microintel.github.io/dd/nothinh.png"
-  },
-  {
-    "aboutproject": "Simple Game",
-    "redurl": "https://microintel.github.io/xox",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micro%20play%20logo.png"
+    "aboutproject": "Nothing.",
+    "redurl": "https://microintel.github.io/dd/",
+    "projectlogo": "https://microintel.github.io/dd/nothinh.png"
   },
   {
     "aboutproject": "Fishing Url Scanner",
@@ -140,16 +105,6 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/api_working_backend_.gif"
   },
   {
-    "aboutproject": "ASKY a Json & Api based work",
-    "redurl": "https://microintel.github.io/endgram/file/co6.html",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/asky_microintel_logo_logo_1.jpg"
-  },
-  {
-    "aboutproject": "RoadMap for developers.",
-    "redurl": "https://microintel.github.io/endgram/file/co6.html",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/roadmap%204.png"
-  },
-  {
     "aboutproject": "Password Manager.",
     "redurl": "https://microintel.github.io/endgram/file/co6.html",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micro%20passman%20boom.jpeg"
@@ -158,11 +113,6 @@
     "aboutproject": "1440 minutes: Invest them, live them, don't waste them",
     "redurl": "https://microintel.github.io/1440/",
     "projectlogo": "https://microintel.github.io/1440/icon512_rounded.png"
-  },
-  {
-    "aboutproject": "WebBased Prank",
-    "redurl": "https://microintel.github.io/endgram/file/co6.html",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/bombc.gif"
   },
   {
     "aboutproject": "Missmonk : Know what you missed",
@@ -175,14 +125,14 @@
     "projectlogo": "https://microintel.github.io/benhexa/icon512_maskable.png"
   },
   {
-  "aboutproject": "Calina : Calcultor",
-  "redurl": "https://microintel.github.io/calina",
-  "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/calina.png"
+    "aboutproject": "Calina : Calcultor",
+    "redurl": "https://microintel.github.io/calina",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/calina.png"
   },
   {
-  "aboutproject": "CAGR : Growth Rate Calculator",
-  "redurl": "https://microintel.github.io/cagr",
-  "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/cagr.png"
+    "aboutproject": "CAGR : Growth Rate Calculator",
+    "redurl": "https://microintel.github.io/cagr",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/cagr.png"
   },
   {
     "aboutproject": " Evolutionary Files",
@@ -190,12 +140,12 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/evogro.png"
   },
   {
-    "aboutproject": "List. Snip. Learn",
+    "aboutproject": "Snippet : List. Snip. Learn",
     "redurl": "https://microintel.github.io/top",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/snippet.png"
   },
   {
-    "aboutproject": "Zoyo   Little Wonders, Made by AI",
+    "aboutproject": "Zoyo :  Little Wonders, Made by AI",
     "redurl": "https://microintel.github.io/zoyo",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/zoyo.png"
   },
@@ -210,16 +160,16 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/frs.png"
   },
   {
-    "aboutproject": "Micron = Currency Converter",
+    "aboutproject": "Micron : Currency Converter",
     "redurl": "https://microintel.github.io/micron/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micron.png"
   },
-    {
-    "aboutproject": "Milkshake ✿ blend dicipline into life",
+  {
+    "aboutproject": "NoRelapse : blend dicipline into life",
     "redurl": "https://microintel.github.io/milkshake/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/ferdinand-milogo.jpg"
   },
-      {
+  {
     "aboutproject": "Whats Up : A demo messaging application",
     "redurl": "https://microintel.github.io/whatsup/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/whatsup.png"
@@ -230,4 +180,3 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/pwa.png"
   }
 ]
-
