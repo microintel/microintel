@@ -1,1 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel%20as%20dc%203.png">
+   
+<title>Microintel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+  :root {
+     --bg: #080a0e;
+    --surface: #0f1118;
+    --surface2: #161b26;
+    --surface3: #1e2535;
+    --border: #232b3a;
+    --text: #eef0f5;
+    --text2: #8891a8;
+    --text3: #5a6278;
+    --accent: #e02020;
+    --accent2: #ff3333;
+    --accent-soft: rgba(224,32,32,0.1);
+    --accent-glow: rgba(224,32,32,0.2);
+    --nav-bg: #050608;
+    --nav-text: #f0f2f8;
+    --card-shadow: 0 1px 4px rgba(0,0,0,0.3), 0 4px 20px rgba(0,0,0,0.3);
+    --card-shadow-hover: 0 4px 16px rgba(0,0,0,0.5), 0 12px 40px rgba(0,0,0,0.4);
+    --input-bg: #0f1118;
+    --input-border: #2a3245;
+    --hero-bg: #050608;
+    --badge-bg: rgba(224,32,32,0.12);
 
+  }
+  [data-theme="dark"] {
+     --bg: #D1D9E0;
+    --surface: #ffffff;
+    --surface2: #f1f3f7;
+    --surface3: #e8eaf0;
+    --border: #e2e5ec;
+    --text: #0f1117;
+    --text2: #5a6076;
+    --text3: #8b93ab;
+    --accent: #cc0000;
+    --accent2: #a80000;
+    --accent-soft: rgba(204,0,0,0.08);
+    --accent-glow: rgba(204,0,0,0.15);
+    --nav-bg: #0a0a0f;
+    --nav-text: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
+    --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.1), 0 12px 32px rgba(0,0,0,0.1);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --input-bg: #ffffff;
+    --input-border: #dde1ea;
+    --hero-bg: #0a0a0f;
+    --badge-bg: rgba(204,0,0,0.1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: 'Inter', 'Space Grotesk', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: background 0.25s ease, color 0.25s ease;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ──────────── NAV ──────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: var(--nav-bg);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 28px;
+    height: 64px;
+    border-bottom: 1px solid rgba(204,0,0,0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo img { height: 30px; display: block; filter: brightness(0) invert(1); }
+  .nav-logo-wordmark {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem; font-weight: 700;
+    color: #fff; letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .nav-logo-wordmark span { color: var(--accent); }
+
+  .nav-links { display: flex; align-items: center; gap: 2px; }
+  .nav-links button {
+    background: none; border: none; cursor: pointer;
+    color: rgba(255,255,255,0.65);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem; font-weight: 500;
+    padding: 7px 14px; border-radius: var(--radius-sm);
+    letter-spacing: 0.02em;
+    transition: all 0.18s ease;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .nav-links button:hover { color: #fff; background: rgba(255,255,255,0.07); }
+  .nav-links button.active { color: #fff; background: rgba(204,0,0,0.18); }
+  .nav-links button.active i { color: var(--accent); }
+  .nav-links button i { font-size: 0.95rem; }
+
+  .nav-right { display: flex; align-items: center; gap: 10px; }
+  .theme-toggle {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    border-radius: 50%; width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.6); font-size: 1.05rem;
+    transition: all 0.2s ease;
+  }
+  .theme-toggle:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+  .hamburger {
+    display: none; flex-direction: column; gap: 4.5px;
+    cursor: pointer; background: none; border: none; padding: 6px;
+  }
+  .hamburger span {
+    display: block; width: 20px; height: 2px;
+    background: rgba(255,255,255,0.75); border-radius: 2px; transition: 0.3s;
+  }
+
+  /* ──────────── MOBILE NAV ──────────── */
+  .mobile-nav {
+    display: none; position: fixed; top: 64px; left: 0; right: 0;
+    background: var(--nav-bg); z-index: 999; flex-direction: column;
+    border-bottom: 1px solid rgba(204,0,0,0.25);
+    animation: slideDown 0.18s ease;
+    padding: 8px 0;
+  }
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav button {
+    background: none; border: none;
+    color: rgba(255,255,255,0.75);
+    font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500;
+    padding: 13px 24px; text-align: left; cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mobile-nav button:hover { background: rgba(255,255,255,0.05); color: #fff; }
+  .mobile-nav button i { font-size: 1rem; color: var(--accent); }
+
+  /* ──────────── PAGES ──────────── */
+  .page { display: none; padding-top: 64px; min-height: 100vh; }
+  .page.active { display: block; }
+
+  /* ──────────── HOME / HERO ──────────── */
+  .hero {
+    background: var(--hero-bg);
+    color: #fff;
+    padding: 96px 28px 80px;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 30%, rgba(204,0,0,0.14) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 70%, rgba(204,0,0,0.06) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--badge-bg); border: 1px solid rgba(204,0,0,0.3);
+    color: #ff8080; font-size: 0.75rem; font-weight: 600;
+    padding: 5px 12px; border-radius: 20px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero-badge i { font-size: 0.8rem; }
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.2rem, 5.5vw, 4rem);
+    font-weight: 800; letter-spacing: -0.03em;
+    line-height: 1.08; margin-bottom: 20px;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero p {
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: rgba(255,255,255,0.55); max-width: 520px; margin: 0 auto 36px;
+    line-height: 1.75; font-weight: 400;
+  }
+  .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent); color: #fff;
+    border: none; padding: 12px 26px; border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s ease;
+    display: flex; align-items: center; gap: 7px;
+    box-shadow: 0 4px 20px rgba(204,0,0,0.35);
+  }
+  .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(204,0,0,0.45); }
+  .btn-outline {
+    background: transparent; color: rgba(255,255,255,0.8);
+    border: 1px solid rgba(255,255,255,0.2); padding: 12px 26px; border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 600;
+    cursor: pointer; transition: all 0.2s ease;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.45); color: #fff; transform: translateY(-2px); background: rgba(255,255,255,0.05); }
+
+  /* hero stats bar */
+  .hero-stats {
+    display: flex; justify-content: center; gap: 0;
+    margin-top: 56px; flex-wrap: wrap;
+  }
+  .hero-stat {
+    padding: 20px 36px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    text-align: center;
+  }
+  .hero-stat:last-child { border-right: none; }
+  .hero-stat .stat-num {
+    font-size: 1.8rem; font-weight: 800; color: #fff;
+    font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em;
+  }
+  .hero-stat .stat-num span { color: var(--accent); }
+  .hero-stat .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.4); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; }
+
+  /* ──────────── HOME CONTENT ──────────── */
+  .home-sections {
+    max-width: 1080px; margin: 0 auto;
+    display: flex; flex-direction: column; gap: 28px;
+    padding: 40px 24px 60px;
+  }
+
+  /* section header */
+  .section-header {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 20px;
+  }
+  .section-header-icon {
+    width: 34px; height: 34px; border-radius: var(--radius-sm);
+    background: var(--accent-soft); border: 1px solid rgba(204,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent); font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+  .section-header h2 {
+    font-size: 1.05rem; font-weight: 700; color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .section-header p { font-size: 0.8rem; color: var(--text3); margin-top: 1px; }
+
+  /* video cards */
+  .vidcon {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .vidcon:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-2px); }
+  .vidcon-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .vidcon-title {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .vidcon-title i { color: var(--accent); font-size: 1.1rem; }
+  .vidcon-title strong { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+  .vidbtn { display: flex; gap: 8px; }
+  .vid-btn {
+    display: flex; align-items: center; gap: 5px;
+    color: var(--text2); font-size: 0.78rem; font-weight: 500;
+    background: var(--surface2); border: 1px solid var(--border);
+    padding: 7px 13px; border-radius: var(--radius-sm);
+    cursor: pointer; font-family: 'Inter', sans-serif;
+    transition: all 0.18s ease;
+    white-space: nowrap;
+  }
+  .vid-btn:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .vid-btn i { font-size: 0.85rem; }
+  .vidcon video {
+    width: 100%; display: block;
+    background: #000;
+    max-height: 380px; object-fit: cover;
+  }
+
+  /* quotes card */
+  .quotes-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+  }
+  .quote-list { display: flex; flex-direction: column; gap: 10px; }
+  .quote-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 13px 16px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem; color: var(--text2);
+    font-style: italic; line-height: 1.65;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.18s ease;
+  }
+  .quote-item:hover { background: var(--accent-soft); border-color: rgba(204,0,0,0.2); color: var(--text); }
+  .quote-item i { color: var(--accent); font-size: 1rem; margin-top: 1px; flex-shrink: 0; }
+  .quote-more-btn {
+    margin-top: 14px;
+    display: flex; align-items: center; gap: 7px;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm); padding: 10px 18px;
+    cursor: pointer; font-family: 'Inter', sans-serif;
+    font-size: 0.84rem; font-weight: 500;
+    color: var(--text2); transition: all 0.2s ease;
+  }
+  .quote-more-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+  .quote-more-btn i { font-size: 0.9rem; }
+  .random-quote {
+    margin-top: 12px; padding: 14px 16px;
+    background: var(--surface2);
+    border: 1px solid rgba(204,0,0,0.2);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem; color: var(--text); font-style: italic; line-height: 1.65;
+    display: none;
+  }
+
+  /* ──────────── PROJECTS PAGE ──────────── */
+  .projects-page {
+    max-width: 1080px; margin: 0 auto;
+    padding: 40px 24px 60px;
+  }
+  .page-title-row {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+    margin-bottom: 28px;
+  }
+  .page-title-row h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.9rem; font-weight: 800;
+    letter-spacing: -0.03em; color: var(--text);
+  }
+  .page-title-row .sub { color: var(--text3); font-size: 0.875rem; margin-top: 4px; }
+  .page-count-badge {
+    background: var(--accent-soft); border: 1px solid rgba(204,0,0,0.2);
+    color: var(--accent); font-size: 0.75rem; font-weight: 700;
+    padding: 4px 10px; border-radius: 20px; letter-spacing: 0.03em;
+  }
+
+  .search-bar {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--input-bg); border: 1.5px solid var(--input-border);
+    border-radius: var(--radius-sm); padding: 0 14px;
+    margin-bottom: 28px; max-width: 420px;
+    transition: border-color 0.18s ease;
+  }
+  .search-bar:focus-within { border-color: var(--accent); }
+  .search-bar i { color: var(--text3); font-size: 1rem; }
+  .search-bar input {
+    border: none; background: none; outline: none; flex: 1;
+    padding: 11px 0; font-family: 'Inter', sans-serif;
+    font-size: 0.875rem; color: var(--text);
+  }
+  .search-bar input::placeholder { color: var(--text3); }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  .ppp {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    cursor: pointer;
+    transition: all 0.22s ease;
+    display: flex; flex-direction: column;
+  }
+  .ppp:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-4px);
+    border-color: rgba(204,0,0,0.25);
+  }
+.ppp img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: var(--surface2);
+}
+  .ppp-body { padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .ppp p {
+    margin: 0; font-size: 0.84rem; font-weight: 600;
+    color: var(--text); text-align: left;
+  }
+  .ppp-arrow {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--accent-soft); border: 1px solid rgba(204,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent); font-size: 0.8rem; flex-shrink: 0;
+    transition: all 0.18s ease;
+  }
+  .ppp:hover .ppp-arrow { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  .no-results {
+    text-align: center; padding: 60px 20px;
+    color: var(--text3); font-size: 0.95rem;
+    grid-column: 1 / -1;
+  }
+  .no-results i { font-size: 2.5rem; display: block; margin-bottom: 12px; color: var(--border); }
+  .projects-loading {
+    text-align: center; padding: 60px;
+    color: var(--text3);
+    grid-column: 1 / -1;
+  }
+  .spinner {
+    width: 36px; height: 36px; border: 2.5px solid var(--border);
+    border-top-color: var(--accent); border-radius: 50%;
+    animation: spin 0.7s linear infinite; margin: 0 auto 14px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ──────────── ABOUT PAGE ──────────── */
+  .about-page { max-width: 920px; margin: 0 auto; padding: 40px 24px 60px; }
+
+  .about-hero {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 36px;
+    margin-bottom: 24px;
+    box-shadow: var(--card-shadow);
+    display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;
+    position: relative; overflow: hidden;
+  }
+  .about-hero::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle at top right, var(--accent-glow), transparent 70%);
+    pointer-events: none;
+  }
+  .about-hero-logo { flex-shrink: 0; }
+  .about-hero-logo img { height: 40px; display: block; }
+  .about-hero-text h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem; font-weight: 800;
+    letter-spacing: -0.025em; margin-bottom: 10px; color: var(--text);
+  }
+  .about-hero-text p { font-size: 0.9rem; color: var(--text2); line-height: 1.78; max-width: 560px; }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; } }
+
+  .about-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+  }
+  .about-card h2 {
+    font-size: 0.95rem; font-weight: 700; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 9px; color: var(--text);
+  }
+  .about-card h2 i { color: var(--accent); font-size: 1.05rem; }
+  .about-card p { font-size: 0.875rem; color: var(--text2); line-height: 1.75; }
+  .about-card p strong { color: var(--text); font-weight: 600; }
+
+  .team-list { display: flex; flex-direction: column; gap: 8px; }
+  .team-member {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px;
+    background: var(--surface2); border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: all 0.18s ease;
+  }
+  .team-member:hover { border-color: rgba(204,0,0,0.2); background: var(--accent-soft); }
+  .team-member-left { display: flex; align-items: center; gap: 10px; }
+  .team-member-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--accent-soft); border: 1px solid rgba(204,0,0,0.2);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent); font-size: 0.9rem; flex-shrink: 0;
+  }
+  .team-member .name { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+  .team-member .role { font-size: 0.75rem; color: var(--text3); margin-top: 1px; }
+
+  .role-badge {
+    font-size: 0.68rem; font-weight: 700;
+    padding: 3px 9px; border-radius: 20px;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .role-badge.founder { background: rgba(15,17,23,0.8); color: #fff; border: 1px solid #333; }
+  .role-badge.ceo { background: rgba(26,26,140,0.12); color: #5555cc; border: 1px solid rgba(85,85,204,0.25); }
+  .role-badge.qa { background: rgba(45,106,79,0.12); color: #2d8a5b; border: 1px solid rgba(45,138,91,0.25); }
+  .role-badge.design { background: rgba(139,69,19,0.12); color: #c07640; border: 1px solid rgba(192,118,64,0.25); }
+  .role-badge.invest { background: rgba(90,0,128,0.12); color: #9a40c8; border: 1px solid rgba(154,64,200,0.25); }
+  .role-badge.coder { background: rgba(204,0,0,0.1); color: var(--accent); border: 1px solid rgba(204,0,0,0.2); }
+
+  /* ──────────── CONTACT PAGE ──────────── */
+  .contact-page { max-width: 860px; margin: 0 auto; padding: 40px 24px 60px; }
+
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 28px; }
+  @media (max-width: 580px) { .contact-grid { grid-template-columns: 1fr; } }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    box-shadow: var(--card-shadow);
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none; color: var(--text);
+    transition: all 0.2s ease;
+  }
+  .contact-card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--card-shadow-hover), 0 0 0 1px rgba(204,0,0,0.1); }
+  .contact-icon {
+    width: 44px; height: 44px; border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    background: var(--accent-soft); border: 1px solid rgba(204,0,0,0.2);
+    flex-shrink: 0; font-size: 1.2rem; color: var(--accent);
+  }
+  .contact-info .label { font-size: 0.7rem; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; }
+  .contact-info .value { font-size: 0.875rem; font-weight: 600; margin-top: 2px; color: var(--text); }
+
+  .team-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--card-shadow);
+  }
+  .team-section h2 {
+    font-size: 0.95rem; font-weight: 700; margin-bottom: 18px;
+    display: flex; align-items: center; gap: 8px; color: var(--text);
+  }
+  .team-section h2 i { color: var(--accent); }
+  .team-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
+  .team-chip {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 13px 14px; text-align: center;
+    transition: all 0.18s ease;
+  }
+  .team-chip:hover { border-color: var(--accent); background: var(--accent-soft); transform: translateY(-2px); }
+  .team-chip .tname { font-weight: 700; font-size: 0.84rem; color: var(--text); }
+  .team-chip .trole { font-size: 0.72rem; color: var(--text3); margin-top: 3px; }
+
+  /* ──────────── FOOTER ──────────── */
+  footer {
+    background: var(--nav-bg); color: rgba(255,255,255,0.3);
+    text-align: center; padding: 24px;
+    font-size: 0.78rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  footer span { color: var(--accent); }
+  footer .footer-inner { display: flex; align-items: center; justify-content: center; gap: 6px; }
+  footer i { font-size: 0.85rem; }
+
+  /* ──────────── DIVIDER ──────────── */
+  .divider {
+    height: 1px; background: var(--border); margin: 0;
+  }
+
+  /* ──────────── RESPONSIVE ──────────── */
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .hero { padding: 72px 20px 60px; }
+    .hero-stats { display: none; }
+    .about-hero { padding: 24px 20px; }
+    .about-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 480px) {
+    .projects-grid { grid-template-columns: 1fr; }
+  }
+  @media (min-width: 641px) {
+    .hamburger { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ──── NAV ──── -->
+<nav>
+  <a class="nav-logo" href="#" onclick="showPage('home');return false;">
+    <img id="nav-logo-img" src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel-black-small.png" alt="Microintel">
+  </a>
+  <div class="nav-links">
+    <button class="active" onclick="showPage('home', this)">
+      <i class="bi bi-house-fill"></i> Home
+    </button>
+    <button onclick="showPage('projects', this)">
+      <i class="bi bi-grid-fill"></i> Projects
+    </button>
+    <button onclick="showPage('about', this)">
+      <i class="bi bi-info-circle-fill"></i> About
+    </button>
+    <button onclick="showPage('contact', this)">
+      <i class="bi bi-chat-dots-fill"></i> Contact
+    </button>
+  </div>
+  <div class="nav-right">
+   
+    <button class="hamburger" id="hamburger" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <button onclick="showPage('home');closeMobileNav()"><i class="bi bi-house-fill"></i> Home</button>
+  <button onclick="showPage('projects');closeMobileNav()"><i class="bi bi-grid-fill"></i> Projects</button>
+  <button onclick="showPage('about');closeMobileNav()"><i class="bi bi-info-circle-fill"></i> About</button>
+  <button onclick="showPage('contact');closeMobileNav()"><i class="bi bi-chat-dots-fill"></i> Contact</button>
+</div>
+
+<!-- ──── HOME PAGE ──── -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    
+    <h1>Learn. <span>Create.</span><br>Grow.</h1>
+    <p>
+Microintel is a team of learners and builders creating technology solutions, gaining knowledge, and solving real-world problems with a vision for the future.
+</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="showPage('projects')">
+        <i class="bi bi-grid-fill"></i> View Projects
+      </button>
+      <button class="btn-outline" onclick="showPage('about')">
+        <i class="bi bi-info-circle"></i> About Us
+      </button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-num">9<span>+</span></div>
+        <div class="stat-label">Team Members</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">20<span>+</span></div>
+        <div class="stat-label">Projects Built</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">2022</div>
+        <div class="stat-label">Founded</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num"><span>∞</span></div>
+        <div class="stat-label">Ambition</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-sections">
+    <!-- Video 1 -->
+    <div class="vidcon">
+      <div class="vidcon-header">
+        <div class="vidcon-title">
+          <i class="bi bi-play-circle-fill"></i>
+          <strong>Microdisk Demo</strong>
+        </div>
+        <div class="vidbtn">
+          <button class="vid-btn" id="vbtn1" onclick="toggleVid('vid1','vbtn1','Play MicroDisk','Pause MicroDisk')">
+            <i class="bi bi-play-fill"></i> Play
+          </button>
+          <button class="vid-btn" onclick="window.open('https://microintel.github.io/Microdisk/')">
+            <i class="bi bi-box-arrow-up-right"></i> Open App
+          </button>
+        </div>
+      </div>
+      <video id="vid1" poster="https://w0.peakpx.com/wallpaper/127/1000/HD-wallpaper-avengers-poster-hero-endgame-marvel-film-poster-art.jpg" preload="none">
+        <source src="https://microintel.github.io/endgram/videos/mdisk.mp4">
+      </video>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="vidcon">
+      <div class="vidcon-header">
+        <div class="vidcon-title">
+          <i class="bi bi-images"></i>
+          <strong>Gallery of Microintel</strong>
+        </div>
+        <div class="vidbtn">
+          <button class="vid-btn" id="vbtn2" onclick="toggleVid('vid2','vbtn2','Play Gallery','Pause Gallery')">
+            <i class="bi bi-play-fill"></i> Play
+          </button>
+          <button class="vid-btn" onclick="window.open('https://microintel.github.io/endgram/photo/pro.html')">
+            <i class="bi bi-box-arrow-up-right"></i> View Endgram
+          </button>
+        </div>
+      </div>
+      <video id="vid2" poster="https://raw.githubusercontent.com/microintel/endgram/main/photo/endgram.png" preload="none">
+        <source src="https://microintel.github.io/endgram/videos/mi_peoplearestrange.mp4">
+      </video>
+    </div>
+
+    <!-- Quotes -->
+    <div class="quotes-section">
+      <div class="section-header">
+        <div class="section-header-icon"><i class="bi bi-chat-quote-fill"></i></div>
+        <div>
+          <h2>Quotes We Live By</h2>
+          <p>Words that shape the way we build</p>
+        </div>
+      </div>
+      <div class="quote-list">
+        <a class="quote-item" href="https://www.google.com/search?q=you+could+not+live+with+your+own+failure" target="_blank">
+          <i class="bi bi-quote"></i>
+          "You could not live with your own failure. Where did that bring you?"
+        </a>
+       
+        <a class="quote-item" href="https://www.google.com/search?q=warren+buffett+if+you+dont+find+a+way+to+make+money+while+you+sleep" target="_blank">
+          <i class="bi bi-quote"></i>
+          "If you don't find a way to make money while you sleep, you will work until you die." — Buffett
+        </a>
+       
+        <a class="quote-item" href="https://www.google.com/search?q=risk+hai+toh+ishq+hai+scam+1992" target="_blank">
+          <i class="bi bi-quote"></i>
+          "Risk hai toh ishq hai." — Scam 1992
+        </a>
+      </div>
+      
+      <div class="random-quote" id="randomQuote">Loading…</div>
+    </div>
+  </div>
+</div>
+
+<!-- ──── PROJECTS PAGE ──── -->
+<div id="page-projects" class="page">
+  <div class="projects-page">
+    <div class="page-title-row">
+      <div>
+        <h1>Projects</h1>
+        <p class="sub">All Microintel builds </p>
+      </div>
+      <span class="page-count-badge" id="projectCountBadge">Loading…</span>
+    </div>
+    <div class="search-bar">
+      <i class="bi bi-search"></i>
+      <input type="text" id="searchInput" placeholder="Search projects…" oninput="filterProjects()">
+    </div>
+    <div id="projectsGrid" class="projects-grid">
+      <div class="projects-loading"><div class="spinner"></div>Fetching projects…</div>
+    </div>
+  </div>
+</div>
+
+<!-- ──── ABOUT PAGE ──── -->
+<div id="page-about" class="page">
+  <div class="about-page">
+    <div class="about-hero">
+      <div class="about-hero-logo">
+        <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/microintel-black-small.png" alt="Microintel" id="about-logo-img">
+      </div>
+      <div class="about-hero-text">
+        <h1>About Microintel</h1>
+      <p>
+<b>Microintel</b> began as a student-driven initiative with a simple goal: to solve everyday academic challenges through technology. What started as small college projects soon became a journey of <b>learning, innovation, and continuous growth</b>.
+
+Today, we explore new technologies, build practical solutions, and challenge ourselves to turn ideas into meaningful products. Every project we create is another step toward gaining experience, expanding our knowledge, and understanding how technology can make a real difference.
+
+While <b>Microintel does not yet have a physical office</b>, our ambition extends far beyond our current size. We envision a future where Microintel grows into a <b>dedicated software company</b> with its own workspace, talented teams, and innovative products that help solve real-world problems.
+
+We believe every successful organization begins with <b>curiosity, persistence, and the courage to start small while thinking big</b>.
+
+</p>
+ </div>
+    </div>
+
+    <div class="about-grid" style="margin-bottom:18px;">
+      <div class="about-card">
+        <h2><i class="bi bi-code-slash"></i> What We Do</h2>
+       <p>
+We design and develop software projects that solve practical problems. Starting with academic and college-related challenges, we now focus on learning modern technologies and building applications that address real-world needs. Every project we create helps us gain experience, improve our skills, and understand how technology can make everyday tasks easier.
+</p>   </div>
+      <div class="about-card">
+        <h2><i class="bi bi-bullseye"></i> Our Mission</h2>
+        <p>
+Our mission is to continuously learn, innovate, and build meaningful software solutions. We aim to transform ideas into practical products that solve real-world problems. As we grow in knowledge and experience, our long-term goal is to establish Microintel as a company dedicated to creating impactful technology and delivering valuable solutions to people and organizations.
+</p>  </div>
+    </div>
+
+    <div class="about-card">
+      <h2><i class="bi bi-people-fill"></i> The Team</h2>
+      <div class="team-list">
+        <div class="team-member">
+          <div class="team-member-left">
+            <div class="team-member-avatar"><i class="bi bi-person-fill"></i></div>
+            <div><div class="name">Ms. Darling</div><div class="role">Chief Executive Officer</div></div>
+          </div>
+          <span class="role-badge ceo">CEO</span>
+        </div>
+        <div class="team-member">
+          <div class="team-member-left">
+            <div class="team-member-avatar"><i class="bi bi-person-fill"></i></div>
+            <div><div class="name">Mr. Nikil</div><div class="role">BM · Founder · Coder · Shareholder</div></div>
+          </div>
+          <span class="role-badge founder">Founder</span>
+        </div>
+        <div class="team-member">
+          <div class="team-member-left">
+            <div class="team-member-avatar"><i class="bi bi-person-fill"></i></div>
+            <div><div class="name">Mr. Vignesh</div><div class="role">Founder · Coder · Shareholder</div></div>
+          </div>
+          <span class="role-badge coder">Coder</span>
+        </div>
+        <div class="team-member">
+          <div class="team-member-left">
+            <div class="team-member-avatar"><i class="bi bi-person-fill"></i></div>
+            <div><div class="name">Mr. Raghavendra</div><div class="role">QA Manager & Distributor</div></div>
+          </div>
+          <span class="role-badge qa">QA</span>
+        </div>
+        <div class="team-member">
+          <div class="team-member-left">
+            <div class="team-member-avatar"><i class="bi bi-person-fill"></i></div>
+            <div><div class="name">Mr. Vinay</div><div class="role">QA Tester & Distributor</div></div>
+          </div>
+          <span class="role-badge qa">QA</span>
+        </div>
+        <div class="team-member">
+          <div class="team-member-left">
+            <div class="team-member-avatar"><i class="bi bi-person-fill"></i></div>
+            <div><div class="name">Mr. Amith</div><div class="role">Ideator & Designer</div></div>
+          </div>
+          <span class="role-badge design">Design</span>
+        </div>
+        <div class="team-member">
+          <div class="team-member-left">
+            <div class="team-member-avatar"><i class="bi bi-person-fill"></i></div>
+            <div><div class="name">Mr. Dhanush</div><div class="role">Tester</div></div>
+          </div>
+          <span class="role-badge qa">Test</span>
+        </div>
+        <div class="team-member">
+          <div class="team-member-left">
+            <div class="team-member-avatar"><i class="bi bi-person-fill"></i></div>
+            <div><div class="name">Mr. Chandra Shekar</div><div class="role">Contributor</div></div>
+          </div>
+          <span class="role-badge founder">Contrib</span>
+        </div>
+        <div class="team-member">
+          <div class="team-member-left">
+            <div class="team-member-avatar"><i class="bi bi-person-fill"></i></div>
+            <div><div class="name">Mr. Pranav P</div><div class="role">Primary Investor & Designer</div></div>
+          </div>
+          <span class="role-badge invest">Investor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ──── CONTACT PAGE ──── -->
+<div id="page-contact" class="page">
+  <div class="contact-page">
+    <div class="page-title-row">
+      <div>
+        <h1>Contact Us</h1>
+        <p class="sub">Reach out through any channel below — we'd love to hear from you.</p>
+      </div>
+    </div>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:microfly2410@gmail.com?body=Hello Microintel support team">
+        <div class="contact-icon"><i class="bi bi-envelope-fill"></i></div>
+        <div class="contact-info">
+          <div class="label">Email</div>
+          <div class="value">microfly2410@gmail.com</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://instagram.com/micro_intel/" target="_blank">
+        <div class="contact-icon"><i class="bi bi-instagram"></i></div>
+        <div class="contact-info">
+          <div class="label">Instagram</div>
+          <div class="value">@micro_intel</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://github.com/microintel/" target="_blank">
+        <div class="contact-icon"><i class="bi bi-github"></i></div>
+        <div class="contact-info">
+          <div class="label">GitHub</div>
+          <div class="value">github.com/microintel</div>
+        </div>
+      </a>
+      <a class="contact-card" href="https://x.com/micro_intel/" target="_blank">
+        <div class="contact-icon"><i class="bi bi-twitter-x"></i></div>
+        <div class="contact-info">
+          <div class="label">Twitter / X</div>
+          <div class="value">@micro_intel</div>
+        </div>
+      </a>
+   
+    </div>
+    <div class="team-section">
+      <h2><i class="bi bi-people-fill"></i> Our Team</h2>
+      <div class="team-cards">
+        <div class="team-chip"><div class="tname">Vignesh</div><div class="trole">Coder</div></div>
+        <div class="team-chip"><div class="tname">Nikhil</div><div class="trole">Coder</div></div>
+        <div class="team-chip"><div class="tname">Dhanush</div><div class="trole">Tester</div></div>
+        <div class="team-chip"><div class="tname">Amith</div><div class="trole">Designer</div></div>
+        <div class="team-chip"><div class="tname">Pranav</div><div class="trole">Investor</div></div>
+        <div class="team-chip"><div class="tname">Raghavendra</div><div class="trole">QA</div></div>
+        <div class="team-chip"><div class="tname">Vinay</div><div class="trole">QA</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <i class="bi bi-c-circle"></i>
+    <span>Microintel</span>
+  </div>
+</footer>
+
+<script>
+
+let dark = false;
+function toggleTheme() {
+  dark = !dark;
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
+  document.getElementById('themeBtn').innerHTML = dark
+    ? '<i class="bi bi-moon-stars-fill"></i>'
+    : '<i class="bi bi-sun-fill"></i>';
+  // flip logo for dark
+  const logos = document.querySelectorAll('#nav-logo-img, #about-logo-img');
+  logos.forEach(img => {
+    img.style.filter = dark ? 'brightness(0) invert(1)' : 'none';
+  });
+}
+
+// ── PAGES ──
+function showPage(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  window.scrollTo(0, 0);
+  if (id === 'projects') loadProjects();
+}
+
+// ── MOBILE NAV ──
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+
+// ── VIDEOS ──
+function toggleVid(vidId, btnId, playText, pauseText) {
+  const v = document.getElementById(vidId);
+  const b = document.getElementById(btnId);
+  ['vid1','vid2'].forEach(id => { if (id !== vidId) document.getElementById(id).pause(); });
+  if (v.paused) {
+    v.play();
+    b.innerHTML = `<i class="bi bi-pause-fill"></i> Pause`;
+  } else {
+    v.pause();
+    b.innerHTML = `<i class="bi bi-play-fill"></i> Play`;
+  }
+}
+
+// ── PROJECTS ──
+let allProjects = [];
+let projectsLoaded = false;
+
+async function loadProjects() {
+  if (projectsLoaded) return;
+  try {
+    const res = await fetch('https://microintel.github.io/microintel/project.json');
+    const data = await res.json();
+    allProjects = Object.values(data);
+    projectsLoaded = true;
+    document.getElementById('projectCountBadge').textContent = allProjects.length + ' Projects';
+    renderProjects(allProjects);
+  } catch(e) {
+    document.getElementById('projectCountBadge').textContent = 'Error';
+    document.getElementById('projectsGrid').innerHTML =
+      '<div class="no-results"><i class="bi bi-wifi-off"></i>Could not load projects. Check your connection.</div>';
+  }
+}
+
+function renderProjects(list) {
+  const grid = document.getElementById('projectsGrid');
+  if (!list.length) {
+    grid.innerHTML = '<div class="no-results"><i class="bi bi-search"></i>No projects match your search.</div>';
+    return;
+  }
+  grid.innerHTML = list.map(p => `
+    <div class="ppp" onclick="window.open('${p.redurl || '#'}')">
+      <img src="${p.projectlogo}" alt="${p.aboutproject || ''}" loading="lazy">
+      <div class="ppp-body">
+        <p>${p.aboutproject || 'Untitled Project'}</p>
+        <div class="ppp-arrow"><i class="bi bi-arrow-right"></i></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function filterProjects() {
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  if (!q) { renderProjects(allProjects); return; }
+  const filtered = allProjects.filter(p =>
+    (p.aboutproject || '').toLowerCase().includes(q) ||
+    (p.redurl || '').toLowerCase().includes(q)
+  );
+  renderProjects(filtered);
+}
+
+// ── RANDOM QUOTE ──
+async function loadRandomQuote() {
+  const el = document.getElementById('randomQuote');
+  el.style.display = 'block';
+  el.textContent = 'Fetching a quote…';
+  try {
+    const r = await fetch('https://quotes-api-self.vercel.app/quote');
+    const d = await r.json();
+    el.textContent = `"${d.quote}" — ${d.author}`;
+  } catch(e) {
+    el.textContent = 'Could not load quote. Try again.';
+  }
+}
+</script>
+</body>
+</html>
