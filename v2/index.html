@@ -37,7 +37,7 @@
     --badge-bg: rgba(224,32,32,0.12);
 
   }
-  [data-theme="dark"] {
+  [data-theme="light"]  {
      --bg: #D1D9E0;
     --surface: #ffffff;
     --surface2: #f1f3f7;
@@ -46,8 +46,10 @@
     --text: #0f1117;
     --text2: #5a6076;
     --text3: #8b93ab;
-    --accent: #cc0000;
-    --accent2: #a80000;
+    --accent: #4f46e5;      /* Indigo */
+--accent2: #6366f1;
+--accent-soft: rgba(79,70,229,.12);
+--accent-glow: rgba(79,70,229,.2);
     --accent-soft: rgba(204,0,0,0.08);
     --accent-glow: rgba(204,0,0,0.15);
     --nav-bg: #0a0a0f;
@@ -173,7 +175,7 @@
     opacity:0;
     visibility:hidden;
     transform:translateY(-15px);
-
+pointer-events:none;
     transition:all .3s ease;
 }
 
@@ -181,6 +183,7 @@
     opacity:1;
     visibility:visible;
     transform:translateY(0);
+    pointer-events:auto;
 }
   .mobile-nav button {
     background: none; border: none;
@@ -702,6 +705,20 @@
     transform:translateY(0) scale(1);
   }
 }
+
+
+@media (max-width: 640px) {
+
+  .hero-btns{
+    display:none;
+  }
+  #themeBtn{
+    display:none;
+  }
+
+}
+
+
 </style>
 </head>
 <body>
@@ -730,6 +747,9 @@
     <button class="hamburger" id="hamburger" onclick="toggleMobileNav()">
       <span></span><span></span><span></span>
     </button>
+    <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">
+  <i class="bi bi-sun-fill"></i>
+</button>
   </div>
 </nav>
 
@@ -738,6 +758,9 @@
   <button onclick="showPage('projects');closeMobileNav()"><i class="bi bi-grid-fill"></i> Projects</button>
   <button onclick="showPage('about');closeMobileNav()"><i class="bi bi-info-circle-fill"></i> About</button>
   <button onclick="showPage('contact');closeMobileNav()"><i class="bi bi-chat-dots-fill"></i> Contact</button>
+  <button onclick="toggleTheme()">
+  <i class="bi bi-circle-half"></i> Theme
+</button>
 </div>
 
 <!-- ──── HOME PAGE ──── -->
@@ -749,26 +772,28 @@
 Microintel is a team of learners and builders creating technology solutions, gaining knowledge, and solving real-world problems with a vision for the future.
 </p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="showPage('projects')">
+      <button class="btn-primary" onclick="closeMobileNav(); showPage('projects')">
         <i class="bi bi-grid-fill"></i> View Projects
       </button>
-      <button class="btn-outline" onclick="showPage('about')">
+      <button class="btn-outline" onclick="closeMobileNav(); showPage('about')">
         <i class="bi bi-info-circle"></i> About Us
       </button>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="stat-num">9<span>+</span></div>
-        <div class="stat-label">Team Members</div>
-      </div>
-      <div class="hero-stat">
-        <div class="stat-num">20<span>+</span></div>
-        <div class="stat-label">Projects Built</div>
-      </div>
-      <div class="hero-stat">
-        <div class="stat-num">2022</div>
-        <div class="stat-label">Founded</div>
-      </div>
+  <div class="stat-num counter" data-target="9">0</div>
+  <div class="stat-label">Team Members</div>
+</div>
+
+<div class="hero-stat">
+  <div class="stat-num counter" data-target="20">0</div>
+  <div class="stat-label">Projects Built</div>
+</div>
+
+<div class="hero-stat">
+  <div class="stat-num counter" data-target="2022">0</div>
+  <div class="stat-label">Founded</div>
+</div>
       <div class="hero-stat">
         <div class="stat-num"><span>∞</span></div>
         <div class="stat-label">Ambition</div>
@@ -1058,35 +1083,75 @@ document.querySelectorAll(
 });
 
 
-function animateCounter(el,target){
-  let count=0;
+function animateCounter(el) {
 
-  const step=setInterval(()=>{
-    count+=Math.ceil(target/50);
+  const target = Number(el.dataset.target);
 
-    if(count>=target){
-      count=target;
-      clearInterval(step);
+  let start = target === 2022 ? 2000 : 0;
+
+  const duration = 1800;
+  const increment = (target - start) / (duration / 16);
+
+  const timer = setInterval(() => {
+
+    start += increment;
+
+    if (start >= target) {
+      start = target;
+      clearInterval(timer);
     }
 
-    el.textContent=count+"+";
-  },30);
+    if (target === 2022) {
+      el.textContent = Math.floor(start);
+    } else {
+      el.textContent = Math.floor(start) + "+";
+    }
+
+  }, 16);
 }
 
 
 
-let dark = false;
-function toggleTheme() {
-  dark = !dark;
-  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
-  document.getElementById('themeBtn').innerHTML = dark
-    ? '<i class="bi bi-moon-stars-fill"></i>'
-    : '<i class="bi bi-sun-fill"></i>';
-  // flip logo for dark
-  const logos = document.querySelectorAll('#nav-logo-img, #about-logo-img');
+function applyTheme(theme){
+
+  document.documentElement.setAttribute(
+    'data-theme',
+    theme
+  );
+
+  localStorage.setItem('theme', theme);
+
+  const btn = document.getElementById('themeBtn');
+
+  if(btn){
+    btn.innerHTML =
+      theme === 'light'
+      ? '<i class="bi bi-moon-stars-fill"></i>'
+      : '<i class="bi bi-sun-fill"></i>';
+  }
+
+  const logos = document.querySelectorAll(
+    '#nav-logo-img,#about-logo-img'
+  );
+
   logos.forEach(img => {
-    img.style.filter = dark ? 'brightness(0) invert(1)' : 'none';
+    img.style.filter =
+      theme === 'light'
+      ? 'none'
+      : 'brightness(0) invert(1)';
   });
+}
+
+function toggleTheme(){
+
+  const current =
+    localStorage.getItem('theme') || 'dark';
+
+  applyTheme(
+    current === 'dark'
+      ? 'light'
+      : 'dark'
+  );
 }
 
 // ── PAGES ──
@@ -1212,6 +1277,54 @@ async function loadRandomQuote() {
     el.textContent = 'Could not load quote. Try again.';
   }
 }
+
+
+
+const savedTheme =
+  localStorage.getItem('theme') || 'dark';
+
+applyTheme(savedTheme);
+
+
+
+let countersStarted = false;
+
+const counterObserver = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting && !countersStarted) {
+
+      countersStarted = true;
+
+      document.querySelectorAll('.counter')
+        .forEach(counter => animateCounter(counter));
+
+    }
+
+  });
+
+}, {
+  threshold: 0.4
+});
+
+counterObserver.observe(
+  document.querySelector('.hero-stats')
+);
+
+
+
+document.addEventListener('click', (e) => {
+  const nav = document.getElementById('mobileNav');
+  const burger = document.getElementById('hamburger');
+
+  if (
+      !nav.contains(e.target) &&
+      !burger.contains(e.target)
+  ) {
+      closeMobileNav();
+  }
+});
 </script>
 </body>
 </html>
