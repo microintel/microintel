@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +36,8 @@
     --input-border: #2a3245;
     --hero-bg: #050608;
     --badge-bg: rgba(224,32,32,0.12);
+    --radius: 12px;
+    --radius-sm: 8px;
 
   }
   [data-theme="light"]  {
@@ -64,6 +67,35 @@
     --badge-bg: rgba(204,0,0,0.1);
   }
 
+
+  [data-theme="dark"] body::before{
+    background-image:
+      linear-gradient(rgba(99,102,241,.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99,102,241,.15) 1px, transparent 1px);
+}
+
+[data-theme="light"] body::before{
+    background-image:
+      linear-gradient(rgba(79,70,229,.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79,70,229,.08) 1px, transparent 1px);
+}
+
+[data-theme="light"] .hero{
+    color: var(--text);
+}
+
+[data-theme="light"] .hero p{
+    color: var(--text2);
+}
+
+[data-theme="light"] .hero-stat .stat-num{
+    color: var(--text);
+}
+
+[data-theme="light"] .hero-stat .stat-label{
+    color: var(--text2);
+}
+
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; font-size: 16px; }
   body {
@@ -74,6 +106,15 @@
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
   }
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+
+    background-size:30px 30px;
+}
 
   /* ──────────── NAV ──────────── */
   nav {
@@ -300,6 +341,15 @@ pointer-events:none;
   .hero-stat .stat-num span { color: var(--accent); }
   .hero-stat .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.4); font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 3px; }
 
+
+  .hero{
+  position:relative;
+}
+
+.hero > *{
+  position:relative;
+  z-index:2;
+}
   /* ──────────── HOME CONTENT ──────────── */
   .home-sections {
     max-width: 1080px; margin: 0 auto;
@@ -709,16 +759,40 @@ pointer-events:none;
 
 @media (max-width: 640px) {
 
-  .hero-btns{
-    display:none;
-  }
+  
   #themeBtn{
     display:none;
   }
 
 }
 
+@media (max-width: 640px){
 
+  .hero-stats{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      margin-top:35px;
+  }
+
+  .hero-stat{
+      border:none;
+      padding:12px 18px;
+      min-width:110px;
+      background:rgba(255,255,255,.04);
+      border-radius:12px;
+  }
+
+  .hero-stat .stat-num{
+      font-size:1.4rem;
+  }
+
+  .hero-stat .stat-label{
+      font-size:.65rem;
+  }
+
+}
 </style>
 </head>
 <body>
@@ -771,7 +845,7 @@ pointer-events:none;
     <p>
 Microintel is a team of learners and builders creating technology solutions, gaining knowledge, and solving real-world problems with a vision for the future.
 </p>
-    <div class="hero-btns">
+    <div class="hero-btns" style="display: none;">
       <button class="btn-primary" onclick="closeMobileNav(); showPage('projects')">
         <i class="bi bi-grid-fill"></i> View Projects
       </button>
@@ -1063,6 +1137,76 @@ Our mission is to continuously learn, innovate, and build meaningful software so
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+
+
+
+<script>
+
+  let vantaEffect = null;
+
+
+
+function initVanta() {
+
+
+
+  if (vantaEffect) {
+
+    vantaEffect.destroy();
+
+  }
+
+
+
+  const isLight =
+
+    document.documentElement.getAttribute("data-theme") === "light";
+
+
+
+  vantaEffect = VANTA.DOTS({
+
+    el: ".hero",
+
+
+
+    mouseControls: true,
+
+    touchControls: true,
+
+    gyroControls: false,
+
+
+
+    color: 0x4f46e5,
+
+    color2: 0x6366f1,
+
+
+
+    backgroundColor: isLight
+
+      ? 0xD1D9E0
+
+      : 0x050608,
+
+
+
+    size: 3.5,
+
+    spacing: 28,
+
+    showLines: false
+
+  });
+
+}
+
+</script>
+
 <script>
 
 
@@ -1140,6 +1284,10 @@ function applyTheme(theme){
       ? 'none'
       : 'brightness(0) invert(1)';
   });
+
+  if (window.VANTA) {
+  initVanta();
+}
 }
 
 function toggleTheme(){
@@ -1284,6 +1432,7 @@ const savedTheme =
   localStorage.getItem('theme') || 'dark';
 
 applyTheme(savedTheme);
+initVanta();
 
 
 
@@ -1326,5 +1475,6 @@ document.addEventListener('click', (e) => {
   }
 });
 </script>
+
 </body>
 </html>
