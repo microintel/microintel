@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,8 +21,10 @@
     --text: #eef0f5;
     --text2: #8891a8;
     --text3: #5a6278;
-    --accent: #e02020;
-    --accent2: #ff3333;
+    --accent: #4f46e5;      /* Indigo */
+--accent2: #6366f1;
+--accent-soft: rgba(79,70,229,.12);
+--accent-glow: rgba(79,70,229,.2);
     --accent-soft: rgba(224,32,32,0.1);
     --accent-glow: rgba(224,32,32,0.2);
     --nav-bg: #050608;
@@ -82,6 +85,12 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
+
+  nav{
+   background:rgba(5,6,8,.75);
+   backdrop-filter:blur(18px);
+   border-bottom:1px solid rgba(255,255,255,.08);
+}
   .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
   .nav-logo img { height: 30px; display: block; filter: brightness(0) invert(1); }
   .nav-logo-wordmark {
@@ -128,20 +137,51 @@
     display: block; width: 20px; height: 2px;
     background: rgba(255,255,255,0.75); border-radius: 2px; transition: 0.3s;
   }
+  .hamburger span{
+  transition: all .3s ease;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1){
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform: translateY(-6.5px) rotate(-45deg);
+}
 
   /* ──────────── MOBILE NAV ──────────── */
-  .mobile-nav {
-    display: none; position: fixed; top: 64px; left: 0; right: 0;
-    background: var(--nav-bg); z-index: 999; flex-direction: column;
-    border-bottom: 1px solid rgba(204,0,0,0.25);
-    animation: slideDown 0.18s ease;
-    padding: 8px 0;
-  }
-  @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-8px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .mobile-nav.open { display: flex; }
+  .mobile-nav{
+    display:flex;
+    position:fixed;
+    top:64px;
+    left:0;
+    right:0;
+
+    background:var(--nav-bg);
+    z-index:999;
+
+    flex-direction:column;
+    padding:8px 0;
+
+    border-bottom:1px solid rgba(204,0,0,0.25);
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-15px);
+
+    transition:all .3s ease;
+}
+
+.mobile-nav.open{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
   .mobile-nav button {
     background: none; border: none;
     color: rgba(255,255,255,0.75);
@@ -173,6 +213,32 @@
       radial-gradient(ellipse 40% 40% at 20% 70%, rgba(204,0,0,0.06) 0%, transparent 60%);
     pointer-events: none;
   }
+
+  .hero::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:radial-gradient(
+        circle,
+        rgba(79,70,229,.25),
+        transparent 70%
+    );
+    top:-150px;
+    right:-150px;
+    animation: floatBlob 8s ease-in-out infinite;
+}
+
+@keyframes floatBlob{
+    0%,100%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(-50px,40px);
+    }
+}
+
+
   .hero-badge {
     display: inline-flex; align-items: center; gap: 6px;
     background: var(--badge-bg); border: 1px solid rgba(204,0,0,0.3);
@@ -392,9 +458,20 @@
   }
   .ppp:hover {
     box-shadow: var(--card-shadow-hover);
-    transform: translateY(-4px);
+    transform: translateY(-8px) scale(1.02);
     border-color: rgba(204,0,0,0.25);
   }
+
+ 
+  .ppp img{
+   transition:transform .6s ease;
+}
+
+.ppp:hover img{
+   transform:scale(1.08);
+}
+
+
 .ppp img {
     width: 100%;
     height: 220px;
@@ -594,6 +671,37 @@
   @media (min-width: 641px) {
     .hamburger { display: none; }
   }
+
+
+
+
+
+
+  .reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.page-enter{
+  animation: pageEnter .8s cubic-bezier(0.16,1,0.3,1);
+}
+
+@keyframes pageEnter{
+  0%{
+    opacity:0;
+    transform:translateY(40px) scale(.98);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
 </style>
 </head>
 <body>
@@ -932,6 +1040,41 @@ Our mission is to continuously learn, innovate, and build meaningful software so
 
 <script>
 
+
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(
+  '.vidcon,.quotes-section,.about-card,.team-member,.ppp,.contact-card'
+).forEach(el=>{
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+
+
+function animateCounter(el,target){
+  let count=0;
+
+  const step=setInterval(()=>{
+    count+=Math.ceil(target/50);
+
+    if(count>=target){
+      count=target;
+      clearInterval(step);
+    }
+
+    el.textContent=count+"+";
+  },30);
+}
+
+
+
 let dark = false;
 function toggleTheme() {
   dark = !dark;
@@ -947,21 +1090,52 @@ function toggleTheme() {
 }
 
 // ── PAGES ──
+// ── PAGES ──
 function showPage(id, btn) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
-  document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
+
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+    page.classList.remove('page-enter');
+  });
+
+  const page = document.getElementById('page-' + id);
+
+  page.classList.add('active');
+
+  // Restart animation every time
+  void page.offsetWidth;
+
+  page.classList.add('page-enter');
+
+  document.querySelectorAll('.nav-links button')
+    .forEach(b => b.classList.remove('active'));
+
   if (btn) btn.classList.add('active');
-  window.scrollTo(0, 0);
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+   
+  closeMobileNav();
   if (id === 'projects') loadProjects();
 }
 
 // ── MOBILE NAV ──
 function toggleMobileNav() {
-  document.getElementById('mobileNav').classList.toggle('open');
+
+  const nav = document.getElementById('mobileNav');
+  const burger = document.getElementById('hamburger');
+
+  nav.classList.toggle('open');
+  burger.classList.toggle('active');
 }
 function closeMobileNav() {
+
   document.getElementById('mobileNav').classList.remove('open');
+
+  document.getElementById('hamburger')
+    .classList.remove('active');
 }
 
 // ── VIDEOS ──
