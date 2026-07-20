@@ -175,6 +175,11 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/whatsup.png"
   },
   {
+    "aboutproject": "Tower Of Hanoi",
+    "redurl": "https://microintel.github.io/tower",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/tower-of-hanoi.png"
+  },
+  {
     "aboutproject": "Our PWA Apps.",
     "redurl": "https://microintel.github.io/microintel/pwa/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/pwa.png"
