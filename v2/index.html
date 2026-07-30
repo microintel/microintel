@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -350,6 +348,219 @@ pointer-events:none;
   position:relative;
   z-index:2;
 }
+
+  /* ──────────── PROFESSIONAL ANIMATED NEW RELEASE SPOTLIGHT CARD ──────────── */
+  .featured-release-wrapper {
+    max-width: 1080px;
+    margin: -30px auto 10px;
+    padding: 0 24px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .featured-release-card {
+    background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+    border: 1px solid rgba(79, 70, 229, 0.4);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: 0 12px 40px rgba(79, 70, 229, 0.15), var(--card-shadow);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Subtle border glow breath animation */
+    animation: cardBorderPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes cardBorderPulse {
+    0%, 100% {
+      border-color: rgba(79, 70, 229, 0.4);
+      box-shadow: 0 12px 40px rgba(79, 70, 229, 0.15), var(--card-shadow);
+    }
+    50% {
+      border-color: rgba(225, 29, 72, 0.5); /* Rose-Red subtle shift */
+      box-shadow: 0 12px 45px rgba(225, 29, 72, 0.18), var(--card-shadow);
+    }
+  }
+
+  .featured-release-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(79, 70, 229, 0.3), var(--card-shadow-hover);
+    border-color: var(--accent);
+  }
+
+  /* Badge with dual red/blue subtle pulse */
+  .fr-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(79, 70, 229, 0.15);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+    border: 1px solid rgba(79, 70, 229, 0.3);
+    animation: badgeColorShift 4s infinite alternate ease-in-out;
+  }
+
+  @keyframes badgeColorShift {
+    0% {
+      background: rgba(79, 70, 229, 0.15);
+      border-color: rgba(79, 70, 229, 0.4);
+      color: #818cf8;
+    }
+    100% {
+      background: rgba(225, 29, 72, 0.15);
+      border-color: rgba(225, 29, 72, 0.4);
+      color: #fb7185;
+    }
+  }
+
+  .pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    animation: dotPulseColor 2s infinite ease-in-out;
+  }
+
+  @keyframes dotPulseColor {
+    0% {
+      background-color: #4f46e5;
+      box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.7);
+    }
+    50% {
+      background-color: #e11d48;
+      box-shadow: 0 0 0 8px rgba(225, 29, 72, 0);
+    }
+    100% {
+      background-color: #4f46e5;
+      box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+    }
+  }
+
+  .fr-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .fr-text h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+  }
+
+  .fr-text p {
+    color: var(--text2);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 24px;
+    max-width: 520px;
+  }
+
+  .fr-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* ──────── PROFESSIONAL RED & BLUE DUAL-GLOW BUTTON ──────── */
+  .btn-explore-pro {
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 50%, #e11d48 100%);
+    background-size: 200% 200%;
+    color: #fff;
+    border: none;
+    padding: 12px 26px;
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    /* Red/Blue Professional Gradient Breath Animation */
+    animation: proButtonGlow 3.5s ease infinite;
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes proButtonGlow {
+    0% {
+      background-position: 0% 50%;
+      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.45), 0 0 12px rgba(79, 70, 229, 0.3);
+    }
+    50% {
+      background-position: 100% 50%;
+      box-shadow: 0 4px 25px rgba(225, 29, 72, 0.5), 0 0 16px rgba(225, 29, 72, 0.35);
+    }
+    100% {
+      background-position: 0% 50%;
+      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.45), 0 0 12px rgba(79, 70, 229, 0.3);
+    }
+  }
+
+  .btn-explore-pro:hover {
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 28px rgba(225, 29, 72, 0.6), 0 6px 28px rgba(79, 70, 229, 0.6);
+  }
+
+  .btn-explore-pro i {
+    font-size: 0.95rem;
+    transition: transform 0.2s ease;
+  }
+
+  .btn-explore-pro:hover i {
+    transform: translate(2px, -2px);
+  }
+
+  /* Visual subtle float animation */
+  .fr-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fr-visual img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    background: var(--surface3);
+    border: 1px solid var(--border);
+    padding: 10px;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+    animation: imageFloat 6s ease-in-out infinite;
+  }
+
+  @keyframes imageFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+  }
+
+  .fr-visual img:hover {
+    transform: scale(1.03) translateY(-4px);
+    border-color: rgba(79, 70, 229, 0.6);
+  }
+
+  @media (max-width: 768px) {
+    .fr-content {
+      grid-template-columns: 1fr;
+    }
+    .fr-visual {
+      order: -1;
+    }
+  }
+
   /* ──────────── HOME CONTENT ──────────── */
   .home-sections {
     max-width: 1080px; margin: 0 auto;
@@ -725,11 +936,6 @@ pointer-events:none;
     .hamburger { display: none; }
   }
 
-
-
-
-
-
   .reveal{
     opacity:0;
     transform:translateY(40px);
@@ -756,14 +962,10 @@ pointer-events:none;
   }
 }
 
-
 @media (max-width: 640px) {
-
-  
   #themeBtn{
     display:none;
   }
-
 }
 
 @media (max-width: 640px){
@@ -791,7 +993,6 @@ pointer-events:none;
   .hero-stat .stat-label{
       font-size:.65rem;
   }
-
 }
 </style>
 </head>
@@ -871,6 +1072,35 @@ Microintel is a team of learners and builders creating technology solutions, gai
       <div class="hero-stat">
         <div class="stat-num"><span>∞</span></div>
         <div class="stat-label">Ambition</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──── NEW RELEASE SPOTLIGHT: INVISIBLE HOUSE ──── -->
+  <div class="featured-release-wrapper">
+    <div class="featured-release-card reveal">
+      <div class="fr-badge">
+        <span class="pulse-dot"></span>
+        NEW RELEASE
+      </div>
+      <div class="fr-content">
+        <div class="fr-text">
+          <h3>Invisible House</h3>
+          <p>
+            Compare mutual funds, analyze performance, visualize NAV trends, and make informed investment decisions with a modern, intuitive platform built by MicroIntel.
+          </p>
+          <div class="fr-actions">
+            <button class="btn-explore-pro" onclick="window.open('https://microintel.github.io/invisible-house/')">
+              <i class="bi bi-box-arrow-up-right"></i> Explore Project
+            </button>
+            <button class="btn-outline" onclick="showPage('projects')">
+              <i class="bi bi-grid-fill"></i> All Projects
+            </button>
+          </div>
+        </div>
+        <div class="fr-visual">
+          <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/invisible-house.png" alt="Invisible House Project Logo" loading="lazy">
+        </div>
       </div>
     </div>
   </div>
@@ -1218,7 +1448,7 @@ const observer = new IntersectionObserver(entries=>{
 });
 
 document.querySelectorAll(
-  '.vidcon,.quotes-section,.about-card,.team-member,.ppp,.contact-card'
+  '.vidcon,.quotes-section,.about-card,.team-member,.ppp,.contact-card,.featured-release-card'
 ).forEach(el=>{
   el.classList.add('reveal');
   observer.observe(el);
