@@ -2,7 +2,10 @@
   {
     "aboutproject": "Invisible House : Fund House & NAV",
     "redurl": "https://microintel.github.io/invisible-house/",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/invisible-house.png"
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/invisible-house.png",
+    "newrelease": true,
+    "featuretitle": "Invisible House",
+    "featuredesc": "Compare mutual funds, analyze performance, visualize NAV trends, and make informed investment decisions with a modern, intuitive platform built by MicroIntel."
   },
   {
     "aboutproject": "Anka : Academic progress, simplified",
