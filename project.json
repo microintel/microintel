@@ -1,5 +1,45 @@
 [
   {
+    "aboutproject": "Invisible House : Fund House & NAV",
+    "redurl": "https://microintel.github.io/invisible-house/",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/invisible-house.png"
+  },
+  {
+    "aboutproject": "Anka : Academic progress, simplified",
+    "redurl": "https://microintel.github.io/anka/",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/anka.png"
+  },
+  {
+    "aboutproject": "Missmonk : Know what you missed",
+    "redurl": "https://microintel.github.io/missmonk",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/missmonk.png"
+  },
+  {
+    "aboutproject": "Whats Up : A demo messaging application",
+    "redurl": "https://microintel.github.io/whatsup/",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/whatsup.png"
+  },
+  {
+    "aboutproject": "Vision : for the wealthy who prefer relaxation.",
+    "redurl": "https://microintel.github.io/vision",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/future%20vision%201.jpeg"
+  },
+  {
+    "aboutproject": "CAGR : Growth Rate Calculator",
+    "redurl": "https://microintel.github.io/cagr",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/cagr.png"
+  },
+  {
+    "aboutproject": "Tower Of Hanoi",
+    "redurl": "https://microintel.github.io/tower",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/tower-of-hanoi.png"
+  },
+  {
+    "aboutproject": "Our PWA Apps.",
+    "redurl": "https://microintel.github.io/microintel/pwa/",
+    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/pwa.png"
+  },
+  {
     "aboutproject": "Evaluator : A Calculator for CIE Book",
     "redurl": "https://microintel.github.io/cie/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/evaluators.jpg"
@@ -25,11 +65,6 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/multi%20verse%20wanda.jpg"
   },
   {
-    "aboutproject": "Vision : for the wealthy who prefer relaxation.",
-    "redurl": "https://microintel.github.io/vision",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/future%20vision%201.jpeg"
-  },
-    {
     "aboutproject": "StepUP : SIP tracker that tracks your investment growth",
     "redurl": "https://microintel.github.io/stepup",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/steupfront.png"
@@ -110,11 +145,6 @@
     "projectlogo": "https://microintel.github.io/1440/icon512_rounded.png"
   },
   {
-    "aboutproject": "Missmonk : Know what you missed",
-    "redurl": "https://microintel.github.io/missmonk",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/missmonk.png"
-  },
-  {
     "aboutproject": "Fake Results",
     "redurl": "https://microintel.github.io/benhexa",
     "projectlogo": "https://microintel.github.io/benhexa/icon512_maskable.png"
@@ -123,11 +153,6 @@
     "aboutproject": "Calina : Calcultor",
     "redurl": "https://microintel.github.io/calina",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/calina.png"
-  },
-  {
-    "aboutproject": "CAGR : Growth Rate Calculator",
-    "redurl": "https://microintel.github.io/cagr",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/cagr.png"
   },
   {
     "aboutproject": " Evolutionary Files",
@@ -160,33 +185,8 @@
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/micron.png"
   },
   {
-    "aboutproject": "Anka : Academic progress, simplified",
-    "redurl": "https://microintel.github.io/anka/",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/anka.png"
-  },
-  {
     "aboutproject": "NoRelapse : blend dicipline into life",
     "redurl": "https://microintel.github.io/milkshake/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/ferdinand-milogo.jpg"
-  },
-  {
-    "aboutproject": "Whats Up : A demo messaging application",
-    "redurl": "https://microintel.github.io/whatsup/",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/whatsup.png"
-  },
-  {
-    "aboutproject": "Tower Of Hanoi",
-    "redurl": "https://microintel.github.io/tower",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/tower-of-hanoi.png"
-  },
-  {
-    "aboutproject": "Invisible House : Fund House & NAV",
-    "redurl": "https://microintel.github.io/invisible-house/",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/invisible-house.png"
-  },
-  {
-    "aboutproject": "Our PWA Apps.",
-    "redurl": "https://microintel.github.io/microintel/pwa/",
-    "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/pwa.png"
   }
 ]
