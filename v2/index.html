@@ -1076,34 +1076,8 @@ Microintel is a team of learners and builders creating technology solutions, gai
     </div>
   </div>
 
-  <!-- ──── NEW RELEASE SPOTLIGHT: INVISIBLE HOUSE ──── -->
-  <div class="featured-release-wrapper">
-    <div class="featured-release-card reveal">
-      <div class="fr-badge">
-        <span class="pulse-dot"></span>
-        NEW RELEASE
-      </div>
-      <div class="fr-content">
-        <div class="fr-text">
-          <h3>Invisible House</h3>
-          <p>
-            Compare mutual funds, analyze performance, visualize NAV trends, and make informed investment decisions with a modern, intuitive platform built by MicroIntel.
-          </p>
-          <div class="fr-actions">
-            <button class="btn-explore-pro" onclick="window.open('https://microintel.github.io/invisible-house/')">
-              <i class="bi bi-box-arrow-up-right"></i> Explore Project
-            </button>
-            <button class="btn-outline" onclick="showPage('projects')">
-              <i class="bi bi-grid-fill"></i> All Projects
-            </button>
-          </div>
-        </div>
-        <div class="fr-visual">
-          <img src="https://raw.githubusercontent.com/microintel/endgram/main/photo/invisible-house.png" alt="Invisible House Project Logo" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- ──── NEW RELEASE SPOTLIGHT (populated dynamically from project.json) ──── -->
+  <div class="featured-release-wrapper" id="featuredReleaseWrapper" style="display:none;"></div>
 
   <div class="home-sections">
     <!-- Video 1 -->
@@ -1606,11 +1580,56 @@ async function loadProjects() {
     projectsLoaded = true;
     document.getElementById('projectCountBadge').textContent = allProjects.length + ' Projects';
     renderProjects(allProjects);
+    renderFeaturedRelease(allProjects);
   } catch(e) {
     document.getElementById('projectCountBadge').textContent = 'Error';
     document.getElementById('projectsGrid').innerHTML =
       '<div class="no-results"><i class="bi bi-wifi-off"></i>Could not load projects. Check your connection.</div>';
   }
+}
+
+// ── NEW RELEASE SPOTLIGHT ──
+// Reads the "newrelease" flag from project.json. Whichever project has
+// "newrelease": true becomes the spotlight card on the home page.
+// To change the featured project later, just edit project.json —
+// no HTML changes needed.
+function renderFeaturedRelease(list) {
+  const wrapper = document.getElementById('featuredReleaseWrapper');
+  const featured = list.find(p => p.newrelease === true);
+  if (!featured) { wrapper.style.display = 'none'; wrapper.innerHTML = ''; return; }
+
+  const title = featured.featuretitle || featured.aboutproject || 'New Release';
+  const desc = featured.featuredesc || '';
+  const url = featured.redurl || '#';
+  const logo = featured.projectlogo || '';
+
+  wrapper.innerHTML = `
+    <div class="featured-release-card reveal">
+      <div class="fr-badge">
+        <span class="pulse-dot"></span>
+        NEW RELEASE
+      </div>
+      <div class="fr-content">
+        <div class="fr-text">
+          <h3>${title}</h3>
+          <p>${desc}</p>
+          <div class="fr-actions">
+            <button class="btn-explore-pro" onclick="window.open('${url}')">
+              <i class="bi bi-box-arrow-up-right"></i> Explore Project
+            </button>
+            <button class="btn-outline" onclick="showPage('projects')">
+              <i class="bi bi-grid-fill"></i> All Projects
+            </button>
+          </div>
+        </div>
+        <div class="fr-visual">
+          <img src="${logo}" alt="${title} Project Logo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  `;
+  wrapper.style.display = 'block';
+  observer.observe(wrapper.querySelector('.featured-release-card'));
 }
 
 function renderProjects(list) {
@@ -1661,6 +1680,7 @@ const savedTheme =
 
 applyTheme(savedTheme);
 initVanta();
+loadProjects(); // fetch project.json on load so the home page NEW RELEASE card renders right away
 
 
 
