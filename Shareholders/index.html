@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shareholders Gallery</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#0d0d0d;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color:#eee;
+    padding:20px 14px 40px;
+  }
+  h1 {
+    font-size:1.3rem;
+    font-weight:600;
+    margin-bottom:18px;
+    text-align:center;
+    letter-spacing:0.5px;
+  }
+  .grid {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:12px;
+    max-width:900px;
+    margin:0 auto;
+  }
+  .card {
+    position:relative;
+    display:block;
+    aspect-ratio: 1 / 1;
+    border-radius:10px;
+    overflow:hidden;
+    background:#1a1a1a;
+    text-decoration:none;
+    box-shadow:0 2px 6px rgba(0,0,0,0.4);
+  }
+  .card img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform 0.2s;
+  }
+  .card:active img { transform:scale(0.97); }
+  .label {
+    position:absolute;
+    bottom:0; left:0; right:0;
+    padding:6px 8px;
+    font-size:0.68rem;
+    color:#fff;
+    background:linear-gradient(transparent, rgba(0,0,0,0.75));
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  @media (min-width:600px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+  <h1>Shareholders Gallery</h1>
+  <div class="grid">
+    <a href="page1.html" class="card">
+      <img src="IMG-20250410-WA0035.jpg" alt="IMG-20250410-WA0035.jpg" loading="lazy">
+      <div class="label">IMG-20250410-WA0035.jpg</div>
+    </a>
+    <a href="page2.html" class="card">
+      <img src="IMG_20240430_092933.jpg" alt="IMG_20240430_092933.jpg" loading="lazy">
+      <div class="label">IMG_20240430_092933.jpg</div>
+    </a>
+    <a href="page3.html" class="card">
+      <img src="IMG_20260120_000518.jpg" alt="IMG_20260120_000518.jpg" loading="lazy">
+      <div class="label">IMG_20260120_000518.jpg</div>
+    </a>
+    <a href="page4.html" class="card">
+      <img src="MicroIntel pranav.jpg" alt="MicroIntel pranav.jpg" loading="lazy">
+      <div class="label">MicroIntel pranav.jpg</div>
+    </a>
+    <a href="page5.html" class="card">
+      <img src="Microintel investor.jpg" alt="Microintel investor.jpg" loading="lazy">
+      <div class="label">Microintel investor.jpg</div>
+    </a>
+    <a href="page6.html" class="card">
+      <img src="investor.jpg" alt="investor.jpg" loading="lazy">
+      <div class="label">investor.jpg</div>
+    </a>
+    <a href="page7.html" class="card">
+      <img src="pranav 1.jpg" alt="pranav 1.jpg" loading="lazy">
+      <div class="label">pranav 1.jpg</div>
+    </a>
+    <a href="page8.html" class="card">
+      <img src="pranav vignesh.png" alt="pranav vignesh.png" loading="lazy">
+      <div class="label">pranav vignesh.png</div>
+    </a>
+    <a href="page9.html" class="card">
+      <img src="pranav.jpg" alt="pranav.jpg" loading="lazy">
+      <div class="label">pranav.jpg</div>
+    </a>
+  </div>
+</body>
+</html>
