@@ -17,11 +17,11 @@
     "description": "An academic progress tracker built for students to manage their entire semester in one place. It covers attendance logging, semester-wise subject management, SSLC record keeping, and stage-based grading, alongside a dashboard with visual charts to track performance over time. Data can be exported and imported for backup, and full progress reports can be downloaded as PDFs for records or sharing."
   },
   {
-    "aboutproject": "Missmonk : Know what you missed",
+    "aboutproject": "Megha : Know what you missed",
     "redurl": "https://microintel-missmonk.vercel.app/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/missmonk.png",
-    "projectName": "Missmonk",
-    "description": "A personal learning hub that bundles a diploma engineering curriculum, financial-literacy content, and self-development books into one installable web app. It features Google sign-in with cross-device progress tracking synced to Firestore, a searchable library covering coursework, investing fundamentals, and psychology books broken into chapters, plus a TikTok-style 'reels' feed called Nuts that surfaces one key idea or quote at a time with like, share, and 'ask ChatGPT' actions. Progress dashboards, a members list, and shareable URL-synced navigation round out the experience."
+    "projectName": "Megha",
+    "description": "A personal learning hub that bundles a curriculum, financial-literacy content, and self-development books into one installable web app. It features Google sign-in with cross-device progress tracking synced to Firestore, a searchable library covering coursework, investing fundamentals, and psychology books broken into chapters, plus a TikTok-style 'reels' feed called Nuts that surfaces one key idea or quote at a time with like, share, and 'ask ChatGPT' actions. Progress dashboards, a members list, and shareable URL-synced navigation round out the experience."
   },
   {
     "aboutproject": "BlackRoad : Financial Wealth Tracker",
