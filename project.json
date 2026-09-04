@@ -18,7 +18,7 @@
   },
   {
     "aboutproject": "Megha : Know what you missed",
-    "redurl": "https://microintel-missmonk.vercel.app/",
+    "redurl": "https://megha-microintel.vercel.app/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/missmonk.png",
     "projectName": "Megha",
     "description": "A personal learning hub that bundles a curriculum, financial-literacy content, and self-development books into one installable web app. It features Google sign-in with cross-device progress tracking synced to Firestore, a searchable library covering coursework, investing fundamentals, and psychology books broken into chapters, plus a TikTok-style 'reels' feed called Nuts that surfaces one key idea or quote at a time with like, share, and 'ask ChatGPT' actions. Progress dashboards, a members list, and shareable URL-synced navigation round out the experience."
