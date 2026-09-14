@@ -25,7 +25,7 @@
   },
   {
     "aboutproject": "BlackRoad : Financial Wealth Tracker",
-    "redurl": "https://microintel.github.io/blackroad",
+    "redurl": "https://microintel.github.io/blackroad/home.html",
     "projectlogo": "https://microintel.github.io/blackroad/icon512_maskable.png",
     "description": "A personal finance dashboard, built as an installable PWA with offline support, that tracks your income, expenses, loans, fixed deposits, and stock/mutual fund investments all in one place. It includes a main dashboard overview, an income statement for tracking and searching entries across periods, a lending ledger for money borrowed or lent, fixed deposit tracking, a step-up SIP calculator with charts and PDF reports, and a simple login system to keep data tied to an account. Everything currently runs on plain HTML, CSS, and JavaScript with data stored locally in the browser, with React, cloud backup, and Firebase Authentication planned for future releases.",
     "projectName": "BlackRoad"
