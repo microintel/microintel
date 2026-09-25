@@ -372,28 +372,15 @@ pointer-events:none;
     border: 1px solid rgba(79, 70, 229, 0.4);
     border-radius: var(--radius);
     padding: 32px;
-    box-shadow: 0 12px 40px rgba(79, 70, 229, 0.15), var(--card-shadow);
+    box-shadow: var(--card-shadow);
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Subtle border glow breath animation */
-    animation: cardBorderPulse 4s ease-in-out infinite;
-  }
-
-  @keyframes cardBorderPulse {
-    0%, 100% {
-      border-color: rgba(79, 70, 229, 0.4);
-      box-shadow: 0 12px 40px rgba(79, 70, 229, 0.15), var(--card-shadow);
-    }
-    50% {
-      border-color: rgba(225, 29, 72, 0.5); /* Rose-Red subtle shift */
-      box-shadow: 0 12px 45px rgba(225, 29, 72, 0.18), var(--card-shadow);
-    }
   }
 
   .featured-release-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(79, 70, 229, 0.3), var(--card-shadow-hover);
+    box-shadow: var(--card-shadow-hover);
     border-color: var(--accent);
   }
 
@@ -1761,7 +1748,7 @@ function renderHeroTyped(segments, charCount) {
   const el = document.querySelector('#typedHeading .typed-text');
   if (!el) return;
 
-  let phraseIndex = 0;
+  let phraseIndex = Math.floor(Math.random() * heroPhrases.length);
   let charIndex = 0;
   let typingForward = true;
 
@@ -1783,7 +1770,13 @@ function renderHeroTyped(segments, charCount) {
       el.innerHTML = renderHeroTyped(segments, charIndex);
       if (charIndex <= 0) {
         typingForward = true;
-        phraseIndex = (phraseIndex + 1) % heroPhrases.length;
+        let nextIndex = phraseIndex;
+        if (heroPhrases.length > 1) {
+          while (nextIndex === phraseIndex) {
+            nextIndex = Math.floor(Math.random() * heroPhrases.length);
+          }
+        }
+        phraseIndex = nextIndex;
         setTimeout(step, 500);
         return;
       }
