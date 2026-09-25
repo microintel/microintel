@@ -297,6 +297,15 @@ pointer-events:none;
     line-height: 1.08; margin-bottom: 20px;
   }
   .hero h1 span { color: var(--accent); }
+  .typed-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: typedBlink 0.9s steps(1) infinite;
+  }
+  @keyframes typedBlink {
+    0%, 50% { opacity: 1; }
+    50.01%, 100% { opacity: 0; }
+  }
   .hero p {
     font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: rgba(255,255,255,0.55); max-width: 520px; margin: 0 auto 36px;
@@ -1042,7 +1051,7 @@ pointer-events:none;
 <div id="page-home" class="page active">
   <div class="hero">
     
-    <h1>Learn. <span>Create.</span> Grow.</h1>
+    <h1 id="typedHeading"><span class="typed-text"></span><span class="typed-cursor">|</span></h1>
     <p>
 Microintel is a team of learners and builders creating technology solutions, gaining knowledge, and solving real-world problems with a vision for the future.
 </p>
@@ -1718,6 +1727,72 @@ document.addEventListener('click', (e) => {
       closeMobileNav();
   }
 });
+
+
+
+// ──── Hero heading typing animation: cycles between two phrases (loops forever) ────
+const heroPhrases = [
+  [
+    { text: "Learn. ", highlight: false },
+    { text: "Create.", highlight: true },
+    { text: " Grow.", highlight: false }
+  ],
+  [
+    { text: "Buy. ", highlight: false },
+    { text: "Borrow.", highlight: true },
+    { text: " Die.", highlight: false }
+  ]
+];
+
+function renderHeroTyped(segments, charCount) {
+  let remaining = charCount;
+  let html = '';
+  for (const seg of segments) {
+    if (remaining <= 0) break;
+    const take = Math.min(remaining, seg.text.length);
+    const part = seg.text.slice(0, take);
+    html += seg.highlight ? `<span>${part}</span>` : part;
+    remaining -= take;
+  }
+  return html;
+}
+
+(function heroTypeLoop() {
+  const el = document.querySelector('#typedHeading .typed-text');
+  if (!el) return;
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let typingForward = true;
+
+  function step() {
+    const segments = heroPhrases[phraseIndex];
+    const totalLength = segments.reduce((sum, seg) => sum + seg.text.length, 0);
+
+    if (typingForward) {
+      charIndex++;
+      el.innerHTML = renderHeroTyped(segments, charIndex);
+      if (charIndex >= totalLength) {
+        typingForward = false;
+        setTimeout(step, 1400);
+        return;
+      }
+      setTimeout(step, 70);
+    } else {
+      charIndex--;
+      el.innerHTML = renderHeroTyped(segments, charIndex);
+      if (charIndex <= 0) {
+        typingForward = true;
+        phraseIndex = (phraseIndex + 1) % heroPhrases.length;
+        setTimeout(step, 500);
+        return;
+      }
+      setTimeout(step, 35);
+    }
+  }
+
+  step();
+})();
 </script>
 
 </body>
