@@ -694,6 +694,23 @@ pointer-events:none;
   }
   .search-bar:focus-within { border-color: var(--accent); }
   .search-bar i { color: var(--text3); font-size: 1rem; }
+
+  .category-filter {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--input-bg); border: 1.5px solid var(--input-border);
+    border-radius: var(--radius-sm); padding: 0 14px;
+    margin-bottom: 28px; max-width: 420px;
+    transition: border-color 0.18s ease;
+  }
+  .category-filter:focus-within { border-color: var(--accent); }
+  .category-filter i { color: var(--text3); font-size: 0.95rem; }
+  .category-filter select {
+    border: none; background: none; outline: none; flex: 1;
+    padding: 11px 0; font-family: 'Inter', sans-serif;
+    font-size: 0.875rem; color: var(--text);
+    cursor: pointer;
+  }
+  .category-filter option { background: var(--surface); color: var(--text); }
   .search-bar input {
     border: none; background: none; outline: none; flex: 1;
     padding: 11px 0; font-family: 'Inter', sans-serif;
@@ -1004,7 +1021,7 @@ pointer-events:none;
       <i class="bi bi-house-fill"></i> Home
     </button>
     <button onclick="showPage('projects', this)">
-      <i class="bi bi-grid-fill"></i> Projects
+      <i class="bi bi-grid-fill"></i> Creations
     </button>
     <button onclick="showPage('about', this)">
       <i class="bi bi-info-circle-fill"></i> About
@@ -1026,7 +1043,7 @@ pointer-events:none;
 
 <div class="mobile-nav" id="mobileNav">
   <button onclick="showPage('home');closeMobileNav()"><i class="bi bi-house-fill"></i> Home</button>
-  <button onclick="showPage('projects');closeMobileNav()"><i class="bi bi-grid-fill"></i> Projects</button>
+  <button onclick="showPage('projects');closeMobileNav()"><i class="bi bi-grid-fill"></i> Creations</button>
   <button onclick="showPage('about');closeMobileNav()"><i class="bi bi-info-circle-fill"></i> About</button>
   <button onclick="showPage('contact');closeMobileNav()"><i class="bi bi-chat-dots-fill"></i> Contact</button>
   <button onclick="toggleTheme()">
@@ -1044,7 +1061,7 @@ Microintel is a team of learners and builders creating technology solutions, gai
 </p>
     <div class="hero-btns" style="display: none;">
       <button class="btn-primary" onclick="closeMobileNav(); showPage('projects')">
-        <i class="bi bi-grid-fill"></i> View Projects
+        <i class="bi bi-grid-fill"></i> View Creations
       </button>
       <button class="btn-outline" onclick="closeMobileNav(); showPage('about')">
         <i class="bi bi-info-circle"></i> About Us
@@ -1057,8 +1074,8 @@ Microintel is a team of learners and builders creating technology solutions, gai
 </div>
 
 <div class="hero-stat">
-  <div class="stat-num counter" data-target="20">0</div>
-  <div class="stat-label">Projects Built</div>
+  <div class="stat-num counter" data-target="30">0</div>
+  <div class="stat-label">Creations Built</div>
 </div>
 
 <div class="hero-stat">
@@ -1152,17 +1169,27 @@ Microintel is a team of learners and builders creating technology solutions, gai
   <div class="projects-page">
     <div class="page-title-row">
       <div>
-        <h1>Projects</h1>
-        <p class="sub">All Microintel builds </p>
+        <h1>Creations</h1>
+        <p class="sub">All Microintel creations </p>
       </div>
       <span class="page-count-badge" id="projectCountBadge">Loading…</span>
     </div>
     <div class="search-bar">
       <i class="bi bi-search"></i>
-      <input type="text" id="searchInput" placeholder="Search projects…" oninput="filterProjects()">
+      <input type="text" id="searchInput" placeholder="Search creations…" oninput="filterProjects()">
+    </div>
+    <div class="category-filter">
+      <i class="bi bi-funnel-fill"></i>
+      <select id="categoryFilter" onchange="filterProjects()">
+        <option value="all">All Categories</option>
+        <option value="project">Projects</option>
+        <option value="tool">Tools</option>
+        <option value="utility">Utilities</option>
+        <option value="work">Works</option>
+      </select>
     </div>
     <div id="projectsGrid" class="projects-grid">
-      <div class="projects-loading"><div class="spinner"></div>Fetching projects…</div>
+      <div class="projects-loading"><div class="spinner"></div>Fetching creations…</div>
     </div>
   </div>
 </div>
@@ -1177,9 +1204,9 @@ Microintel is a team of learners and builders creating technology solutions, gai
       <div class="about-hero-text">
         <h1>About Microintel</h1>
       <p>
-<b>Microintel</b> began as a student-driven initiative with a simple goal: to solve everyday academic challenges through technology. What started as small college projects soon became a journey of <b>learning, innovation, and continuous growth</b>.
+<b>Microintel</b> began as a student-driven initiative with a simple goal: to solve everyday academic challenges through technology. What started as small college creations soon became a journey of <b>learning, innovation, and continuous growth</b>.
 
-Today, we explore new technologies, build practical solutions, and challenge ourselves to turn ideas into meaningful products. Every project we create is another step toward gaining experience, expanding our knowledge, and understanding how technology can make a real difference.
+Today, we explore new technologies, build practical solutions, and challenge ourselves to turn ideas into meaningful products. Every creation we create is another step toward gaining experience, expanding our knowledge, and understanding how technology can make a real difference.
 
 While <b>Microintel does not yet have a physical office</b>, our ambition extends far beyond our current size. We envision a future where Microintel grows into a <b>dedicated software company</b> with its own workspace, talented teams, and innovative products that help solve real-world problems.
 
@@ -1193,7 +1220,7 @@ We believe every successful organization begins with <b>curiosity, persistence, 
       <div class="about-card">
         <h2><i class="bi bi-code-slash"></i> What We Do</h2>
        <p>
-We design and develop software projects that solve practical problems. Starting with academic and college-related challenges, we now focus on learning modern technologies and building applications that address real-world needs. Every project we create helps us gain experience, improve our skills, and understand how technology can make everyday tasks easier.
+We design and develop software creations that solve practical problems. Starting with academic and college-related challenges, we now focus on learning modern technologies and building applications that address real-world needs. Every creation we create helps us gain experience, improve our skills, and understand how technology can make everyday tasks easier.
 </p>   </div>
       <div class="about-card">
         <h2><i class="bi bi-bullseye"></i> Our Mission</h2>
@@ -1425,7 +1452,7 @@ function animateCounter(el) {
 
   const target = Number(el.dataset.target);
 
-  let start = target === 2022 ? 2000 : 0;
+  let start = target === 2022 ? 2005 : 0;
 
   const duration = 1800;
   const increment = (target - start) / (duration / 16);
@@ -1570,13 +1597,13 @@ async function loadProjects() {
     const data = await res.json();
     allProjects = Object.values(data);
     projectsLoaded = true;
-    document.getElementById('projectCountBadge').textContent = allProjects.length + ' Projects';
+    document.getElementById('projectCountBadge').textContent = allProjects.length + ' Creations';
     renderProjects(allProjects);
     renderFeaturedRelease(allProjects);
   } catch(e) {
     document.getElementById('projectCountBadge').textContent = 'Error';
     document.getElementById('projectsGrid').innerHTML =
-      '<div class="no-results"><i class="bi bi-wifi-off"></i>Could not load projects. Check your connection.</div>';
+      '<div class="no-results"><i class="bi bi-wifi-off"></i>Could not load creations. Check your connection.</div>';
   }
 }
 
@@ -1615,7 +1642,7 @@ function renderFeaturedRelease(list) {
           </div>
         </div>
         <div class="fr-visual">
-          <img src="${logo}" alt="${title} Project Logo" loading="lazy">
+          <img src="${logo}" alt="${title} Creation Logo" loading="lazy">
         </div>
       </div>
     </div>
@@ -1627,14 +1654,14 @@ function renderFeaturedRelease(list) {
 function renderProjects(list) {
   const grid = document.getElementById('projectsGrid');
   if (!list.length) {
-    grid.innerHTML = '<div class="no-results"><i class="bi bi-search"></i>No projects match your search.</div>';
+    grid.innerHTML = '<div class="no-results"><i class="bi bi-search"></i>No creations match your search.</div>';
     return;
   }
   grid.innerHTML = list.map(p => `
     <div class="ppp" onclick="window.open('${p.redurl || '#'}')">
       <img src="${p.projectlogo}" alt="${p.aboutproject || ''}" loading="lazy">
       <div class="ppp-body">
-        <p>${p.aboutproject || 'Untitled Project'}</p>
+        <p>${p.aboutproject || 'Untitled Creation'}</p>
         <div class="ppp-arrow"><i class="bi bi-arrow-right"></i></div>
       </div>
     </div>
@@ -1643,11 +1670,24 @@ function renderProjects(list) {
 
 function filterProjects() {
   const q = document.getElementById('searchInput').value.trim().toLowerCase();
-  if (!q) { renderProjects(allProjects); return; }
-  const filtered = allProjects.filter(p =>
-    (p.aboutproject || '').toLowerCase().includes(q) ||
-    (p.redurl || '').toLowerCase().includes(q)
-  );
+  const category = document.getElementById('categoryFilter').value;
+
+  const filtered = allProjects.filter(p => {
+    const matchesSearch = !q ||
+      (p.aboutproject || '').toLowerCase().includes(q) ||
+      (p.projectName || '').toLowerCase().includes(q) ||
+      (p.description || '').toLowerCase().includes(q) ||
+      (p.redurl || '').toLowerCase().includes(q);
+
+    const matchesCategory = category === 'all' ||
+      (p.category || '').toLowerCase() === category;
+
+    return matchesSearch && matchesCategory;
+  });
+
+  document.getElementById('projectCountBadge').textContent =
+    filtered.length + ' Creations';
+
   renderProjects(filtered);
 }
 
