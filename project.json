@@ -7,7 +7,7 @@
     "featuretitle": "Invisible House",
     "featuredesc": "Compare mutual funds, analyze performance, visualize NAV trends, and make informed investment decisions with a modern, intuitive platform built by MicroIntel.",
     "projectName": "Invisible House",
-    "description": "A clean, fast tool to look up any Indian mutual fund's NAV history and compare funds side by side. It offers instant search across fund houses and schemes, zoomable trend charts with quick range filters (1W to MAX), CAGR at a glance, and tap-to-compare between any two points on a chart. A dedicated Compare mode overlays up to 4 funds on one graph, with the comparison saved locally so it survives a page reload. Data is sourced live from mfapi.in, runs entirely in the browser, and needs no sign-up or account.",
+    "description": "Invisible House is a web-based platform for exploring and comparing Indian mutual funds using live Net Asset Value (NAV) data. It provides fund search, historical NAV records, interactive performance charts, CAGR calculations, and side-by-side comparisons of up to four funds. Users can filter time ranges, analyze NAV changes, download fund data, and access recent searches. With light and dark themes, it offers a simple, transparent way to understand mutual fund performance.",
     "category": "project"
   },
   {
@@ -23,14 +23,14 @@
     "redurl": "https://megha-microintel.vercel.app/",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/missmonk.png",
     "projectName": "Megha",
-    "description": "A personal learning hub that bundles a curriculum, financial-literacy content, and self-development books into one installable web app. It features Google sign-in with cross-device progress tracking synced to Firestore, a searchable library covering coursework, investing fundamentals, and psychology books broken into chapters, plus a TikTok-style 'reels' feed called Nuts that surfaces one key idea or quote at a time with like, share, and 'ask ChatGPT' actions. Progress dashboards, a members list, and shareable URL-synced navigation round out the experience.",
+    "description": "Megha is an interactive knowledge platform that brings together book summaries, academic syllabi, and concepts from diverse fields, including finance, computer science, psychology, and personal development. It presents key ideas from books in an engaging format and organizes academic syllabi into structured subjects and topics. With its user-friendly interface, Megha makes exploring knowledge, understanding complex concepts, and accessing useful information across different domains simple and convenient.",
     "category": "project"
   },
   {
     "aboutproject": "BlackRoad : Financial Wealth Tracker",
     "redurl": "https://microintel.github.io/blackroad-v2/home.html",
     "projectlogo": "https://microintel.github.io/blackroad/icon512_maskable.png",
-    "description": "A personal finance dashboard, built as an installable PWA with offline support, that tracks your income, expenses, loans, fixed deposits, and stock/mutual fund investments all in one place. It includes a main dashboard overview, an income statement for tracking and searching entries across periods, a lending ledger for money borrowed or lent, fixed deposit tracking, a step-up SIP calculator with charts and PDF reports, and a simple login system to keep data tied to an account. Everything currently runs on plain HTML, CSS, and JavaScript with data stored locally in the browser, with React, cloud backup, and Firebase Authentication planned for future releases.",
+    "description": "BlackRoad is a comprehensive personal finance and investment management platform designed to simplify financial tracking. It enables users to manage income, expenses, loans, fixed deposits, stocks, and mutual funds in one place. With an intuitive dashboard, financial reports, and investment calculators, BlackRoad helps users monitor their financial health and make informed decisions. Rover is an integrated chatbot that helps users interact with the platform and get assistance with their queries.",
     "projectName": "BlackRoad",
     "category": "project"
   },
@@ -43,11 +43,11 @@
     "category": "project"
   },
   {
-    "aboutproject": "Vision : for the wealthy who prefer relaxation.",
+    "aboutproject": "Vision simplifies financial planning through interactive investment calculators and wealth growth analysis.",
     "redurl": "https://microintel.github.io/vision",
     "projectlogo": "https://raw.githubusercontent.com/microintel/endgram/main/photo/future%20vision%201.jpeg",
     "projectName": "Vision",
-    "description": "For the wealthy who prefer relaxation.",
+    "description": "Vision is a free financial planning platform that helps users understand savings, investments, and wealth growth through interactive calculators. It includes SIP, lumpsum, retirement, goal planning, CAGR, and discounted cash flow (DCF) calculators. Users can estimate future returns, plan financial goals, compare investment options, and analyze growth using charts and tables. With a simple interface, instant calculations, and light and dark modes, Vision makes financial concepts easier to understand.",
     "category": "tool"
   },
   {
